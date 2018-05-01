@@ -1,1 +1,13 @@
 site_name: My Docs
+repo_url: https://github.com/leoman730/d8docs
+repo_name: Github
+remote_branch: gh-pages
+theme:
+    name: material
+    include_sidebar: true
+docs_dir: docs
+dev_addr: '127.0.0.1:8888'
+markdown_extensions:
+    - smarty
+plugins:
+    - search
