@@ -173,6 +173,119 @@ For reporting purpose, use $migration_executable->saveMessage() to log migration
 
 ### Paragraphs page
 * Many pages not migrated, probably due to block references.
+* Also, Paragraphs need to be migrated prior to this migration
+
+Todo:
+    - We we ignore Paragraphs page that use block reference fields?
+
+
+### Custom blocks
+Todo:
+
+- How many custom blocks do we have, do we have scripts for custom block migration, and how does it looks like
+
+
+### Views
+- If views is created in the admin, it will be managed/tracked by Configuration Mangement
+
+### Node Path/Alias
+- All path alias is able to migrated without issue.
+
+### Redirect
+Todo:
+
+* There are couple (4) redirect failing, primary because the source url is identical, only the letter cases vary. The easiest fix seems to be re-add those manually after migration.
+```
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'JDfYcWeYjq2O0VL70etyNcPOZnQn0DMYpJd_wCMCXcU' for key 'hash': INSERT INTO {redirect} (rid, type, uuid, language, hash, uid, redirect_source__path, redirect_source__query, redirect_redirect__uri, redirect_redirect__title, redirect_redirect__options, status_code, created) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9, :db_insert_placeholder_10, :db_insert_placeholder_11, :db_insert_placeholder_12); Array
+(
+    [:db_insert_placeholder_0] => 1712
+    [:db_insert_placeholder_1] => redirect
+    [:db_insert_placeholder_2] => ad68c230-a982-4410-a624-86a3bf4867ce
+    [:db_insert_placeholder_3] => und
+    [:db_insert_placeholder_4] => JDfYcWeYjq2O0VL70etyNcPOZnQn0DMYpJd_wCMCXcU
+    [:db_insert_placeholder_5] => 150
+    [:db_insert_placeholder_6] => guarini-global/lawtech
+    [:db_insert_placeholder_7] => N;
+    [:db_insert_placeholder_8] => internal:/node/29626
+    [:db_insert_placeholder_9] =>
+    [:db_insert_placeholder_10] => a:0:{}
+    [:db_insert_placeholder_11] => 301
+    [:db_insert_placeholder_12] => 1525455137
+)
+ (/var/www/web/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php:829)
+
+
+ 27264
+ 29626
+ 23299
+ 23267
+
+```
+
+
+### Field Collection 
+Note: 
+
+* Couple items didn't migrate due to file missing. Not a blocker. 
+
+```
+    ⟩ fin drush migrate-import --tag=FieldCollection
+Processed 7 items (7 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_type'                                                                                                               [status]
+Processed 25 items (25 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_bm_section'                                                                                                       [status]
+Processed 0 items (0 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_dynamic_lead_item'                                                                                                  [status]
+Processed 7 items (7 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_images'                                                                                                             [status]
+Processed 49 items (49 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_mm_section'                                                                                                       [status]
+Missing file with ID 18833. ImageItem.php:327                                                                                                                                                                              [warning]
+Missing file with ID 18858. ImageItem.php:327                                                                                                                                                                              [warning]
+Processed 12 items (12 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_selected_news_item'                                                                                               [status]
+Missing file with ID 18866. ImageItem.php:327                                                                                                                                                                              [warning]
+Missing file with ID 18867. ImageItem.php:327                                                                                                                                                                              [warning]
+Processed 1382 items (1382 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_slides'                                                                                                       [status]
+Missing file with ID 15901. ImageItem.php:327                                                                                                                                                                              [warning]
+Missing file with ID 18883. ImageItem.php:327                                                                                                                                                                              [warning]
+Missing file with ID 18884. ImageItem.php:327                                                                                                                                                                              [warning]
+Processed 52 items (52 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_stat_box_item'                                                                                                    [status]
+```
+
+### Gallery 
+Note:
+
+* Gallery migrated. 2 missing files is reported. 
+```
+~/git_repos/nyu-law-d8/web · (migration±)
+⟩ fin drush migrate-import --tag=Gallery
+Missing file with ID 18866. ImageItem.php:327                                                                                                                                                                              [warning]
+Missing file with ID 18867. ImageItem.php:327                                                                                                                                                                              [warning]
+Processed 174 items (174 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_node_gallery'                                                                                                                    [status]
+```
+
+
+### Menu
+
+
+### Workbench
+Todo:
+
+* Check if workbench for node set correctly
+
+
+### MetaTags
+Todo:
+
+* This could be just site config,not migration.
+
+
+
+
+
+
+
+
+
+## Post Migration todo list
+
+
+
 
 
 
