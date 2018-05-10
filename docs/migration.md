@@ -260,29 +260,116 @@ Processed 174 items (174 created, 0 updated, 0 failed, 0 ignored) - done with 'u
 ```
 
 
+### Video
+Note:
+* After discussion, the video content type will not be migrated (95% for sure)
+* For the sake of migration, the video field value for some reasons do not migrate.
+
+
+
+### Flexslider
+Note:
+* Everything migrated.
+
 ### Menu
+Note: 
+* Most links were migrate. 
+- 34 links failed - Views and other related
+- 20 ignored - Admin links, which no need for migrate
+```
+~/git_repos/nyu-law-d8/web · (migration±)
+⟩ fin drush migrate-import  upgrade_d7_menu_links
+Processed 4462 items (4408 created, 0 updated, 34 failed, 20 ignored) - done with 'upgrade_d7_menu_links'                                                                                                                  [status]
+upgrade_d7_menu_links Migration - 34 failed.                                                                                                                                                                               [error]
+
+
+
+
+
+~/git_repos/nyu-law-d8/web · (migration±)
+⟩ fin drush mmsg  upgrade_d7_menu_links
+ source_ids_hash                                                   level   message
+ 29d2bab6d873450d1187d89170841fdbd5d9de7607ce397c9b9dc874b02e6ce3  1       The path "internal:/aggregator" failed validation.
+ e7aad5d001ee00794225748e79a15a428586dcab6315bee28de24925e505620a  1       The path "internal:/ctools_ajax_sample" failed validation.
+ f2697de0b770e1961d78ed7e6b6172cd88dbbb6dce5d6375afa9f29c3933ce6f  1       The path "internal:/blog" failed validation.
+ ebb421f19738aa44eadc9b25fcbe3920751444168c3c2d077a2eb442d77d722f  1       The path "internal:/mega_menu/1" failed validation.
+ 20de6002d1f8e607915226d9811fa40db148de4a8d9a13afb7367868f644fd70  1       The path "internal:/press-highlights" failed validation.
+ a30bc1ff563489d908e3220d256e46960636c2745bca8fcd0d38deff6bae06a8  1       The path "internal:/announcements" failed validation.
+ c2db12edbf17f51cc17300ad58711ee16693ec38d9a07a9f2fa6683ef3415de5  1       The path "internal:/presshightlights" failed validation.
+ f223b8e78c3cd1612f6c835cb2103fd1ba638445504f3bfb9a7dfd68f2cdd8a9  1       The path "internal:/news/Press%20Contacts/presscontacts" failed validation.
+ f7d4bd88be8b82828e18d881dc4b67cb600442b1f5fea5b08786acbe98553dd5  1       The path "internal:/news/Press%20Contacts/presscontacts" failed validation.
+ 86532f82132bed200ca21961ca3514200841477b7079fcf70c2ab72cafe1ac8d  1       The path "internal:/news/Press%20Contacts/presscontacts" failed validation.
+ 37399ff49ae366f50e6f090754563e0c524825e0cee9a69056dbd757c1bfeea8  1       The path "internal:/news/Press%20Contacts/presscontacts" failed validation.
+ 0be26f44f6e396a0dd6c58084008f5dae1e22fd31160f26d68921e69d31556e8  1       The path "internal:/featured-alumni-view" failed validation.
+ 562c4b3050ab9f55b1907e76cf4f22127f81ae1a38cbf49d581639af6dce5fa6  1       The path "internal:/aggregator/categories" failed validation.
+ cc884b0b7807a909d0663641c264956e5bb2fc83a243c3e1c03d3cec7a8e3679  1       The path "internal:/aggregator/sources" failed validation.
+ a6678c6096408964adc595c0edf0431a297290fbbd3efc0514740944bf30ecf3  1       The path "internal:/ctools_ajax_sample/jumped" failed validation.
+ aa5eb1a31c0aa8f946d8b7c013dd2829621b52ce5e6b205be8ad18590b4f1d1f  1       The path "internal:/blog/%" failed validation.
+ 9168cd967017f71606987b2b402dc063e1a07d1bc5f7d43b6995fb13c268f0a6  1       The path "internal:/node/294" failed validation.
+ 12613bfa414e2508eb70cf4af47e1283071d60144e6b95b97b4d7d8210021e5c  1       The path "internal:/presshighlights" failed validation.
+ 2e56e78fe884bf6471753179c1ba451b2e2f7dfda56f98bedb25b8b9c6c09e89  1       The path "internal:/news/alumni" failed validation.
+ 0d6979d68221aae00033393d3b25fb1ea11c9f2ab64935850e2d3e927ac4a1cb  1       The path "internal:/news/centers" failed validation.
+ 3daca132bb9ddd46c32b39c58d21408f0ad891d43c98ba40d93c0d853ec7fa07  1       The path "internal:/news/faculty" failed validation.
+ 64e1f55b676184bed00cbc8aea54ec25c0eee58736cea88d3f861e830ccd9ac4  1       The path "internal:/news/global" failed validation.
+ 95a788d9430dfa7e3366d234dab0c3d87f3338094efce16739d1b25a7c9a42f8  1       The path "internal:/news/students" failed validation.
+ c74d0d062d8985b93c69093f4a74f9dfbdd4d27eee525846dd353bb4a2570c38  1       The path "internal:/news-ideas" failed validation.
+ 7e54fb5d4dc1f71fb71ea70427c483bb1a6d80cb76647c9b78e45f83aa946330  1       The path "internal:/node/269" failed validation.
+ 9a93537c4a9a846b6cbf688a85a7e2acf0f14273f6adf7cea9e9ec4b3441f384  1       The path "internal:/node/322" failed validation.
+ 679fca41d8c8b672d8f43e8a3ef8380f59deb096d1df22d679ba883f19685953  1       The path "internal:/node/320" failed validation.
+ bde65a4332992b1ff2c3b0abcbeff6be4d59910a80bc476182311a7ea54b91a1  1       The path "internal:/node/308" failed validation.
+ a8e6dd7bd7bfb9ce304ec6aeac0c05b41608398ff2e22e895f20f16b38781d53  1       The path "internal:/node/323" failed validation.
+ 040299cc82da4721e674cf734cdbd33db869865e51d084de0e4ff33006e128e5  1       The path "internal:/node/270" failed validation.
+ be48aa213b83876b40c219d4268ea41cccdb77d3982a312f6e72daf172a78d7a  1       The path "internal:/node/325" failed validation.
+ e067f1710b30cc3408cf6b319ccfc0bc02e04ce5b2fb75a6f5b17d3496292208  1       The path "internal:/node/288" failed validation.
+ 59710eaa8e25a5e6b7e9d19ef9fe24966889c3c784d808756b20422db2102e10  1       The path "internal:/node/327" failed validation.
+ db3162a1db176c0de98be598bf9167029010951e03c96f8080afde5f99448a2a  1       The path "internal:/node/293" failed validation.
+
+
+
+# Following menu link were ignored, because they are admin links
+select * from menu_links where mlid in (434,93354,85819,93512,93514,80308,78871,93406,196,68391,93421,79563,491,197,79824,93427,94270,93355,96859,96852);
+```
+
+
+
+
+
+### Custom blocks
+
 
 
 ### Workbench
+Note:
+* Content type now need to create a field for access control
+* The first level node ("Access control") no longer avaiable for selection
+
 Todo:
 
 * Check if workbench for node set correctly
+* Most likely in D8, we need to create the field and then need a custom migration
+
+
+
 
 
 ### MetaTags
-Todo:
+Note:
+* In D8, in order to enable content to override default metatags settings, the content type needs to create a new field for metatag. See [Metatags per content Drupal8?](https://www.drupal.org/project/metatag/issues/2715395)
 
+
+Todo:
+* Need meta description migrate
 * This could be just site config,not migration.
 
 
+### 404 Redirect
+Note:
+* Dropping it
 
 
 
 
 
-
-
-## Post Migration todo list
 
 
 
