@@ -1,0 +1,284 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Welcome to MkDocs"
+        }, 
+        {
+            "location": "/#welcome-to-mkdocs", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "Welcome to MkDocs"
+        }, 
+        {
+            "location": "/#commands", 
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/#project-layout", 
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Project layout"
+        }, 
+        {
+            "location": "/changes/", 
+            "text": "Changes from Drupal 7\n\n\nField collection\n\n\nFields in field collection have converted to Paragraphs type in D8. \n\n\nIn Basic page type, the sidebar field collection now are in Paragraphs sidebar blocks.\n\n\nMenu link attributs\n\n\n\n\nMenu attributs modules is no longer use and in favor of link attributes module.", 
+            "title": "Changes from Drupal 7"
+        }, 
+        {
+            "location": "/changes/#changes-from-drupal-7", 
+            "text": "", 
+            "title": "Changes from Drupal 7"
+        }, 
+        {
+            "location": "/changes/#field-collection", 
+            "text": "Fields in field collection have converted to Paragraphs type in D8.   In Basic page type, the sidebar field collection now are in Paragraphs sidebar blocks.", 
+            "title": "Field collection"
+        }, 
+        {
+            "location": "/changes/#menu-link-attributs", 
+            "text": "Menu attributs modules is no longer use and in favor of link attributes module.", 
+            "title": "Menu link attributs"
+        }, 
+        {
+            "location": "/configuration_magnagement/", 
+            "text": "Configuration Management\n\n\nSome useful modules:\n* \nConfiguration installer\n\nUse this module to install a new site based on configs.", 
+            "title": "Configuration Management"
+        }, 
+        {
+            "location": "/configuration_magnagement/#configuration-management", 
+            "text": "Some useful modules:\n*  Configuration installer \nUse this module to install a new site based on configs.", 
+            "title": "Configuration Management"
+        }, 
+        {
+            "location": "/menu/", 
+            "text": "Currently, we are using menu_attributes module for providing css class settings for menu link. There\ns exist a warning complaining about argument data type (array vs string). A custom fix is made to fix this issue. \n\n\nThis ideally should be package as a patch and submit to the module page.\n\n\n( ! ) Warning: explode() expects parameter 2 to be string, array given in /var/www/web/modules/contrib/menu_attributes/menu_attributes.module on line 374\n\n\n\n\n# In menu_attributes.module\n\n    // Class attribute needs special handling because it's stored as an array.\n    if (isset($attributes[MENU_ATTRIBUTES_LINK]['class'])) {\n      $attributes[MENU_ATTRIBUTES_LINK]['class'] = explode(' ', $attributes[MENU_ATTRIBUTES_LINK]['class']);\n    }\n    if (isset($attributes[MENU_ATTRIBUTES_ITEM]['class'])) {\n      $attributes[MENU_ATTRIBUTES_ITEM]['class'] = explode(' ', $attributes[MENU_ATTRIBUTES_ITEM]['class']);\n    }\n\n\n\n\n\n\nUpdate\n\n\nThe menu_attributes module was removed in favor of the link_attributes module, which has a stable release.\n\n\n*\n Todo\n\n Menu is not scalable and load very slow because of the big menu tree. Big menu module is no longer available, need to find alternative solution.\n\n\n\n\nMenu select for node also a problem because the big tree make selection very difficult.", 
+            "title": "Menu"
+        }, 
+        {
+            "location": "/migration/", 
+            "text": "Upgrading to Drupal 8\n\n\n\n\nUpgrade using Drush\n\n\n\n\n\n\nInstalling Drupal 8 from configuration\n\n\n\n\nVideo - Drupal 8 Day: Custom Content Migrations to Drupal 8\n\n\nCustom Drupal-to-Drupal Migrations\n\n\n\n\nSome useful migration commands\n\n\n# Generate configuration for migration\n# Modify settings.php to include db connection string \nmigrate\n\ndrush migrate-upgrade --configure-only --legacy-db-key=migrate\n\n# Export migrate-status to a file\ndrush ms \n status.txt\n\n# Export configruation files\ndrush config-export \n config.txt\ndrush config-export --destination=/tmp/migrate\n\n# Show a specific config\ndrush config-get {config_name}\n\n# Only show migration status related to 'field'\ndrush ms --group=migrate_drupal_7 --names-only | ag field\n\n# Get a list of Destination plugins\n# At the php console:\n\\Drupal::service('plugin.manager.migrate.destination')-\ngetDefinitions();\n\n\nfin drush migrate-status --tag=Field\nfin drush migrate-import --feedback --execute-dependencies --tag=Field\n\n# To refresh migration in a module\ndrush config-import --partial --source=module/custom/nyulaw_migrate/config/install\n\n\n\n\n\n\n\n\nMigration Steps:\n\n\nPrimary migration will divide into 3 phrases: migrate site structures from source site; modify site structure based on new needs; migrate content from source site.\n\n\n\n\nRun migration to generate structure based on the Source Site\n\n\nAfter the structures is generated, modified it base on the need of the new site. For example, news_item content type has an image field, which should be a entity reference field in D8, therefore, it needs to be recreated. Also make sure the machine name is mapped to the old type field name.\n\n\nMake sure to export all the configs as code \ndrush config-export -y\n. This will save all the config in the ../config directory\n\n\nStart content migration\n\n\n\n\n\n\nUse the \nConfig Installer\n to import site profile is the easiest way for manage site structure\n\n\n\n\nOnce the site structure is ready, use \ndrush config-export -y\n to export entire site configs\n\n\nInstall Drupal as usual, but using the minimal profile\n\n\nRun \nfin drush site-install --verbose config_installer config_installer_sync_configure_form.sync_directory=../config --yes\n to re-install the site based on config files in the sync directory\n\n\nOnce it is completed, the srceen will show the user name and password. In case that is not working, Use \nfin drush upwd admin --password=\"admin\"\n to reset admin password\n\n\n\n\nMigration Note\n\n\nTo set up a new dev site with content, we could modify the script (migrationclean.sh) to:\n1. Install the config profile\n2. Then run run-migration.sh to import site content\n\n\nField collection to Paragraphs\n\n\nParagraphs has most of the code to migrate field collections. And this is the plan based on the community discussion.\n\n\nAccording to @mikelutz\n\n\n\n\nIf you install the latest paragraphs -dev and apply https://www.drupal.org/project/paragraphs/issues/2911244  it\nshould migrate through the migrate_drupal_ui\n\n\n\n\nThere are couple threads related to this:\n\n\n\n\nhttps://www.drupal.org/project/paragraphs/issues/2911244\n\n\nhttps://www.drupal.org/project/paragraphs/issues/2897021\n\n\n\n\nBasic page migration\n\n\nbenjifisher [2:02 PM]\nI think you want the \nmerge\n plugin: https://cgit.drupalcode.org/migrate_plus/tree/src/Plugin/migrate/process/Merge.php\n\n\nThere might be an easier way, but if you want to follow the model in the docblock, then you can create three separate migrations, each of which creates a Paragraph entity from one of the source fields. Then use \nmigration_lookup\n and \nmerge\n as in the sample code in the docblock. Remember that \niterator\n is deprecated; use \nsub_process\n instead. (edited)\n\n\nBlock reference\n\n\nBlock reference is not support in D8. There are discussions propose how this should work in D8 but there\ns no agreement\nyet. See \nDrupal 8 Port\n\n\nThe \nBlock Field\n seems work as an alternative.\n\n\nCKeditor - Embeded media\n\n\nMedia module is in Drupal core \n= 8.5. Ckeditor can work with Media Embed module for embeding many types of media eneity inside a ckeditor. Refer to the \nmedia guide section\n for more info.\n\n\nIn order to make legacy embeded string work, some process transformations is needed. This transformation will convert the legacy embeded string into a new string that is regonizabled by the new editor.\n\n\n# Old Embeded String\n[[{\nfid\n:\n41966\n,\nview_mode\n:\n190wide\n,\nfields\n:{\nalt\n:\nAlt - Chinese New Year \n,\ntitle\n:\nTitle - Chinese New\nYear\n,\nstyle\n:\nfloat: right;\n,\nclass\n:\nmedia-element my_custom_class\nfile-teaser\n,\ndata-delta\n:\n1\n,\nformat\n:\n190wide\n,\nfield_file_caption[und][0][value]\n:\nHappy Chinese New\nYear\n,\nfield_file_image_alt_text[und][0][value]\n:\nAlt - Chinese New Year\n\n,\nfield_file_image_title_text[und][0][value]\n:\nTitle - Chinese New\nYear\n},\ntype\n:\nmedia\n,\nfield_deltas\n:{\n1\n:{\nalt\n:\nAlt - Chinese New Year \n,\ntitle\n:\nTitle - Chinese New\nYear\n,\nstyle\n:\nfloat: right;\n,\nclass\n:\nmedia-element my_custom_class\nfile-teaser\n,\ndata-delta\n:\n1\n,\nformat\n:\n190wide\n,\nfield_file_caption[und][0][value]\n:\nHappy Chinese New\nYear\n,\nfield_file_image_alt_text[und][0][value]\n:\nAlt - Chinese New Year\n\n,\nfield_file_image_title_text[und][0][value]\n:\nTitle - Chinese New Year\n}},\nattributes\n:{\nalt\n:\nAlt - Chinese New Year\n\n,\ntitle\n:\nTitle - Chinese New Year\n,\nstyle\n:\nfloat: left;\n,\nclass\n:\nmedia-element my_custom_class\nfile-190wide\n,\ndata-delta\n:\n1\n}}]]\n\n\n# New Embeded String\n\ndrupal-entity data-align='left' data-caption='Happy Chinese New Year' data-entity-type='media'\ndata-entity-uuid='302905a2-3598-433b-9fa2-143fbaac4b98' data-entity-embed-display='entity_reference:media_thumbnail'\ndata-embed-button='media_browser_button' data-entity-embed-display-settings='{\nimage_style\n:\n190wide\n}'  /\n\n\n\n\n\n\nLook at the FixMediaTags.php from the nyulaw_migrate module to understand how th process works.\n\n\nIf after migrated content the front end doesn\nt render html tag correctly. This is due to body_format field value doesn\nt specified.\nThe default migration script comes from core does not set soruce for body_format; Therefore, the migration script set a default body_format value to full_html during the migration.\n\n\nAssuming the body_format value is set, run \ndrush cr\n should resolve this issue.\n\n\nDebug migration\n\n\n\u27e9 drush migrate-import upgrade_d7_menu_links\nProcessed 4462 items (48 created, 0 updated, 4066 failed, 348 ignored) - done with 'upgrade_d7_menu_links'                                                                                                                 [status]\nupgrade_d7_menu_links Migration - 4066 failed.\n\n\n\n\n\nUse drush mmsg upgrade_d7_menu_links\n\n\ndrush mmsg upgrade_d7_menu_links\n\n109dbf0220db6b16b80efe7fb1211f97d558d3624372b2b012f745a9ea3b8145  1       The path \ninternal:/node/19346\n failed validation.\n\n\n\n\nFor reporting purpose, use $migration_executable-\nsaveMessage() to log migration issue.\n\n\nContent migration\n\n\nBasic Page\n\n\n\n\n\n\nField_images currently is using paragraph_field_images, because there only a handful of nodes using this field, we may just want to get rid of it.\n\n\n\n\n\n\nNeed to find out how many node is using the promo block.\n\n\n\n\n\n\nLanding Page\n\n\n\n\nThere are only 3 handful landing page with no content to it. This may be just convert to a simple basic page.\n\n\n\n\nNews Item\n\n\n\n\nAll items seems migrated\n\n\n\n\nPress Highlight\n\n\n\n\nAll items seems migrated\n\n\n\n\nParagraphs page\n\n\n\n\nMany pages not migrated, probably due to block references.\n\n\nAlso, Paragraphs need to be migrated prior to this migration\n\n\n\n\nTodo:\n    - We we ignore Paragraphs page that use block reference fields?\n\n\nCustom blocks\n\n\nTodo:\n\n\n\n\nHow many custom blocks do we have, do we have scripts for custom block migration, and how does it looks like\n\n\n\n\nViews\n\n\n\n\nIf views is created in the admin, it will be managed/tracked by Configuration Mangement\n\n\n\n\nNode Path/Alias\n\n\n\n\nAll path alias is able to migrated without issue.\n\n\n\n\nRedirect\n\n\nTodo:\n\n\n\n\nThere are couple (4) redirect failing, primary because the source url is identical, only the letter cases vary. The easiest fix seems to be re-add those manually after migration.\n\n\n\n\nSQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'JDfYcWeYjq2O0VL70etyNcPOZnQn0DMYpJd_wCMCXcU' for key 'hash': INSERT INTO {redirect} (rid, type, uuid, language, hash, uid, redirect_source__path, redirect_source__query, redirect_redirect__uri, redirect_redirect__title, redirect_redirect__options, status_code, created) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9, :db_insert_placeholder_10, :db_insert_placeholder_11, :db_insert_placeholder_12); Array\n(\n    [:db_insert_placeholder_0] =\n 1712\n    [:db_insert_placeholder_1] =\n redirect\n    [:db_insert_placeholder_2] =\n ad68c230-a982-4410-a624-86a3bf4867ce\n    [:db_insert_placeholder_3] =\n und\n    [:db_insert_placeholder_4] =\n JDfYcWeYjq2O0VL70etyNcPOZnQn0DMYpJd_wCMCXcU\n    [:db_insert_placeholder_5] =\n 150\n    [:db_insert_placeholder_6] =\n guarini-global/lawtech\n    [:db_insert_placeholder_7] =\n N;\n    [:db_insert_placeholder_8] =\n internal:/node/29626\n    [:db_insert_placeholder_9] =\n\n    [:db_insert_placeholder_10] =\n a:0:{}\n    [:db_insert_placeholder_11] =\n 301\n    [:db_insert_placeholder_12] =\n 1525455137\n)\n (/var/www/web/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php:829)\n\n\n 27264\n 29626\n 23299\n 23267\n\n\n\n\n\nField Collection\n\n\nNote: \n\n\n\n\nCouple items didn\nt migrate due to file missing. Not a blocker. \n\n\n\n\n    \u27e9 fin drush migrate-import --tag=FieldCollection\nProcessed 7 items (7 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_type'                                                                                                               [status]\nProcessed 25 items (25 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_bm_section'                                                                                                       [status]\nProcessed 0 items (0 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_dynamic_lead_item'                                                                                                  [status]\nProcessed 7 items (7 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_images'                                                                                                             [status]\nProcessed 49 items (49 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_mm_section'                                                                                                       [status]\nMissing file with ID 18833. ImageItem.php:327                                                                                                                                                                              [warning]\nMissing file with ID 18858. ImageItem.php:327                                                                                                                                                                              [warning]\nProcessed 12 items (12 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_selected_news_item'                                                                                               [status]\nMissing file with ID 18866. ImageItem.php:327                                                                                                                                                                              [warning]\nMissing file with ID 18867. ImageItem.php:327                                                                                                                                                                              [warning]\nProcessed 1382 items (1382 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_slides'                                                                                                       [status]\nMissing file with ID 15901. ImageItem.php:327                                                                                                                                                                              [warning]\nMissing file with ID 18883. ImageItem.php:327                                                                                                                                                                              [warning]\nMissing file with ID 18884. ImageItem.php:327                                                                                                                                                                              [warning]\nProcessed 52 items (52 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_stat_box_item'                                                                                                    [status]\n\n\n\n\nGallery\n\n\nNote:\n\n\n\n\nGallery migrated. 2 missing files is reported. \n\n\n\n\n~/git_repos/nyu-law-d8/web \u00b7 (migration\u00b1)\n\u27e9 fin drush migrate-import --tag=Gallery\nMissing file with ID 18866. ImageItem.php:327                                                                                                                                                                              [warning]\nMissing file with ID 18867. ImageItem.php:327                                                                                                                                                                              [warning]\nProcessed 174 items (174 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_node_gallery'                                                                                                                    [status]\n\n\n\n\nVideo\n\n\nNote:\n\n After discussion, the video content type will not be migrated (95% for sure)\n\n For the sake of migration, the video field value for some reasons do not migrate.\n\n\nFlexslider\n\n\nNote:\n* Everything migrated.\n\n\nMenu\n\n\nNote: \n* Most links were migrate. \n- 34 links failed - Views and other related\n- 20 ignored - Admin links, which no need for migrate\n\n\n~/git_repos/nyu-law-d8/web \u00b7 (migration\u00b1)\n\u27e9 fin drush migrate-import  upgrade_d7_menu_links\nProcessed 4462 items (4408 created, 0 updated, 34 failed, 20 ignored) - done with 'upgrade_d7_menu_links'                                                                                                                  [status]\nupgrade_d7_menu_links Migration - 34 failed.                                                                                                                                                                               [error]\n\n\n\n\n\n~/git_repos/nyu-law-d8/web \u00b7 (migration\u00b1)\n\u27e9 fin drush mmsg  upgrade_d7_menu_links\n source_ids_hash                                                   level   message\n 29d2bab6d873450d1187d89170841fdbd5d9de7607ce397c9b9dc874b02e6ce3  1       The path \ninternal:/aggregator\n failed validation.\n e7aad5d001ee00794225748e79a15a428586dcab6315bee28de24925e505620a  1       The path \ninternal:/ctools_ajax_sample\n failed validation.\n f2697de0b770e1961d78ed7e6b6172cd88dbbb6dce5d6375afa9f29c3933ce6f  1       The path \ninternal:/blog\n failed validation.\n ebb421f19738aa44eadc9b25fcbe3920751444168c3c2d077a2eb442d77d722f  1       The path \ninternal:/mega_menu/1\n failed validation.\n 20de6002d1f8e607915226d9811fa40db148de4a8d9a13afb7367868f644fd70  1       The path \ninternal:/press-highlights\n failed validation.\n a30bc1ff563489d908e3220d256e46960636c2745bca8fcd0d38deff6bae06a8  1       The path \ninternal:/announcements\n failed validation.\n c2db12edbf17f51cc17300ad58711ee16693ec38d9a07a9f2fa6683ef3415de5  1       The path \ninternal:/presshightlights\n failed validation.\n f223b8e78c3cd1612f6c835cb2103fd1ba638445504f3bfb9a7dfd68f2cdd8a9  1       The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n f7d4bd88be8b82828e18d881dc4b67cb600442b1f5fea5b08786acbe98553dd5  1       The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n 86532f82132bed200ca21961ca3514200841477b7079fcf70c2ab72cafe1ac8d  1       The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n 37399ff49ae366f50e6f090754563e0c524825e0cee9a69056dbd757c1bfeea8  1       The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n 0be26f44f6e396a0dd6c58084008f5dae1e22fd31160f26d68921e69d31556e8  1       The path \ninternal:/featured-alumni-view\n failed validation.\n 562c4b3050ab9f55b1907e76cf4f22127f81ae1a38cbf49d581639af6dce5fa6  1       The path \ninternal:/aggregator/categories\n failed validation.\n cc884b0b7807a909d0663641c264956e5bb2fc83a243c3e1c03d3cec7a8e3679  1       The path \ninternal:/aggregator/sources\n failed validation.\n a6678c6096408964adc595c0edf0431a297290fbbd3efc0514740944bf30ecf3  1       The path \ninternal:/ctools_ajax_sample/jumped\n failed validation.\n aa5eb1a31c0aa8f946d8b7c013dd2829621b52ce5e6b205be8ad18590b4f1d1f  1       The path \ninternal:/blog/%\n failed validation.\n 9168cd967017f71606987b2b402dc063e1a07d1bc5f7d43b6995fb13c268f0a6  1       The path \ninternal:/node/294\n failed validation.\n 12613bfa414e2508eb70cf4af47e1283071d60144e6b95b97b4d7d8210021e5c  1       The path \ninternal:/presshighlights\n failed validation.\n 2e56e78fe884bf6471753179c1ba451b2e2f7dfda56f98bedb25b8b9c6c09e89  1       The path \ninternal:/news/alumni\n failed validation.\n 0d6979d68221aae00033393d3b25fb1ea11c9f2ab64935850e2d3e927ac4a1cb  1       The path \ninternal:/news/centers\n failed validation.\n 3daca132bb9ddd46c32b39c58d21408f0ad891d43c98ba40d93c0d853ec7fa07  1       The path \ninternal:/news/faculty\n failed validation.\n 64e1f55b676184bed00cbc8aea54ec25c0eee58736cea88d3f861e830ccd9ac4  1       The path \ninternal:/news/global\n failed validation.\n 95a788d9430dfa7e3366d234dab0c3d87f3338094efce16739d1b25a7c9a42f8  1       The path \ninternal:/news/students\n failed validation.\n c74d0d062d8985b93c69093f4a74f9dfbdd4d27eee525846dd353bb4a2570c38  1       The path \ninternal:/news-ideas\n failed validation.\n 7e54fb5d4dc1f71fb71ea70427c483bb1a6d80cb76647c9b78e45f83aa946330  1       The path \ninternal:/node/269\n failed validation.\n 9a93537c4a9a846b6cbf688a85a7e2acf0f14273f6adf7cea9e9ec4b3441f384  1       The path \ninternal:/node/322\n failed validation.\n 679fca41d8c8b672d8f43e8a3ef8380f59deb096d1df22d679ba883f19685953  1       The path \ninternal:/node/320\n failed validation.\n bde65a4332992b1ff2c3b0abcbeff6be4d59910a80bc476182311a7ea54b91a1  1       The path \ninternal:/node/308\n failed validation.\n a8e6dd7bd7bfb9ce304ec6aeac0c05b41608398ff2e22e895f20f16b38781d53  1       The path \ninternal:/node/323\n failed validation.\n 040299cc82da4721e674cf734cdbd33db869865e51d084de0e4ff33006e128e5  1       The path \ninternal:/node/270\n failed validation.\n be48aa213b83876b40c219d4268ea41cccdb77d3982a312f6e72daf172a78d7a  1       The path \ninternal:/node/325\n failed validation.\n e067f1710b30cc3408cf6b319ccfc0bc02e04ce5b2fb75a6f5b17d3496292208  1       The path \ninternal:/node/288\n failed validation.\n 59710eaa8e25a5e6b7e9d19ef9fe24966889c3c784d808756b20422db2102e10  1       The path \ninternal:/node/327\n failed validation.\n db3162a1db176c0de98be598bf9167029010951e03c96f8080afde5f99448a2a  1       The path \ninternal:/node/293\n failed validation.\n\n\n\n# Following menu link were ignored, because they are admin links\nselect * from menu_links where mlid in (434,93354,85819,93512,93514,80308,78871,93406,196,68391,93421,79563,491,197,79824,93427,94270,93355,96859,96852);\n\n\n\n\nCustom blocks\n\n\nWorkbench\n\n\nNote:\n\n Content type now need to create a field for access control\n\n The first level node (\nAccess control\n) no longer avaiable for selection\n\n\nTodo:\n\n\n\n\nCheck if workbench for node set correctly\n\n\nMost likely in D8, we need to create the field and then need a custom migration\n\n\n\n\nMetaTags\n\n\nNote:\n* In D8, in order to enable content to override default metatags settings, the content type needs to create a new field for metatag. See \nMetatags per content Drupal8?\n\n\nTodo:\n\n Need meta description migrate\n\n This could be just site config,not migration.\n\n\n404 Redirect\n\n\nNote:\n* Dropping it", 
+            "title": "Migration"
+        }, 
+        {
+            "location": "/migration/#some-useful-migration-commands", 
+            "text": "# Generate configuration for migration\n# Modify settings.php to include db connection string  migrate \ndrush migrate-upgrade --configure-only --legacy-db-key=migrate\n\n# Export migrate-status to a file\ndrush ms   status.txt\n\n# Export configruation files\ndrush config-export   config.txt\ndrush config-export --destination=/tmp/migrate\n\n# Show a specific config\ndrush config-get {config_name}\n\n# Only show migration status related to 'field'\ndrush ms --group=migrate_drupal_7 --names-only | ag field\n\n# Get a list of Destination plugins\n# At the php console:\n\\Drupal::service('plugin.manager.migrate.destination')- getDefinitions();\n\n\nfin drush migrate-status --tag=Field\nfin drush migrate-import --feedback --execute-dependencies --tag=Field\n\n# To refresh migration in a module\ndrush config-import --partial --source=module/custom/nyulaw_migrate/config/install", 
+            "title": "Some useful migration commands"
+        }, 
+        {
+            "location": "/migration/#migration-steps", 
+            "text": "Primary migration will divide into 3 phrases: migrate site structures from source site; modify site structure based on new needs; migrate content from source site.   Run migration to generate structure based on the Source Site  After the structures is generated, modified it base on the need of the new site. For example, news_item content type has an image field, which should be a entity reference field in D8, therefore, it needs to be recreated. Also make sure the machine name is mapped to the old type field name.  Make sure to export all the configs as code  drush config-export -y . This will save all the config in the ../config directory  Start content migration    Use the  Config Installer  to import site profile is the easiest way for manage site structure   Once the site structure is ready, use  drush config-export -y  to export entire site configs  Install Drupal as usual, but using the minimal profile  Run  fin drush site-install --verbose config_installer config_installer_sync_configure_form.sync_directory=../config --yes  to re-install the site based on config files in the sync directory  Once it is completed, the srceen will show the user name and password. In case that is not working, Use  fin drush upwd admin --password=\"admin\"  to reset admin password", 
+            "title": "Migration Steps:"
+        }, 
+        {
+            "location": "/migration/#migration-note", 
+            "text": "To set up a new dev site with content, we could modify the script (migrationclean.sh) to:\n1. Install the config profile\n2. Then run run-migration.sh to import site content", 
+            "title": "Migration Note"
+        }, 
+        {
+            "location": "/migration/#field-collection-to-paragraphs", 
+            "text": "Paragraphs has most of the code to migrate field collections. And this is the plan based on the community discussion.  According to @mikelutz   If you install the latest paragraphs -dev and apply https://www.drupal.org/project/paragraphs/issues/2911244  it\nshould migrate through the migrate_drupal_ui   There are couple threads related to this:   https://www.drupal.org/project/paragraphs/issues/2911244  https://www.drupal.org/project/paragraphs/issues/2897021", 
+            "title": "Field collection to Paragraphs"
+        }, 
+        {
+            "location": "/migration/#basic-page-migration", 
+            "text": "benjifisher [2:02 PM]\nI think you want the  merge  plugin: https://cgit.drupalcode.org/migrate_plus/tree/src/Plugin/migrate/process/Merge.php  There might be an easier way, but if you want to follow the model in the docblock, then you can create three separate migrations, each of which creates a Paragraph entity from one of the source fields. Then use  migration_lookup  and  merge  as in the sample code in the docblock. Remember that  iterator  is deprecated; use  sub_process  instead. (edited)", 
+            "title": "Basic page migration"
+        }, 
+        {
+            "location": "/migration/#block-reference", 
+            "text": "Block reference is not support in D8. There are discussions propose how this should work in D8 but there s no agreement\nyet. See  Drupal 8 Port  The  Block Field  seems work as an alternative.", 
+            "title": "Block reference"
+        }, 
+        {
+            "location": "/migration/#ckeditor-embeded-media", 
+            "text": "Media module is in Drupal core  = 8.5. Ckeditor can work with Media Embed module for embeding many types of media eneity inside a ckeditor. Refer to the  media guide section  for more info.  In order to make legacy embeded string work, some process transformations is needed. This transformation will convert the legacy embeded string into a new string that is regonizabled by the new editor.  # Old Embeded String\n[[{ fid : 41966 , view_mode : 190wide , fields :{ alt : Alt - Chinese New Year  , title : Title - Chinese New\nYear , style : float: right; , class : media-element my_custom_class\nfile-teaser , data-delta : 1 , format : 190wide , field_file_caption[und][0][value] : Happy Chinese New\nYear , field_file_image_alt_text[und][0][value] : Alt - Chinese New Year , field_file_image_title_text[und][0][value] : Title - Chinese New\nYear }, type : media , field_deltas :{ 1 :{ alt : Alt - Chinese New Year  , title : Title - Chinese New\nYear , style : float: right; , class : media-element my_custom_class\nfile-teaser , data-delta : 1 , format : 190wide , field_file_caption[und][0][value] : Happy Chinese New\nYear , field_file_image_alt_text[und][0][value] : Alt - Chinese New Year , field_file_image_title_text[und][0][value] : Title - Chinese New Year }}, attributes :{ alt : Alt - Chinese New Year , title : Title - Chinese New Year , style : float: left; , class : media-element my_custom_class\nfile-190wide , data-delta : 1 }}]]\n\n\n# New Embeded String drupal-entity data-align='left' data-caption='Happy Chinese New Year' data-entity-type='media'\ndata-entity-uuid='302905a2-3598-433b-9fa2-143fbaac4b98' data-entity-embed-display='entity_reference:media_thumbnail'\ndata-embed-button='media_browser_button' data-entity-embed-display-settings='{ image_style : 190wide }'  /   Look at the FixMediaTags.php from the nyulaw_migrate module to understand how th process works.  If after migrated content the front end doesn t render html tag correctly. This is due to body_format field value doesn t specified.\nThe default migration script comes from core does not set soruce for body_format; Therefore, the migration script set a default body_format value to full_html during the migration.  Assuming the body_format value is set, run  drush cr  should resolve this issue.", 
+            "title": "CKeditor - Embeded media"
+        }, 
+        {
+            "location": "/migration/#debug-migration", 
+            "text": "\u27e9 drush migrate-import upgrade_d7_menu_links\nProcessed 4462 items (48 created, 0 updated, 4066 failed, 348 ignored) - done with 'upgrade_d7_menu_links'                                                                                                                 [status]\nupgrade_d7_menu_links Migration - 4066 failed.  Use drush mmsg upgrade_d7_menu_links  drush mmsg upgrade_d7_menu_links\n\n109dbf0220db6b16b80efe7fb1211f97d558d3624372b2b012f745a9ea3b8145  1       The path  internal:/node/19346  failed validation.  For reporting purpose, use $migration_executable- saveMessage() to log migration issue.", 
+            "title": "Debug migration"
+        }, 
+        {
+            "location": "/migration/#content-migration", 
+            "text": "", 
+            "title": "Content migration"
+        }, 
+        {
+            "location": "/migration/#basic-page", 
+            "text": "Field_images currently is using paragraph_field_images, because there only a handful of nodes using this field, we may just want to get rid of it.    Need to find out how many node is using the promo block.", 
+            "title": "Basic Page"
+        }, 
+        {
+            "location": "/migration/#landing-page", 
+            "text": "There are only 3 handful landing page with no content to it. This may be just convert to a simple basic page.", 
+            "title": "Landing Page"
+        }, 
+        {
+            "location": "/migration/#news-item", 
+            "text": "All items seems migrated", 
+            "title": "News Item"
+        }, 
+        {
+            "location": "/migration/#press-highlight", 
+            "text": "All items seems migrated", 
+            "title": "Press Highlight"
+        }, 
+        {
+            "location": "/migration/#paragraphs-page", 
+            "text": "Many pages not migrated, probably due to block references.  Also, Paragraphs need to be migrated prior to this migration   Todo:\n    - We we ignore Paragraphs page that use block reference fields?", 
+            "title": "Paragraphs page"
+        }, 
+        {
+            "location": "/migration/#custom-blocks", 
+            "text": "Todo:   How many custom blocks do we have, do we have scripts for custom block migration, and how does it looks like", 
+            "title": "Custom blocks"
+        }, 
+        {
+            "location": "/migration/#views", 
+            "text": "If views is created in the admin, it will be managed/tracked by Configuration Mangement", 
+            "title": "Views"
+        }, 
+        {
+            "location": "/migration/#node-pathalias", 
+            "text": "All path alias is able to migrated without issue.", 
+            "title": "Node Path/Alias"
+        }, 
+        {
+            "location": "/migration/#redirect", 
+            "text": "Todo:   There are couple (4) redirect failing, primary because the source url is identical, only the letter cases vary. The easiest fix seems to be re-add those manually after migration.   SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'JDfYcWeYjq2O0VL70etyNcPOZnQn0DMYpJd_wCMCXcU' for key 'hash': INSERT INTO {redirect} (rid, type, uuid, language, hash, uid, redirect_source__path, redirect_source__query, redirect_redirect__uri, redirect_redirect__title, redirect_redirect__options, status_code, created) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9, :db_insert_placeholder_10, :db_insert_placeholder_11, :db_insert_placeholder_12); Array\n(\n    [:db_insert_placeholder_0] =  1712\n    [:db_insert_placeholder_1] =  redirect\n    [:db_insert_placeholder_2] =  ad68c230-a982-4410-a624-86a3bf4867ce\n    [:db_insert_placeholder_3] =  und\n    [:db_insert_placeholder_4] =  JDfYcWeYjq2O0VL70etyNcPOZnQn0DMYpJd_wCMCXcU\n    [:db_insert_placeholder_5] =  150\n    [:db_insert_placeholder_6] =  guarini-global/lawtech\n    [:db_insert_placeholder_7] =  N;\n    [:db_insert_placeholder_8] =  internal:/node/29626\n    [:db_insert_placeholder_9] = \n    [:db_insert_placeholder_10] =  a:0:{}\n    [:db_insert_placeholder_11] =  301\n    [:db_insert_placeholder_12] =  1525455137\n)\n (/var/www/web/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php:829)\n\n\n 27264\n 29626\n 23299\n 23267", 
+            "title": "Redirect"
+        }, 
+        {
+            "location": "/migration/#field-collection", 
+            "text": "Note:    Couple items didn t migrate due to file missing. Not a blocker.        \u27e9 fin drush migrate-import --tag=FieldCollection\nProcessed 7 items (7 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_type'                                                                                                               [status]\nProcessed 25 items (25 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_bm_section'                                                                                                       [status]\nProcessed 0 items (0 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_dynamic_lead_item'                                                                                                  [status]\nProcessed 7 items (7 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_images'                                                                                                             [status]\nProcessed 49 items (49 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_mm_section'                                                                                                       [status]\nMissing file with ID 18833. ImageItem.php:327                                                                                                                                                                              [warning]\nMissing file with ID 18858. ImageItem.php:327                                                                                                                                                                              [warning]\nProcessed 12 items (12 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_selected_news_item'                                                                                               [status]\nMissing file with ID 18866. ImageItem.php:327                                                                                                                                                                              [warning]\nMissing file with ID 18867. ImageItem.php:327                                                                                                                                                                              [warning]\nProcessed 1382 items (1382 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_slides'                                                                                                       [status]\nMissing file with ID 15901. ImageItem.php:327                                                                                                                                                                              [warning]\nMissing file with ID 18883. ImageItem.php:327                                                                                                                                                                              [warning]\nMissing file with ID 18884. ImageItem.php:327                                                                                                                                                                              [warning]\nProcessed 52 items (52 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_stat_box_item'                                                                                                    [status]", 
+            "title": "Field Collection"
+        }, 
+        {
+            "location": "/migration/#gallery", 
+            "text": "Note:   Gallery migrated. 2 missing files is reported.    ~/git_repos/nyu-law-d8/web \u00b7 (migration\u00b1)\n\u27e9 fin drush migrate-import --tag=Gallery\nMissing file with ID 18866. ImageItem.php:327                                                                                                                                                                              [warning]\nMissing file with ID 18867. ImageItem.php:327                                                                                                                                                                              [warning]\nProcessed 174 items (174 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_node_gallery'                                                                                                                    [status]", 
+            "title": "Gallery"
+        }, 
+        {
+            "location": "/migration/#video", 
+            "text": "Note:  After discussion, the video content type will not be migrated (95% for sure)  For the sake of migration, the video field value for some reasons do not migrate.", 
+            "title": "Video"
+        }, 
+        {
+            "location": "/migration/#flexslider", 
+            "text": "Note:\n* Everything migrated.", 
+            "title": "Flexslider"
+        }, 
+        {
+            "location": "/migration/#menu", 
+            "text": "Note: \n* Most links were migrate. \n- 34 links failed - Views and other related\n- 20 ignored - Admin links, which no need for migrate  ~/git_repos/nyu-law-d8/web \u00b7 (migration\u00b1)\n\u27e9 fin drush migrate-import  upgrade_d7_menu_links\nProcessed 4462 items (4408 created, 0 updated, 34 failed, 20 ignored) - done with 'upgrade_d7_menu_links'                                                                                                                  [status]\nupgrade_d7_menu_links Migration - 34 failed.                                                                                                                                                                               [error]\n\n\n\n\n\n~/git_repos/nyu-law-d8/web \u00b7 (migration\u00b1)\n\u27e9 fin drush mmsg  upgrade_d7_menu_links\n source_ids_hash                                                   level   message\n 29d2bab6d873450d1187d89170841fdbd5d9de7607ce397c9b9dc874b02e6ce3  1       The path  internal:/aggregator  failed validation.\n e7aad5d001ee00794225748e79a15a428586dcab6315bee28de24925e505620a  1       The path  internal:/ctools_ajax_sample  failed validation.\n f2697de0b770e1961d78ed7e6b6172cd88dbbb6dce5d6375afa9f29c3933ce6f  1       The path  internal:/blog  failed validation.\n ebb421f19738aa44eadc9b25fcbe3920751444168c3c2d077a2eb442d77d722f  1       The path  internal:/mega_menu/1  failed validation.\n 20de6002d1f8e607915226d9811fa40db148de4a8d9a13afb7367868f644fd70  1       The path  internal:/press-highlights  failed validation.\n a30bc1ff563489d908e3220d256e46960636c2745bca8fcd0d38deff6bae06a8  1       The path  internal:/announcements  failed validation.\n c2db12edbf17f51cc17300ad58711ee16693ec38d9a07a9f2fa6683ef3415de5  1       The path  internal:/presshightlights  failed validation.\n f223b8e78c3cd1612f6c835cb2103fd1ba638445504f3bfb9a7dfd68f2cdd8a9  1       The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n f7d4bd88be8b82828e18d881dc4b67cb600442b1f5fea5b08786acbe98553dd5  1       The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n 86532f82132bed200ca21961ca3514200841477b7079fcf70c2ab72cafe1ac8d  1       The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n 37399ff49ae366f50e6f090754563e0c524825e0cee9a69056dbd757c1bfeea8  1       The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n 0be26f44f6e396a0dd6c58084008f5dae1e22fd31160f26d68921e69d31556e8  1       The path  internal:/featured-alumni-view  failed validation.\n 562c4b3050ab9f55b1907e76cf4f22127f81ae1a38cbf49d581639af6dce5fa6  1       The path  internal:/aggregator/categories  failed validation.\n cc884b0b7807a909d0663641c264956e5bb2fc83a243c3e1c03d3cec7a8e3679  1       The path  internal:/aggregator/sources  failed validation.\n a6678c6096408964adc595c0edf0431a297290fbbd3efc0514740944bf30ecf3  1       The path  internal:/ctools_ajax_sample/jumped  failed validation.\n aa5eb1a31c0aa8f946d8b7c013dd2829621b52ce5e6b205be8ad18590b4f1d1f  1       The path  internal:/blog/%  failed validation.\n 9168cd967017f71606987b2b402dc063e1a07d1bc5f7d43b6995fb13c268f0a6  1       The path  internal:/node/294  failed validation.\n 12613bfa414e2508eb70cf4af47e1283071d60144e6b95b97b4d7d8210021e5c  1       The path  internal:/presshighlights  failed validation.\n 2e56e78fe884bf6471753179c1ba451b2e2f7dfda56f98bedb25b8b9c6c09e89  1       The path  internal:/news/alumni  failed validation.\n 0d6979d68221aae00033393d3b25fb1ea11c9f2ab64935850e2d3e927ac4a1cb  1       The path  internal:/news/centers  failed validation.\n 3daca132bb9ddd46c32b39c58d21408f0ad891d43c98ba40d93c0d853ec7fa07  1       The path  internal:/news/faculty  failed validation.\n 64e1f55b676184bed00cbc8aea54ec25c0eee58736cea88d3f861e830ccd9ac4  1       The path  internal:/news/global  failed validation.\n 95a788d9430dfa7e3366d234dab0c3d87f3338094efce16739d1b25a7c9a42f8  1       The path  internal:/news/students  failed validation.\n c74d0d062d8985b93c69093f4a74f9dfbdd4d27eee525846dd353bb4a2570c38  1       The path  internal:/news-ideas  failed validation.\n 7e54fb5d4dc1f71fb71ea70427c483bb1a6d80cb76647c9b78e45f83aa946330  1       The path  internal:/node/269  failed validation.\n 9a93537c4a9a846b6cbf688a85a7e2acf0f14273f6adf7cea9e9ec4b3441f384  1       The path  internal:/node/322  failed validation.\n 679fca41d8c8b672d8f43e8a3ef8380f59deb096d1df22d679ba883f19685953  1       The path  internal:/node/320  failed validation.\n bde65a4332992b1ff2c3b0abcbeff6be4d59910a80bc476182311a7ea54b91a1  1       The path  internal:/node/308  failed validation.\n a8e6dd7bd7bfb9ce304ec6aeac0c05b41608398ff2e22e895f20f16b38781d53  1       The path  internal:/node/323  failed validation.\n 040299cc82da4721e674cf734cdbd33db869865e51d084de0e4ff33006e128e5  1       The path  internal:/node/270  failed validation.\n be48aa213b83876b40c219d4268ea41cccdb77d3982a312f6e72daf172a78d7a  1       The path  internal:/node/325  failed validation.\n e067f1710b30cc3408cf6b319ccfc0bc02e04ce5b2fb75a6f5b17d3496292208  1       The path  internal:/node/288  failed validation.\n 59710eaa8e25a5e6b7e9d19ef9fe24966889c3c784d808756b20422db2102e10  1       The path  internal:/node/327  failed validation.\n db3162a1db176c0de98be598bf9167029010951e03c96f8080afde5f99448a2a  1       The path  internal:/node/293  failed validation.\n\n\n\n# Following menu link were ignored, because they are admin links\nselect * from menu_links where mlid in (434,93354,85819,93512,93514,80308,78871,93406,196,68391,93421,79563,491,197,79824,93427,94270,93355,96859,96852);", 
+            "title": "Menu"
+        }, 
+        {
+            "location": "/migration/#custom-blocks_1", 
+            "text": "", 
+            "title": "Custom blocks"
+        }, 
+        {
+            "location": "/migration/#workbench", 
+            "text": "Note:  Content type now need to create a field for access control  The first level node ( Access control ) no longer avaiable for selection  Todo:   Check if workbench for node set correctly  Most likely in D8, we need to create the field and then need a custom migration", 
+            "title": "Workbench"
+        }, 
+        {
+            "location": "/migration/#metatags", 
+            "text": "Note:\n* In D8, in order to enable content to override default metatags settings, the content type needs to create a new field for metatag. See  Metatags per content Drupal8?  Todo:  Need meta description migrate  This could be just site config,not migration.", 
+            "title": "MetaTags"
+        }, 
+        {
+            "location": "/migration/#404-redirect", 
+            "text": "Note:\n* Dropping it", 
+            "title": "404 Redirect"
+        }, 
+        {
+            "location": "/post-migration-todo/", 
+            "text": "Things need to do after migration\n\n\nMetatag migrtion\n\n\nThere are about 48 metatags need to be migrate manually.\n\n\nselect entity_id from metatag group by entity_id;\n\n\n\n\n\nCrazyeggs\n\n\nMigrate crazyeggs snippet. https://jira.law.nyu.edu/browse/DRP-923\n\n\nFrom migrate-later branch\n\n\nMigrate everything from the migrate-later branch in D7 project", 
+            "title": "Things need to do after migration"
+        }, 
+        {
+            "location": "/post-migration-todo/#things-need-to-do-after-migration", 
+            "text": "", 
+            "title": "Things need to do after migration"
+        }, 
+        {
+            "location": "/post-migration-todo/#metatag-migrtion", 
+            "text": "There are about 48 metatags need to be migrate manually.  select entity_id from metatag group by entity_id;", 
+            "title": "Metatag migrtion"
+        }, 
+        {
+            "location": "/post-migration-todo/#crazyeggs", 
+            "text": "Migrate crazyeggs snippet. https://jira.law.nyu.edu/browse/DRP-923", 
+            "title": "Crazyeggs"
+        }, 
+        {
+            "location": "/post-migration-todo/#from-migrate-later-branch", 
+            "text": "Migrate everything from the migrate-later branch in D7 project", 
+            "title": "From migrate-later branch"
+        }, 
+        {
+            "location": "/questions/", 
+            "text": "Do we need to migrate Fix404 redirect?\n\n\n\n\nNo\n\n\n\n\nMeta Tag config, clayton re-examine the settings for each type. \n\n\n\n\nJust need to make sure meta description for some nodes will be migrated. There already a task defined for post migration.", 
+            "title": "Questions"
+        }, 
+        {
+            "location": "/testing/", 
+            "text": "Access control\n\n\n\n\n\n\nMake sure a user who doesn\nt has access right can not edit the piece of the content", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/testing/#access-control", 
+            "text": "Make sure a user who doesn t has access right can not edit the piece of the content", 
+            "title": "Access control"
+        }, 
+        {
+            "location": "/update/", 
+            "text": "Core/Module update\n\n\nThe site uses composer as package manger to manage core/module update. Generally, you will use the following commands:\n\n\n# To find out what are out-of-date\ncomposer outdate\n\n# To update a module\ncomposer update [module_name]\n\nor\n\ncomposer update [module_name]:[specific version using sematnic versioning syntax]\n\n\n# Run update script\ncd [drupal_root]\ndrush updatedb\n\n\n\n\n\nUpdate Drupal Core\n\n\ncomposer update drupal/core --with-dependencies\n\n# Sometimes drupal/core update is not update, use following to check what is blocking the update.\ncomposer prohibits drupal/core:8.5.0 // version number\n\n\n\n\nTo learn more about composer with syntax for versioning, take a look at \nDrupal 8 Composer Best Practices\n.\n\n\nComposer install vs. Composer update\n\n\nNever run composer update in production. Correct workflow should be: \n1. Run Composer update in dev to generate the composer.lock file \n2. Run composer install in prod based on composer.lock\n\n\n\n\nSee: \ncomposer update\n vs \ncomposer install", 
+            "title": "Core/Module update"
+        }, 
+        {
+            "location": "/update/#coremodule-update", 
+            "text": "The site uses composer as package manger to manage core/module update. Generally, you will use the following commands:  # To find out what are out-of-date\ncomposer outdate\n\n# To update a module\ncomposer update [module_name]\n\nor\n\ncomposer update [module_name]:[specific version using sematnic versioning syntax]\n\n\n# Run update script\ncd [drupal_root]\ndrush updatedb", 
+            "title": "Core/Module update"
+        }, 
+        {
+            "location": "/update/#update-drupal-core", 
+            "text": "composer update drupal/core --with-dependencies\n\n# Sometimes drupal/core update is not update, use following to check what is blocking the update.\ncomposer prohibits drupal/core:8.5.0 // version number  To learn more about composer with syntax for versioning, take a look at  Drupal 8 Composer Best Practices .", 
+            "title": "Update Drupal Core"
+        }, 
+        {
+            "location": "/update/#composer-install-vs-composer-update", 
+            "text": "Never run composer update in production. Correct workflow should be: \n1. Run Composer update in dev to generate the composer.lock file \n2. Run composer install in prod based on composer.lock   See:  composer update  vs  composer install", 
+            "title": "Composer install vs. Composer update"
+        }, 
+        {
+            "location": "/weeklyupdate/", 
+            "text": "Weekly Update\n\n\nMay 14th, 2018\n\n\nQuestions:\n\n\nTo do\n\n\n\n\nFinishing up migration for workbench (node access + editor role)\n\n\nRecreate views\n\n\nSolution for custom blocks\n\n\nCustom module - protected page via coldfusion\n\n\nProtected page migration", 
+            "title": "Weekly Update"
+        }, 
+        {
+            "location": "/weeklyupdate/#weekly-update", 
+            "text": "", 
+            "title": "Weekly Update"
+        }, 
+        {
+            "location": "/weeklyupdate/#may-14th-2018", 
+            "text": "", 
+            "title": "May 14th, 2018"
+        }, 
+        {
+            "location": "/weeklyupdate/#questions", 
+            "text": "", 
+            "title": "Questions:"
+        }, 
+        {
+            "location": "/weeklyupdate/#to-do", 
+            "text": "Finishing up migration for workbench (node access + editor role)  Recreate views  Solution for custom blocks  Custom module - protected page via coldfusion  Protected page migration", 
+            "title": "To do"
+        }
+    ]
+}
