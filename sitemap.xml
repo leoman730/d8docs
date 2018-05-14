@@ -59,6 +59,14 @@
 
     
     <url>
+     <loc>/search/</loc>
+     <lastmod>2018-05-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>/testing/</loc>
      <lastmod>2018-05-14</lastmod>
      <changefreq>daily</changefreq>
