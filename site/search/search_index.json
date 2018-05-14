@@ -226,14 +226,34 @@
             "title": "Questions"
         }, 
         {
+            "location": "/search/", 
+            "text": "Search\n\n\nWe may want to retire the custom make cse module in favor of contrib module or solr search.\n\n\nFor contrib, look at:\n    - \nImplementing Google Custom Search\n\n    - \nGoogle Custom Search Engine", 
+            "title": "Search"
+        }, 
+        {
+            "location": "/search/#search", 
+            "text": "We may want to retire the custom make cse module in favor of contrib module or solr search.  For contrib, look at:\n    -  Implementing Google Custom Search \n    -  Google Custom Search Engine", 
+            "title": "Search"
+        }, 
+        {
             "location": "/testing/", 
-            "text": "Access control\n\n\n\n\n\n\nMake sure a user who doesn\nt has access right can not edit the piece of the content", 
+            "text": "Testing\n\n\nAccess control\n\n\n\n\nMake sure a user who doesn\nt has access right can not edit the piece of the content\n\n\n\n\nProtected Page (module)\n\n\n\n\nMake sure page that is passwd protected still working", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/testing/#testing", 
+            "text": "", 
             "title": "Testing"
         }, 
         {
             "location": "/testing/#access-control", 
             "text": "Make sure a user who doesn t has access right can not edit the piece of the content", 
             "title": "Access control"
+        }, 
+        {
+            "location": "/testing/#protected-page-module", 
+            "text": "Make sure page that is passwd protected still working", 
+            "title": "Protected Page (module)"
         }, 
         {
             "location": "/update/", 
@@ -257,7 +277,7 @@
         }, 
         {
             "location": "/weeklyupdate/", 
-            "text": "Weekly Update\n\n\nMay 14th, 2018\n\n\nQuestions:\n\n\nTo do\n\n\n\n\nFinishing up migration for workbench (node access + editor role)\n\n\nRecreate views\n\n\nSolution for custom blocks\n\n\nCustom module - protected page via coldfusion\n\n\nProtected page migration", 
+            "text": "Weekly Update\n\n\nMay 14th, 2018\n\n\nQuestions:\n\n\nProtected page: \n    - There are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n    - If they need, probably need manually migrated\n\n\nTo do\n\n\n\n\nFinishing up migration for workbench (node access + editor role)\n\n\nRecreate views\n\n\nSolution for custom blocks\n\n\nCustom module - protected page via coldfusion\n\n\nProtected page migration", 
             "title": "Weekly Update"
         }, 
         {
@@ -272,7 +292,7 @@
         }, 
         {
             "location": "/weeklyupdate/#questions", 
-            "text": "", 
+            "text": "Protected page: \n    - There are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n    - If they need, probably need manually migrated", 
             "title": "Questions:"
         }, 
         {
