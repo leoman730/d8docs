@@ -42,12 +42,12 @@
         }, 
         {
             "location": "/configuration_magnagement/", 
-            "text": "Configuration Management\n\n\nSome useful modules:\n* \nConfiguration installer\n\nUse this module to install a new site based on configs.", 
+            "text": "Configuration Management\n\n\nSome useful modules:\n\n\n\n\nConfiguration installer\n - Use this module to install a new site based on configs.", 
             "title": "Configuration Management"
         }, 
         {
             "location": "/configuration_magnagement/#configuration-management", 
-            "text": "Some useful modules:\n*  Configuration installer \nUse this module to install a new site based on configs.", 
+            "text": "Some useful modules:   Configuration installer  - Use this module to install a new site based on configs.", 
             "title": "Configuration Management"
         }, 
         {
@@ -277,7 +277,7 @@
         }, 
         {
             "location": "/weeklyupdate/", 
-            "text": "Weekly Update\n\n\nMay 14th, 2018\n\n\nQuestions:\n\n\nProtected page: \n    - There are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n    - If they need, probably need manually migrated\n\n\nTo do\n\n\n\n\nFinishing up migration for workbench (node access + editor role)\n\n\nRecreate views\n\n\nSolution for custom blocks\n\n\nCustom module - protected page via coldfusion\n\n\nProtected page migration", 
+            "text": "Weekly Update\n\n\nMay 14th, 2018\n\n\nQuestions\n\n\nProtected page\n\n\n\n\nThere are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n\n\nIf they need, probably need manually migrated\n\n\n\n\nTo do\n\n\n\n\nFinishing up migration for workbench (node access + editor role)\n\n\nRecreate views\n\n\nSolution for custom blocks\n\n\nCustom module - protected page via coldfusion\n\n\nProtected page migration", 
             "title": "Weekly Update"
         }, 
         {
@@ -292,8 +292,8 @@
         }, 
         {
             "location": "/weeklyupdate/#questions", 
-            "text": "Protected page: \n    - There are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n    - If they need, probably need manually migrated", 
-            "title": "Questions:"
+            "text": "Protected page   There are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.  If they need, probably need manually migrated", 
+            "title": "Questions"
         }, 
         {
             "location": "/weeklyupdate/#to-do", 
