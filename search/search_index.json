@@ -277,7 +277,7 @@
         }, 
         {
             "location": "/weeklyupdate/", 
-            "text": "Weekly Update\n\n\nMay 14th, 2018\n\n\nQuestions:\n\n\nProtected page: \n    * There are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n    * If they need, probably need manually migrated\n\n\nTo do\n\n\n\n\nFinishing up migration for workbench (node access + editor role)\n\n\nRecreate views\n\n\nSolution for custom blocks\n\n\nCustom module - protected page via coldfusion\n\n\nProtected page migration", 
+            "text": "Weekly Update\n\n\nMay 14th, 2018\n\n\nQuestions:\n\n\nProtected page: \n    - There are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n    - If they need, probably need manually migrated\n\n\nTo do\n\n\n\n\nFinishing up migration for workbench (node access + editor role)\n\n\nRecreate views\n\n\nSolution for custom blocks\n\n\nCustom module - protected page via coldfusion\n\n\nProtected page migration", 
             "title": "Weekly Update"
         }, 
         {
@@ -292,7 +292,7 @@
         }, 
         {
             "location": "/weeklyupdate/#questions", 
-            "text": "Protected page: \n    * There are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n    * If they need, probably need manually migrated", 
+            "text": "Protected page: \n    - There are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n    - If they need, probably need manually migrated", 
             "title": "Questions:"
         }, 
         {
