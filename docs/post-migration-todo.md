@@ -1,6 +1,6 @@
 # Things need to do after migration
 
-## Metatag migrtion
+## Metatag migration
 
 There are about 48 metatags need to be migrate manually.
 
@@ -9,8 +9,13 @@ select entity_id from metatag group by entity_id;
 
 ```
 
+## Views
+- This can be done in an earlier stage, and use configuration management to export configs into code.
+
+
+
 ## Crazyeggs
-Migrate crazyeggs snippet. https://jira.law.nyu.edu/browse/DRP-923
+- Migrate crazyeggs snippet. https://jira.law.nyu.edu/browse/DRP-923
 
 
 ## From migrate-later branch

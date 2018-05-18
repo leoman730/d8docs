@@ -244,6 +244,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../api/" title="API" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../changes/" title="Changes from Drupal 7" class="md-nav__link">
       Changes from Drupal 7
     </a>
@@ -258,6 +270,18 @@
   <li class="md-nav__item">
     <a href="../configuration_magnagement/" title="Configuration Management" class="md-nav__link">
       Configuration Management
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../development/" title="Development" class="md-nav__link">
+      Development
     </a>
   </li>
 
@@ -306,6 +330,26 @@
   <a href="#some-useful-migration-commands" title="Some useful migration commands" class="md-nav__link">
     Some useful migration commands
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-migration-issues" title="Common migration issues" class="md-nav__link">
+    Common migration issues
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#revision-id" title="Revision id" class="md-nav__link">
+    Revision id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -606,6 +650,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#common-migration-issues" title="Common migration issues" class="md-nav__link">
+    Common migration issues
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#revision-id" title="Revision id" class="md-nav__link">
+    Revision id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#migration-steps" title="Migration Steps:" class="md-nav__link">
     Migration Steps:
   </a>
@@ -854,11 +918,22 @@ fin drush migrate-import --feedback --execute-dependencies --tag=Field
 # To refresh migration in a module
 drush config-import --partial --source=module/custom/nyulaw_migrate/config/install
 
-
+# To reset migrtion status
+drush migrate-reset-status
 
 
 </code></pre>
 
+<h2 id="common-migration-issues">Common migration issues</h2>
+<h3 id="revision-id">Revision id</h3>
+<pre><code>Drupal\Core\Entity\EntityStorageException: Update existing 'node' entity revision while changing the revision ID is not supported. in Drupal\Core\Entity\ContentEntityStorageBase-&gt;doPreSave() (line 598 of                [error]
+/var/www/web/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php).
+Update existing 'node' entity revision while changing the revision ID is not supported. (/var/www/web/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php:829)                                                     [error]
+Processed 1 item (0 created, 0 updated, 1 failed, 0 ignored) - done with 'upgrade_d7_node_basic_page'                                                                                                                      [status]
+upgrade_d7_node_basic_page Migration - 1 failed.                                                                                                                                                                           [error]
+</code></pre>
+
+<p>Remove vid mapping from migration script.</p>
 <h2 id="migration-steps">Migration Steps:</h2>
 <p>Primary migration will divide into 3 phrases: migrate site structures from source site; modify site structure based on new needs; migrate content from source site.</p>
 <ol>

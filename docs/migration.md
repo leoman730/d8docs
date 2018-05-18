@@ -36,10 +36,26 @@ fin drush migrate-import --feedback --execute-dependencies --tag=Field
 # To refresh migration in a module
 drush config-import --partial --source=module/custom/nyulaw_migrate/config/install
 
-
+# To reset migrtion status
+drush migrate-reset-status
 
 
 ```
+
+## Common migration issues
+
+### Revision id
+```
+Drupal\Core\Entity\EntityStorageException: Update existing 'node' entity revision while changing the revision ID is not supported. in Drupal\Core\Entity\ContentEntityStorageBase->doPreSave() (line 598 of                [error]
+/var/www/web/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php).
+Update existing 'node' entity revision while changing the revision ID is not supported. (/var/www/web/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php:829)                                                     [error]
+Processed 1 item (0 created, 0 updated, 1 failed, 0 ignored) - done with 'upgrade_d7_node_basic_page'                                                                                                                      [status]
+upgrade_d7_node_basic_page Migration - 1 failed.                                                                                                                                                                           [error]
+```
+
+Remove vid mapping from migration script.
+
+
 
 ## Migration Steps:
 Primary migration will divide into 3 phrases: migrate site structures from source site; modify site structure based on new needs; migrate content from source site.
