@@ -244,6 +244,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../api/" title="API" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../changes/" title="Changes from Drupal 7" class="md-nav__link">
       Changes from Drupal 7
     </a>
@@ -258,6 +270,18 @@
   <li class="md-nav__item">
     <a href="../configuration_magnagement/" title="Configuration Management" class="md-nav__link">
       Configuration Management
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../development/" title="Development" class="md-nav__link">
+      Development
     </a>
   </li>
 
@@ -319,8 +343,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#metatag-migrtion" title="Metatag migrtion" class="md-nav__link">
-    Metatag migrtion
+  <a href="#metatag-migration" title="Metatag migration" class="md-nav__link">
+    Metatag migration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views" title="Views" class="md-nav__link">
+    Views
   </a>
   
 </li>
@@ -431,8 +462,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#metatag-migrtion" title="Metatag migrtion" class="md-nav__link">
-    Metatag migrtion
+  <a href="#metatag-migration" title="Metatag migration" class="md-nav__link">
+    Metatag migration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views" title="Views" class="md-nav__link">
+    Views
   </a>
   
 </li>
@@ -471,14 +509,20 @@
                 
                 
                 <h1 id="things-need-to-do-after-migration">Things need to do after migration</h1>
-<h2 id="metatag-migrtion">Metatag migrtion</h2>
+<h2 id="metatag-migration">Metatag migration</h2>
 <p>There are about 48 metatags need to be migrate manually.</p>
 <pre><code>select entity_id from metatag group by entity_id;
 
 </code></pre>
 
+<h2 id="views">Views</h2>
+<ul>
+<li>This can be done in an earlier stage, and use configuration management to export configs into code.</li>
+</ul>
 <h2 id="crazyeggs">Crazyeggs</h2>
-<p>Migrate crazyeggs snippet. https://jira.law.nyu.edu/browse/DRP-923</p>
+<ul>
+<li>Migrate crazyeggs snippet. https://jira.law.nyu.edu/browse/DRP-923</li>
+</ul>
 <h2 id="from-migrate-later-branch">From migrate-later branch</h2>
 <p>Migrate everything from the migrate-later branch in D7 project</p>
                 
