@@ -313,6 +313,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#module-upgrade-helper" title="Module upgrade helper" class="md-nav__link">
+    Module upgrade helper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block" title="Block" class="md-nav__link">
+    Block
+  </a>
+  
+</li>
+      
       
       
       
@@ -447,6 +461,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#module-upgrade-helper" title="Module upgrade helper" class="md-nav__link">
+    Module upgrade helper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block" title="Block" class="md-nav__link">
+    Block
+  </a>
+  
+</li>
+      
       
       
       
@@ -475,6 +503,22 @@
 <h2 id="debug-within-vim">Debug within vim</h2>
 <ul>
 <li><a href="https://github.com/vim-vdebug/vdebug">vDebug</a></li>
+</ul>
+<h2 id="module-upgrade-helper">Module upgrade helper</h2>
+<p>There&rsquo;s useful module <a href="https://www.drupal.org/documentation/modules/drupalmoduleupgrader">Drupal Module Upgrader</a> can be used to identify compatibilitiess issue D7 modules.</p>
+<pre><code># To generate an issue report
+drush dmu-analyze  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication
+
+# To try automatically fix issue
+drush dmu-upgrade  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication
+
+</code></pre>
+
+<h2 id="block">Block</h2>
+<ul>
+<li><a href="https://www.drupal.org/docs/8/api/block-api/overview">Block API</a></li>
+<li><a href="http://befused.com/drupal/block-programmatically">Transitioning from Drupal 7 to Drupal 8: programmatically creating blocks</a></li>
+<li><a href="https://www.drupal.org/node/1880620">Block are now plugins</a></li>
 </ul>
                 
                   
