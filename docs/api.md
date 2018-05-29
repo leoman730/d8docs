@@ -56,3 +56,15 @@ Psy Shell v0.9.3 (PHP 7.1.15 — cli) by Justin Hileman
      "base_field_override" => Drupal\Core\Config\Entity\ConfigEntityType {#2616},
    ]
 ```
+
+
+## Caching
+```
+# Reference: https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheBackendInterface.php/interface/CacheBackendInterface/8.2.x
+\Drupal::cache('page')->get('http://d8.law.nyu.edu/academics/colloquia/legalhistory:html')
+\Drupal::cache('page')->delete('http://d8.law.nyu.edu/academics/colloquia/legalhistory:html')
+
+
+```
+
+

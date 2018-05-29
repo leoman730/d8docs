@@ -1,11 +1,32 @@
 # Weekly Update
 
+## May 28th, 2018 (week #3)
+
+### Questions
+- What is the status for protected page clean up?
+- What is the status for the invalid menu items?
+    - Invalid menu deleted from live site? [Status](https://docs.google.com/spreadsheets/d/1hRQsA26YvzzE_rXdJCr-O0Xp8cH_fZo8iI27VrJvSl8/edit#gid=0)
+- How draft works in D8?
+
+
+
+### Discusstion
+
+
+### To do
+- Custom module migration
+    - Protected Page for CF
+    - Event Calendar
+
+
+
 ## May 21th, 2018 (week #2)
 
 ### Questions
 - What is the status for protected page clean up?
 - What is the status for the invalid menu items?
 - Are all users in the system active?
+    - Need content purge
 - Should workbench assignment manually migrate?
 
 ### Discusstion
