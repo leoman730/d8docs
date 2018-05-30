@@ -7,10 +7,14 @@
 - What is the status for the invalid menu items?
     - Invalid menu deleted from live site? [Status](https://docs.google.com/spreadsheets/d/1hRQsA26YvzzE_rXdJCr-O0Xp8cH_fZo8iI27VrJvSl8/edit#gid=0)
 - How draft works in D8?
-
+- List of different news item page
 
 
 ### Discusstion
+- Drupal 8 Page caching. 
+    - How protected page can be secured even with anonymous user caching turn on.
+
+
 
 
 ### To do
