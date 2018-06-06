@@ -22,7 +22,7 @@
         }, 
         {
             "location": "/api/", 
-            "text": "API\n\n\nEntity Type\n\n\nTo list all entity type defined in a site:\n\n\n\u27e9 fin drupal shell\nPsy Shell v0.9.3 (PHP 7.1.15 \u2014 cli) by Justin Hileman\n\n \\Drupal::entityTypeManager()-\ngetDefinitions()\n=\n [\n     \nblock\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5804},\n     \nblock_content\n =\n Drupal\\Core\\Entity\\ContentEntityType {#5522},\n     \nblock_content_type\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5227},\n     \ncomment_type\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4830},\n     \ncomment\n =\n Drupal\\Core\\Entity\\ContentEntityType {#5532},\n     \neditor\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5463},\n     \nembed_button\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#3650},\n     \nentity_browser\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5346},\n     \nfield_config\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4754},\n     \nfield_storage_config\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4537},\n     \nfield_collection\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#3300},\n     \nfield_collection_item\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4408},\n     \nfile\n =\n Drupal\\Core\\Entity\\ContentEntityType {#5844},\n     \nfilter_format\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4009},\n     \nflexslider\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5761},\n     \nimage_style\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5676},\n     \nmedia_type\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5496},\n     \nmedia\n =\n Drupal\\Core\\Entity\\ContentEntityType {#5064},\n     \nmetatag_defaults\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4583},\n     \nmigration_group\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4250},\n     \nmigration\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4987},\n     \nnode_type\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4008},\n     \nnode\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4481},\n     \nrdf_mapping\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#3654},\n     \nredirect\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4261},\n     \nsearch_page\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5178},\n     \nshortcut_set\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5084},\n     \nshortcut\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4967},\n     \nsimple_block\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4908},\n     \naction\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5005},\n     \nmenu\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4861},\n     \ntaxonomy_term\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4834},\n     \ntaxonomy_vocabulary\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4943},\n     \ntour\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#3760},\n     \nuser\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4354},\n     \nuser_role\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4341},\n     \nsection_association\n =\n Drupal\\Core\\Entity\\ContentEntityType {#3622},\n     \naccess_scheme\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5545},\n     \nmenu_link_content\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4691},\n     \nview\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5728},\n     \nparagraph\n =\n Drupal\\Core\\Entity\\ContentEntityType {#5040},\n     \nparagraphs_type\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4687},\n     \ndate_format\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#2723},\n     \nentity_form_mode\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#6008},\n     \nentity_view_display\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5861},\n     \nentity_form_display\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5833},\n     \nentity_view_mode\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#6052},\n     \nbase_field_override\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#2616},\n   ]\n\n\n\n\nCaching\n\n\n# Reference: https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheBackendInterface.php/interface/CacheBackendInterface/8.2.x\n\\Drupal::cache('page')-\nget('http://d8.law.nyu.edu/academics/colloquia/legalhistory:html')\n\\Drupal::cache('page')-\ndelete('http://d8.law.nyu.edu/academics/colloquia/legalhistory:html')", 
+            "text": "API\n\n\nEntity Type\n\n\nTo list all entity type defined in a site:\n\n\n\u27e9 fin drupal shell\nPsy Shell v0.9.3 (PHP 7.1.15 \u2014 cli) by Justin Hileman\n\n \\Drupal::entityTypeManager()-\ngetDefinitions()\n=\n [\n     \nblock\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5804},\n     \nblock_content\n =\n Drupal\\Core\\Entity\\ContentEntityType {#5522},\n     \nblock_content_type\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5227},\n     \ncomment_type\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4830},\n     \ncomment\n =\n Drupal\\Core\\Entity\\ContentEntityType {#5532},\n     \neditor\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5463},\n     \nembed_button\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#3650},\n     \nentity_browser\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5346},\n     \nfield_config\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4754},\n     \nfield_storage_config\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4537},\n     \nfield_collection\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#3300},\n     \nfield_collection_item\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4408},\n     \nfile\n =\n Drupal\\Core\\Entity\\ContentEntityType {#5844},\n     \nfilter_format\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4009},\n     \nflexslider\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5761},\n     \nimage_style\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5676},\n     \nmedia_type\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5496},\n     \nmedia\n =\n Drupal\\Core\\Entity\\ContentEntityType {#5064},\n     \nmetatag_defaults\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4583},\n     \nmigration_group\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4250},\n     \nmigration\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4987},\n     \nnode_type\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4008},\n     \nnode\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4481},\n     \nrdf_mapping\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#3654},\n     \nredirect\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4261},\n     \nsearch_page\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5178},\n     \nshortcut_set\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5084},\n     \nshortcut\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4967},\n     \nsimple_block\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4908},\n     \naction\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5005},\n     \nmenu\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4861},\n     \ntaxonomy_term\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4834},\n     \ntaxonomy_vocabulary\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4943},\n     \ntour\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#3760},\n     \nuser\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4354},\n     \nuser_role\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4341},\n     \nsection_association\n =\n Drupal\\Core\\Entity\\ContentEntityType {#3622},\n     \naccess_scheme\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5545},\n     \nmenu_link_content\n =\n Drupal\\Core\\Entity\\ContentEntityType {#4691},\n     \nview\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5728},\n     \nparagraph\n =\n Drupal\\Core\\Entity\\ContentEntityType {#5040},\n     \nparagraphs_type\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#4687},\n     \ndate_format\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#2723},\n     \nentity_form_mode\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#6008},\n     \nentity_view_display\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5861},\n     \nentity_form_display\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#5833},\n     \nentity_view_mode\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#6052},\n     \nbase_field_override\n =\n Drupal\\Core\\Config\\Entity\\ConfigEntityType {#2616},\n   ]\n\n\n\n\nCaching\n\n\n# Reference: https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheBackendInterface.php/interface/CacheBackendInterface/8.2.x\n\\Drupal::cache('page')-\nget('http://d8.law.nyu.edu/academics/colloquia/legalhistory:html')\n\\Drupal::cache('page')-\ndelete('http://d8.law.nyu.edu/academics/colloquia/legalhistory:html')\n\n\n\n\n\n\nEvent subscription\n\n\nThe \nCacheExclude\n module is a small module that show how to create event subscription in Drupal 8.", 
             "title": "API"
         }, 
         {
@@ -39,6 +39,11 @@
             "location": "/api/#caching", 
             "text": "# Reference: https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheBackendInterface.php/interface/CacheBackendInterface/8.2.x\n\\Drupal::cache('page')- get('http://d8.law.nyu.edu/academics/colloquia/legalhistory:html')\n\\Drupal::cache('page')- delete('http://d8.law.nyu.edu/academics/colloquia/legalhistory:html')", 
             "title": "Caching"
+        }, 
+        {
+            "location": "/api/#event-subscription", 
+            "text": "The  CacheExclude  module is a small module that show how to create event subscription in Drupal 8.", 
+            "title": "Event subscription"
         }, 
         {
             "location": "/changes/", 
@@ -82,13 +87,23 @@
         }, 
         {
             "location": "/development/", 
-            "text": "Development\n\n\n\n\nTwig Xdebug\n\n\nDevel\n\n\nMigrate Devel\n\n\n\n\nDebug within vim\n\n\n\n\nvDebug\n\n\n\n\nModule upgrade helper\n\n\nThere\ns useful module \nDrupal Module Upgrader\n can be used to identify compatibilitiess issue D7 modules.\n\n\n# To generate an issue report\ndrush dmu-analyze  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication\n\n# To try automatically fix issue\ndrush dmu-upgrade  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication\n\n\n\n\n\nBlock\n\n\n\n\nBlock API\n\n\nTransitioning from Drupal 7 to Drupal 8: programmatically creating blocks\n\n\nBlock are now plugins", 
+            "text": "Development\n\n\nDrupal coding standard\n\n\n\n\nDrupal Coding Standard\n\n\n\n\nHelpful during development\n\n\n\n\nTwig Xdebug\n\n\nDevel\n\n\nMigrate Devel\n\n\n\n\nDebug within vim\n\n\n\n\nvDebug\n\n\n\n\nModule upgrade helper\n\n\nThere\ns useful module \nDrupal Module Upgrader\n can be used to identify compatibilitiess issue D7 modules.\n\n\n# To generate an issue report\ndrush dmu-analyze  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication\n\n# To try automatically fix issue\ndrush dmu-upgrade  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication\n\n\n\n\n\nDrupal console\n\n\nUse Drupal console to enable/disable development mode. See \nEnable development mode\n\n\ndrupal site:mode dev\ndrupal site:mode prod\n\n\n\n\nCache\n\n\nCache in D8\n\n\nBlock\n\n\n\n\nBlock API\n\n\nTransitioning from Drupal 7 to Drupal 8: programmatically creating blocks\n\n\nBlock are now plugins", 
             "title": "Development"
         }, 
         {
             "location": "/development/#development", 
-            "text": "Twig Xdebug  Devel  Migrate Devel", 
+            "text": "", 
             "title": "Development"
+        }, 
+        {
+            "location": "/development/#drupal-coding-standard", 
+            "text": "Drupal Coding Standard", 
+            "title": "Drupal coding standard"
+        }, 
+        {
+            "location": "/development/#helpful-during-development", 
+            "text": "Twig Xdebug  Devel  Migrate Devel", 
+            "title": "Helpful during development"
         }, 
         {
             "location": "/development/#debug-within-vim", 
@@ -101,9 +116,34 @@
             "title": "Module upgrade helper"
         }, 
         {
+            "location": "/development/#drupal-console", 
+            "text": "Use Drupal console to enable/disable development mode. See  Enable development mode  drupal site:mode dev\ndrupal site:mode prod", 
+            "title": "Drupal console"
+        }, 
+        {
+            "location": "/development/#cache", 
+            "text": "Cache in D8", 
+            "title": "Cache"
+        }, 
+        {
             "location": "/development/#block", 
             "text": "Block API  Transitioning from Drupal 7 to Drupal 8: programmatically creating blocks  Block are now plugins", 
             "title": "Block"
+        }, 
+        {
+            "location": "/improvement/", 
+            "text": "Improvement\n\n\nAuthentication\n\n\nIf cache server is in front of the site, make sure that this will not accidentally serving protected page.\nPossible solution: Create a page as a placeholder, ex: /protected_page, any protected content will serve via this page.\nInstruct Drupal and cache server do not cache such page.", 
+            "title": "Improvement"
+        }, 
+        {
+            "location": "/improvement/#improvement", 
+            "text": "", 
+            "title": "Improvement"
+        }, 
+        {
+            "location": "/improvement/#authentication", 
+            "text": "If cache server is in front of the site, make sure that this will not accidentally serving protected page.\nPossible solution: Create a page as a placeholder, ex: /protected_page, any protected content will serve via this page.\nInstruct Drupal and cache server do not cache such page.", 
+            "title": "Authentication"
         }, 
         {
             "location": "/menu/", 
@@ -262,7 +302,7 @@
         }, 
         {
             "location": "/post-migration-todo/", 
-            "text": "Things need to do after migration\n\n\nMetatag migration\n\n\nThere are about 48 metatags need to be migrate manually.\n\n\nselect entity_id from metatag group by entity_id;\n\n\n\n\n\nViews\n\n\n\n\nThis can be done in an earlier stage, and use configuration management to export configs into code.\n\n\n\n\nCrazyeggs\n\n\n\n\nMigrate crazyeggs snippet. https://jira.law.nyu.edu/browse/DRP-923\n\n\n\n\nFrom migrate-later branch\n\n\nMigrate everything from the migrate-later branch in D7 project", 
+            "text": "Things need to do after migration\n\n\nMetatag migration\n\n\nThere are about 48 metatags need to be migrate manually.\n\n\nselect entity_id from metatag group by entity_id;\n\n\n\n\n\nViews\n\n\n\n\nThis can be done in an earlier stage, and use configuration management to export configs into code.\n\n\n\n\nCrazyeggs\n\n\n\n\nMigrate crazyeggs snippet. https://jira.law.nyu.edu/browse/DRP-923\n\n\n\n\nFrom migrate-later branch\n\n\nMigrate everything from the migrate-later branch in D7 project\n\n\nHttps\n\n\n\n\nIf we want to turn on https when site goes live, we need to make sure that the web fonts from typography is pointing to https not http", 
             "title": "Things need to do after migration"
         }, 
         {
@@ -291,9 +331,44 @@
             "title": "From migrate-later branch"
         }, 
         {
+            "location": "/post-migration-todo/#https", 
+            "text": "If we want to turn on https when site goes live, we need to make sure that the web fonts from typography is pointing to https not http", 
+            "title": "Https"
+        }, 
+        {
             "location": "/questions/", 
             "text": "Do we need to migrate Fix404 redirect?\n\n\n\n\nNo\n\n\n\n\nMeta Tag config, clayton re-examine the settings for each type. \n\n\n\n\nJust need to make sure meta description for some nodes will be migrated. There already a task defined for post migration.", 
             "title": "Questions"
+        }, 
+        {
+            "location": "/resources/", 
+            "text": "Resources\n\n\nBlock\n\n\nDrupal 8 Block API\n\n\nAttach a library\n\n\nCache\n\n\nCache in D8\n\n\nForm\n\n\nForm Element Reference\n\n\nTheme\n\n\nCustom template for custom module", 
+            "title": "Resources"
+        }, 
+        {
+            "location": "/resources/#resources", 
+            "text": "", 
+            "title": "Resources"
+        }, 
+        {
+            "location": "/resources/#block", 
+            "text": "Drupal 8 Block API  Attach a library", 
+            "title": "Block"
+        }, 
+        {
+            "location": "/resources/#cache", 
+            "text": "Cache in D8", 
+            "title": "Cache"
+        }, 
+        {
+            "location": "/resources/#form", 
+            "text": "Form Element Reference", 
+            "title": "Form"
+        }, 
+        {
+            "location": "/resources/#theme", 
+            "text": "Custom template for custom module", 
+            "title": "Theme"
         }, 
         {
             "location": "/search/", 
@@ -347,7 +422,7 @@
         }, 
         {
             "location": "/weeklyupdate/", 
-            "text": "Weekly Update\n\n\nMay 28th, 2018 (week #3)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nWhat is the status for the invalid menu items?\n\n\nInvalid menu deleted from live site? \nStatus\n\n\n\n\n\n\nHow draft works in D8?\n\n\nList of different news item page\n\n\n\n\nDiscusstion\n\n\n\n\nDrupal 8 Page caching. \n\n\nHow protected page can be secured even with anonymous user caching turn on.\n\n\n\n\n\n\n\n\nTo do\n\n\n\n\nCustom module migration\n\n\nProtected Page for CF\n\n\nEvent Calendar\n\n\n\n\n\n\n\n\nMay 21th, 2018 (week #2)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nWhat is the status for the invalid menu items?\n\n\nAre all users in the system active?\n\n\nNeed content purge\n\n\n\n\n\n\nShould workbench assignment manually migrate?\n\n\n\n\nDiscusstion\n\n\n\n\nWorkbench node access: The toppest root level \nAccess Control\n is no longer available in D8\n\n\nIn D7, there\ns opion to allow the vacaburary be one of the active editorial section (admin/structure/taxonomy/access_control/edit). This option is not longer available in D8.\n\n\nNode Clone module, communication should know that this module will not be avaiabled in D8. There\ns may be a draft feature in D8 so it may worth of time to find out.\n\n\n\n\nTo do\n\n\nMay 14th, 2018 (week #1)\n\n\nQuestions\n\n\nProtected page\n\n\n\n\nThere are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n\n\nIf they need, probably need manually migrated\n\n\n\n\nTo do\n\n\n\n\nFinishing up migration for workbench (node access + editor role)\n\n\nRecreate views (clayton will work on this later in the d8 instance)\n\n\nSolution for custom blocks\n\n\nCustom module - protected page via coldfusion\n\n\nProtected page migration\n\n\nClayton to re-examine the list of menu-items, which didn\nt migrate\n\n\n\n\n The path \ninternal:/aggregator\n failed validation.\n The path \ninternal:/ctools_ajax_sample\n failed validation.\n The path \ninternal:/blog\n failed validation.\n The path \ninternal:/mega_menu/1\n failed validation.\n The path \ninternal:/press-highlights\n failed validation.\n The path \ninternal:/announcements\n failed validation.\n The path \ninternal:/presshightlights\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/featured-alumni-view\n failed validation.\n The path \ninternal:/aggregator/categories\n failed validation.\n The path \ninternal:/aggregator/sources\n failed validation.\n The path \ninternal:/ctools_ajax_sample/jumped\n failed validation.\n The path \ninternal:/blog/%\n failed validation.\n The path \ninternal:/node/294\n failed validation.\n The path \ninternal:/presshighlights\n failed validation.\n The path \ninternal:/news/alumni\n failed validation.\n The path \ninternal:/news/centers\n failed validation.\n The path \ninternal:/news/faculty\n failed validation.\n The path \ninternal:/news/global\n failed validation.\n The path \ninternal:/news/students\n failed validation.\n The path \ninternal:/news-ideas\n failed validation.\n The path \ninternal:/node/269\n failed validation.\n The path \ninternal:/node/322\n failed validation.\n The path \ninternal:/node/320\n failed validation.\n The path \ninternal:/node/308\n failed validation.\n The path \ninternal:/node/323\n failed validation.\n The path \ninternal:/node/270\n failed validation.\n The path \ninternal:/node/325\n failed validation.\n The path \ninternal:/node/288\n failed validation.\n The path \ninternal:/node/327\n failed validation.\n The path \ninternal:/node/293\n failed validation.", 
+            "text": "Weekly Update\n\n\nJune 4th, 2018 (week #4)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nHow draft works in D8?\n\n\n\n\nDiscussion\n\n\nTo do\n\n\n\n\nCustom module migration\n\n\nEvent Calendar\n\n\n\n\n\n\nCreate missing views\n\n\n\n\nMay 28th, 2018 (week #3)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nWhat is the status for the invalid menu items?\n\n\nInvalid menu deleted from live site? \nStatus\n\n\n\n\n\n\nHow draft works in D8?\n\n\nList of different news item page\n\n\nPage type\n\n\n\n\n\n\n\n\nDiscussion\n\n\n\n\nDrupal 8 Page caching. \n\n\nHow protected page can be secured even with anonymous user caching turn on.\n\n\nVarnish may bring issue for protected page.\n\n\n\n\n\n\n\n\nTo do\n\n\n\n\nCustom module migration\n\n\nProtected Page for CF\n\n\nEvent Calendar\n\n\n\n\n\n\n\n\nMay 21th, 2018 (week #2)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nWhat is the status for the invalid menu items?\n\n\nAre all users in the system active?\n\n\nNeed content purge\n\n\n\n\n\n\nShould workbench assignment manually migrate?\n\n\n\n\nDiscussion\n\n\n\n\nWorkbench node access: The toppest root level \nAccess Control\n is no longer available in D8\n\n\nIn D7, there\ns opion to allow the vacaburary be one of the active editorial section (admin/structure/taxonomy/access_control/edit). This option is not longer available in D8.\n\n\nNode Clone module, communication should know that this module will not be avaiabled in D8. There\ns may be a draft feature in D8 so it may worth of time to find out.\n\n\n\n\nTo do\n\n\nMay 14th, 2018 (week #1)\n\n\nQuestions\n\n\nProtected page\n\n\n\n\nThere are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n\n\nIf they need, probably need manually migrated\n\n\n\n\nTo do\n\n\n\n\nFinishing up migration for workbench (node access + editor role)\n\n\nRecreate views (clayton will work on this later in the d8 instance)\n\n\nSolution for custom blocks\n\n\nCustom module - protected page via coldfusion\n\n\nProtected page migration\n\n\nClayton to re-examine the list of menu-items, which didn\nt migrate\n\n\n\n\n The path \ninternal:/aggregator\n failed validation.\n The path \ninternal:/ctools_ajax_sample\n failed validation.\n The path \ninternal:/blog\n failed validation.\n The path \ninternal:/mega_menu/1\n failed validation.\n The path \ninternal:/press-highlights\n failed validation.\n The path \ninternal:/announcements\n failed validation.\n The path \ninternal:/presshightlights\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/featured-alumni-view\n failed validation.\n The path \ninternal:/aggregator/categories\n failed validation.\n The path \ninternal:/aggregator/sources\n failed validation.\n The path \ninternal:/ctools_ajax_sample/jumped\n failed validation.\n The path \ninternal:/blog/%\n failed validation.\n The path \ninternal:/node/294\n failed validation.\n The path \ninternal:/presshighlights\n failed validation.\n The path \ninternal:/news/alumni\n failed validation.\n The path \ninternal:/news/centers\n failed validation.\n The path \ninternal:/news/faculty\n failed validation.\n The path \ninternal:/news/global\n failed validation.\n The path \ninternal:/news/students\n failed validation.\n The path \ninternal:/news-ideas\n failed validation.\n The path \ninternal:/node/269\n failed validation.\n The path \ninternal:/node/322\n failed validation.\n The path \ninternal:/node/320\n failed validation.\n The path \ninternal:/node/308\n failed validation.\n The path \ninternal:/node/323\n failed validation.\n The path \ninternal:/node/270\n failed validation.\n The path \ninternal:/node/325\n failed validation.\n The path \ninternal:/node/288\n failed validation.\n The path \ninternal:/node/327\n failed validation.\n The path \ninternal:/node/293\n failed validation.", 
             "title": "Weekly Update"
         }, 
         {
@@ -356,22 +431,42 @@
             "title": "Weekly Update"
         }, 
         {
+            "location": "/weeklyupdate/#june-4th-2018-week-4", 
+            "text": "", 
+            "title": "June 4th, 2018 (week #4)"
+        }, 
+        {
+            "location": "/weeklyupdate/#questions", 
+            "text": "What is the status for protected page clean up?  How draft works in D8?", 
+            "title": "Questions"
+        }, 
+        {
+            "location": "/weeklyupdate/#discussion", 
+            "text": "", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/weeklyupdate/#to-do", 
+            "text": "Custom module migration  Event Calendar    Create missing views", 
+            "title": "To do"
+        }, 
+        {
             "location": "/weeklyupdate/#may-28th-2018-week-3", 
             "text": "", 
             "title": "May 28th, 2018 (week #3)"
         }, 
         {
-            "location": "/weeklyupdate/#questions", 
-            "text": "What is the status for protected page clean up?  What is the status for the invalid menu items?  Invalid menu deleted from live site?  Status    How draft works in D8?  List of different news item page", 
+            "location": "/weeklyupdate/#questions_1", 
+            "text": "What is the status for protected page clean up?  What is the status for the invalid menu items?  Invalid menu deleted from live site?  Status    How draft works in D8?  List of different news item page  Page type", 
             "title": "Questions"
         }, 
         {
-            "location": "/weeklyupdate/#discusstion", 
-            "text": "Drupal 8 Page caching.   How protected page can be secured even with anonymous user caching turn on.", 
-            "title": "Discusstion"
+            "location": "/weeklyupdate/#discussion_1", 
+            "text": "Drupal 8 Page caching.   How protected page can be secured even with anonymous user caching turn on.  Varnish may bring issue for protected page.", 
+            "title": "Discussion"
         }, 
         {
-            "location": "/weeklyupdate/#to-do", 
+            "location": "/weeklyupdate/#to-do_1", 
             "text": "Custom module migration  Protected Page for CF  Event Calendar", 
             "title": "To do"
         }, 
@@ -381,17 +476,17 @@
             "title": "May 21th, 2018 (week #2)"
         }, 
         {
-            "location": "/weeklyupdate/#questions_1", 
+            "location": "/weeklyupdate/#questions_2", 
             "text": "What is the status for protected page clean up?  What is the status for the invalid menu items?  Are all users in the system active?  Need content purge    Should workbench assignment manually migrate?", 
             "title": "Questions"
         }, 
         {
-            "location": "/weeklyupdate/#discusstion_1", 
+            "location": "/weeklyupdate/#discussion_2", 
             "text": "Workbench node access: The toppest root level  Access Control  is no longer available in D8  In D7, there s opion to allow the vacaburary be one of the active editorial section (admin/structure/taxonomy/access_control/edit). This option is not longer available in D8.  Node Clone module, communication should know that this module will not be avaiabled in D8. There s may be a draft feature in D8 so it may worth of time to find out.", 
-            "title": "Discusstion"
+            "title": "Discussion"
         }, 
         {
-            "location": "/weeklyupdate/#to-do_1", 
+            "location": "/weeklyupdate/#to-do_2", 
             "text": "", 
             "title": "To do"
         }, 
@@ -401,12 +496,12 @@
             "title": "May 14th, 2018 (week #1)"
         }, 
         {
-            "location": "/weeklyupdate/#questions_2", 
+            "location": "/weeklyupdate/#questions_3", 
             "text": "Protected page   There are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.  If they need, probably need manually migrated", 
             "title": "Questions"
         }, 
         {
-            "location": "/weeklyupdate/#to-do_2", 
+            "location": "/weeklyupdate/#to-do_3", 
             "text": "Finishing up migration for workbench (node access + editor role)  Recreate views (clayton will work on this later in the d8 instance)  Solution for custom blocks  Custom module - protected page via coldfusion  Protected page migration  Clayton to re-examine the list of menu-items, which didn t migrate    The path  internal:/aggregator  failed validation.\n The path  internal:/ctools_ajax_sample  failed validation.\n The path  internal:/blog  failed validation.\n The path  internal:/mega_menu/1  failed validation.\n The path  internal:/press-highlights  failed validation.\n The path  internal:/announcements  failed validation.\n The path  internal:/presshightlights  failed validation.\n The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n The path  internal:/featured-alumni-view  failed validation.\n The path  internal:/aggregator/categories  failed validation.\n The path  internal:/aggregator/sources  failed validation.\n The path  internal:/ctools_ajax_sample/jumped  failed validation.\n The path  internal:/blog/%  failed validation.\n The path  internal:/node/294  failed validation.\n The path  internal:/presshighlights  failed validation.\n The path  internal:/news/alumni  failed validation.\n The path  internal:/news/centers  failed validation.\n The path  internal:/news/faculty  failed validation.\n The path  internal:/news/global  failed validation.\n The path  internal:/news/students  failed validation.\n The path  internal:/news-ideas  failed validation.\n The path  internal:/node/269  failed validation.\n The path  internal:/node/322  failed validation.\n The path  internal:/node/320  failed validation.\n The path  internal:/node/308  failed validation.\n The path  internal:/node/323  failed validation.\n The path  internal:/node/270  failed validation.\n The path  internal:/node/325  failed validation.\n The path  internal:/node/288  failed validation.\n The path  internal:/node/327  failed validation.\n The path  internal:/node/293  failed validation.", 
             "title": "To do"
         }
