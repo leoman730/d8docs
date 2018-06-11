@@ -1,5 +1,59 @@
 # Weekly Update
 
+## June 11th, 2018 (week #5)
+
+### Questions
+- What is the status for protected page clean up?
+- How draft works in D8?
+
+
+### Discussion
+- View: docket >> Current broken on the live site 
+- View: Featured Blog Post >> Broken
+- View: /editweb
+- View: Feeds view >> Are we still using it? Seems like most of those blocks are disabled
+- View: Field Blocks >> Related to field collection, need verify if this still use
+- View: /gac >> Google analytics counter?
+- View: Recent and Promoted >> Some of the blocks seems unused, can we disabled those
+
+
+
+- The link_attributes module only allow options for class, not for id; therefore, for the footer, we need to convert id to use class 
+- Event calendar module upgraded with more admin options
+ 
+### To do
+- Update drupal core + modules
+- Create missing views
+	- Faculty FlexSlider Service View
+    - Faculty Service View
+	- Featured Alumni
+	- FlexSlider Views (Flexslider block, New Magazine Flexslider)
+	- Ideas Story Grid
+	- News/Press Highlights
+	- Recent and Promoted
+
+
+
+- Works on template for the news_items
+- Basic page - work on sidebar items
+- Homepage 
+
+
+## June 4th, 2018 (week #4)
+
+### Questions
+- What is the status for protected page clean up?
+- How draft works in D8?
+
+### Discussion
+- The link_attributes module only allow options for class, not for id; therefore, for the footer, we need to convert id to use class 
+
+### To do
+- Custom module migration
+    - Event Calendar
+- Create missing views
+
+
 ## May 28th, 2018 (week #3)
 
 ### Questions
@@ -8,12 +62,13 @@
     - Invalid menu deleted from live site? [Status](https://docs.google.com/spreadsheets/d/1hRQsA26YvzzE_rXdJCr-O0Xp8cH_fZo8iI27VrJvSl8/edit#gid=0)
 - How draft works in D8?
 - List of different news item page
+    - [Page type](https://docs.google.com/spreadsheets/d/16T4ns_7iqVucMoRRzhWW_boSfYlc1jobmYZV4I39pBs/edit#gid=529093495)
 
 
-### Discusstion
+### Discussion
 - Drupal 8 Page caching. 
     - How protected page can be secured even with anonymous user caching turn on.
-
+    - Varnish may bring issue for protected page.
 
 
 
@@ -33,7 +88,7 @@
     - Need content purge
 - Should workbench assignment manually migrate?
 
-### Discusstion
+### Discussion
 - Workbench node access: The toppest root level 'Access Control' is no longer available in D8
 - In D7, there's opion to allow the vacaburary be one of the active editorial section (admin/structure/taxonomy/access_control/edit). This option is not longer available in D8.
 - Node Clone module, communication should know that this module will not be avaiabled in D8. There's may be a draft feature in D8 so it may worth of time to find out.

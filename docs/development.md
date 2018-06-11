@@ -1,5 +1,9 @@
 # Development
 
+## Drupal coding standard
+- [Drupal Coding Standard](https://www.drupal.org/docs/develop/coding-standards)
+
+## Helpful during development
 - [Twig Xdebug](https://www.drupal.org/project/twig_xdebug)
 - [Devel](https://www.drupal.org/project/devel)
 - [Migrate Devel](https://www.drupal.org/project/migrate_devel)
@@ -20,6 +24,16 @@ drush dmu-analyze  --skip=info --path=modules/custom/nyulaw_authentication nyula
 drush dmu-upgrade  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication
 
 ```
+
+## Drupal console
+Use Drupal console to enable/disable development mode. See [Enable development mode](https://www.drupaleasy.com/quicktips/enabling-development-mode-local-drupal-8-site)
+```
+drupal site:mode dev
+drupal site:mode prod
+```
+
+## Cache
+[Cache in D8](https://www.adcisolutions.com/knowledge/cache-drupal-8)
 
 
 ## Block 

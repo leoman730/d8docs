@@ -292,6 +292,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../improvement/" title="Improvement" class="md-nav__link">
+      Improvement
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../menu/" title="Menu" class="md-nav__link">
       Menu
     </a>
@@ -370,6 +382,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#https" title="Https" class="md-nav__link">
+    Https
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-services" title="Web services" class="md-nav__link">
+    Web services
+  </a>
+  
+</li>
+      
       
       
       
@@ -389,6 +415,30 @@
   <li class="md-nav__item">
     <a href="../questions/" title="Questions" class="md-nav__link">
       Questions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../resources/" title="Resources" class="md-nav__link">
+      Resources
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../rest_service/" title="Rest service" class="md-nav__link">
+      Rest service
     </a>
   </li>
 
@@ -489,6 +539,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#https" title="Https" class="md-nav__link">
+    Https
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-services" title="Web services" class="md-nav__link">
+    Web services
+  </a>
+  
+</li>
+      
       
       
       
@@ -525,6 +589,39 @@
 </ul>
 <h2 id="from-migrate-later-branch">From migrate-later branch</h2>
 <p>Migrate everything from the migrate-later branch in D7 project</p>
+<h2 id="https">Https</h2>
+<ul>
+<li>If we want to turn on https when site goes live, we need to make sure that the web fonts from typography is pointing to https not http</li>
+</ul>
+<h2 id="web-services">Web services</h2>
+<ul>
+<li>Need to modify coldfusion to point to the new service links:<ul>
+<li>http://d8.law.nyu.edu/faculty_flexslider_service_view?facultyid=20315&amp;items_per_page=1&amp;_format=json</li>
+<li>http://d8.law.nyu.edu/faculty_service_view?facultyid=20315&amp;items_per_page=1&amp;_format=json</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Comparision</th>
+<th>D8</th>
+<th>D7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flexslider View</td>
+<td>{host_name}/faculty_flexslider_service_view?facultyid=20315&amp;items_per_page=1&amp;_format=json</td>
+<td>{host_name}/api/v1/views/faculty_flexslider_service_view?facultyid=20315&amp;limit=1</td>
+</tr>
+<tr>
+<td>Faculty View</td>
+<td>{host_name}/faculty_service_view?facultyid=20315&amp;items_per_page=1&amp;_format=json</td>
+<td>{hostname}/api/v1/views/faculty_service_view?facultyid=20315&amp;limit=1</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 

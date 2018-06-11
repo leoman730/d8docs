@@ -21,3 +21,17 @@ select entity_id from metatag group by entity_id;
 ## From migrate-later branch
 Migrate everything from the migrate-later branch in D7 project
 
+
+## Https
+- If we want to turn on https when site goes live, we need to make sure that the web fonts from typography is pointing to https not http
+
+
+## Web services
+- Need to modify coldfusion to point to the new service links:
+	- http://d8.law.nyu.edu/faculty_flexslider_service_view?facultyid=20315&items_per_page=1&_format=json
+	- http://d8.law.nyu.edu/faculty_service_view?facultyid=20315&items_per_page=1&_format=json
+
+| Comparision | D8 | D7 |
+|---|---|---|
+|Flexslider View| {host_name}/faculty_flexslider_service_view?facultyid=20315&items_per_page=1&_format=json| {host_name}/api/v1/views/faculty_flexslider_service_view?facultyid=20315&limit=1	
+|Faculty View|{host_name}/faculty_service_view?facultyid=20315&items_per_page=1&_format=json|{hostname}/api/v1/views/faculty_service_view?facultyid=20315&limit=1
