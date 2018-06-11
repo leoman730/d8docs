@@ -596,11 +596,14 @@
 <h2 id="web-services">Web services</h2>
 <ul>
 <li>Need to modify coldfusion to point to the new service links:<ul>
-<li>http://d8.law.nyu.edu/faculty_flexslider_service_view?facultyid=20315&amp;items_per_page=5&amp;_format=json</li>
+<li>http://d8.law.nyu.edu/faculty_flexslider_service_view?facultyid=20315&amp;items_per_page=1&amp;_format=json</li>
 <li>http://d8.law.nyu.edu/faculty_service_view?facultyid=20315&amp;items_per_page=1&amp;_format=json</li>
 </ul>
 </li>
 </ul>
+<p>|Comparision|D8 |D7
+|Flexslider View| {host_name}/faculty_flexslider_service_view?facultyid=20315&amp;items_per_page=1&amp;_format=json| {host_name}/api/v1/views/faculty_flexslider_service_view?facultyid=20315&amp;limit=1 <br />
+|Faculty View|{host_name}/faculty_service_view?facultyid=20315&amp;items_per_page=1&amp;_format=json|{hostname}/api/v1/views/faculty_service_view?facultyid=20315&amp;limit=1</p>
                 
                   
                 

@@ -302,7 +302,7 @@
         }, 
         {
             "location": "/post-migration-todo/", 
-            "text": "Things need to do after migration\n\n\nMetatag migration\n\n\nThere are about 48 metatags need to be migrate manually.\n\n\nselect entity_id from metatag group by entity_id;\n\n\n\n\n\nViews\n\n\n\n\nThis can be done in an earlier stage, and use configuration management to export configs into code.\n\n\n\n\nCrazyeggs\n\n\n\n\nMigrate crazyeggs snippet. https://jira.law.nyu.edu/browse/DRP-923\n\n\n\n\nFrom migrate-later branch\n\n\nMigrate everything from the migrate-later branch in D7 project\n\n\nHttps\n\n\n\n\nIf we want to turn on https when site goes live, we need to make sure that the web fonts from typography is pointing to https not http\n\n\n\n\nWeb services\n\n\n\n\nNeed to modify coldfusion to point to the new service links:\n\n\nhttp://d8.law.nyu.edu/faculty_flexslider_service_view?facultyid=20315\nitems_per_page=5\n_format=json\n\n\nhttp://d8.law.nyu.edu/faculty_service_view?facultyid=20315\nitems_per_page=1\n_format=json", 
+            "text": "Things need to do after migration\n\n\nMetatag migration\n\n\nThere are about 48 metatags need to be migrate manually.\n\n\nselect entity_id from metatag group by entity_id;\n\n\n\n\n\nViews\n\n\n\n\nThis can be done in an earlier stage, and use configuration management to export configs into code.\n\n\n\n\nCrazyeggs\n\n\n\n\nMigrate crazyeggs snippet. https://jira.law.nyu.edu/browse/DRP-923\n\n\n\n\nFrom migrate-later branch\n\n\nMigrate everything from the migrate-later branch in D7 project\n\n\nHttps\n\n\n\n\nIf we want to turn on https when site goes live, we need to make sure that the web fonts from typography is pointing to https not http\n\n\n\n\nWeb services\n\n\n\n\nNeed to modify coldfusion to point to the new service links:\n\n\nhttp://d8.law.nyu.edu/faculty_flexslider_service_view?facultyid=20315\nitems_per_page=1\n_format=json\n\n\nhttp://d8.law.nyu.edu/faculty_service_view?facultyid=20315\nitems_per_page=1\n_format=json\n\n\n\n\n\n\n\n\n|Comparision|D8 |D7\n|Flexslider View| {host_name}/faculty_flexslider_service_view?facultyid=20315\nitems_per_page=1\n_format=json| {host_name}/api/v1/views/faculty_flexslider_service_view?facultyid=20315\nlimit=1 \n\n|Faculty View|{host_name}/faculty_service_view?facultyid=20315\nitems_per_page=1\n_format=json|{hostname}/api/v1/views/faculty_service_view?facultyid=20315\nlimit=1", 
             "title": "Things need to do after migration"
         }, 
         {
@@ -337,7 +337,7 @@
         }, 
         {
             "location": "/post-migration-todo/#web-services", 
-            "text": "Need to modify coldfusion to point to the new service links:  http://d8.law.nyu.edu/faculty_flexslider_service_view?facultyid=20315 items_per_page=5 _format=json  http://d8.law.nyu.edu/faculty_service_view?facultyid=20315 items_per_page=1 _format=json", 
+            "text": "Need to modify coldfusion to point to the new service links:  http://d8.law.nyu.edu/faculty_flexslider_service_view?facultyid=20315 items_per_page=1 _format=json  http://d8.law.nyu.edu/faculty_service_view?facultyid=20315 items_per_page=1 _format=json     |Comparision|D8 |D7\n|Flexslider View| {host_name}/faculty_flexslider_service_view?facultyid=20315 items_per_page=1 _format=json| {host_name}/api/v1/views/faculty_flexslider_service_view?facultyid=20315 limit=1  \n|Faculty View|{host_name}/faculty_service_view?facultyid=20315 items_per_page=1 _format=json|{hostname}/api/v1/views/faculty_service_view?facultyid=20315 limit=1", 
             "title": "Web services"
         }, 
         {
@@ -412,7 +412,7 @@
         }, 
         {
             "location": "/testing/", 
-            "text": "Testing\n\n\nAccess control\n\n\n\n\nMake sure a user who doesn\nt has access right can not edit the piece of the content\n\n\nIf a user has \nfull access control\n priviledge, she should be able to access all content for editing\n\n\n\n\nProtected Page (module)\n\n\n\n\nMake sure page that is passwd protected still working", 
+            "text": "Testing\n\n\nAccess control\n\n\n\n\nMake sure a user who doesn\nt has access right can not edit the piece of the content\n\n\nIf a user has \nfull access control\n priviledge, she should be able to access all content for editing\n\n\n\n\nProtected Page (module)\n\n\n\n\nMake sure page that is passwd protected still working\n\n\n\n\nCalendar Block\n\n\n\n\nCalendar Homepage block should only display \nPing to homepage event\n\n\nCache durarion setting in the admin should reflect in the calendar block.\n\n\nMake sure drupal page load not hitting Coldfusion everytime\n\n\n\n\n\n\n\n\nColdfusion Authentication\n\n\n\n\nMake sure only login user can view the content\n\n\nMake sure once user logout, content viewing need to be re-authenticated\n\n\n\n\nFaculty Services\n\n\n\n\nFaculty profile could pull data from Faculty service (faculty view, faculty flexslider view)", 
             "title": "Testing"
         }, 
         {
@@ -429,6 +429,21 @@
             "location": "/testing/#protected-page-module", 
             "text": "Make sure page that is passwd protected still working", 
             "title": "Protected Page (module)"
+        }, 
+        {
+            "location": "/testing/#calendar-block", 
+            "text": "Calendar Homepage block should only display  Ping to homepage event  Cache durarion setting in the admin should reflect in the calendar block.  Make sure drupal page load not hitting Coldfusion everytime", 
+            "title": "Calendar Block"
+        }, 
+        {
+            "location": "/testing/#coldfusion-authentication", 
+            "text": "Make sure only login user can view the content  Make sure once user logout, content viewing need to be re-authenticated", 
+            "title": "Coldfusion Authentication"
+        }, 
+        {
+            "location": "/testing/#faculty-services", 
+            "text": "Faculty profile could pull data from Faculty service (faculty view, faculty flexslider view)", 
+            "title": "Faculty Services"
         }, 
         {
             "location": "/update/", 
