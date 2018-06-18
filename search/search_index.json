@@ -132,7 +132,7 @@
         }, 
         {
             "location": "/improvement/", 
-            "text": "Improvement\n\n\nAuthentication\n\n\nIf cache server is in front of the site, make sure that this will not accidentally serving protected page.\nPossible solution: Create a page as a placeholder, ex: /protected_page, any protected content will serve via this page.\nInstruct Drupal and cache server do not cache such page.", 
+            "text": "Improvement\n\n\nAuthentication\n\n\nIf cache server is in front of the site, make sure that this will not accidentally serving protected page.\nPossible solution: Create a page as a placeholder, ex: /protected_page, any protected content will serve via this page.\nInstruct Drupal and cache server do not cache such page.\n\n\nBasic page with Hero Image\n\n\nA new paragraph type for basic page to include a full-width hero image on the top. Similar to the layout for the msltax page.\n\n\nNews landing page\n\n\nRight now rely on paginator, would be nice to have auto generate content based on scroll position.", 
             "title": "Improvement"
         }, 
         {
@@ -144,6 +144,16 @@
             "location": "/improvement/#authentication", 
             "text": "If cache server is in front of the site, make sure that this will not accidentally serving protected page.\nPossible solution: Create a page as a placeholder, ex: /protected_page, any protected content will serve via this page.\nInstruct Drupal and cache server do not cache such page.", 
             "title": "Authentication"
+        }, 
+        {
+            "location": "/improvement/#basic-page-with-hero-image", 
+            "text": "A new paragraph type for basic page to include a full-width hero image on the top. Similar to the layout for the msltax page.", 
+            "title": "Basic page with Hero Image"
+        }, 
+        {
+            "location": "/improvement/#news-landing-page", 
+            "text": "Right now rely on paginator, would be nice to have auto generate content based on scroll position.", 
+            "title": "News landing page"
         }, 
         {
             "location": "/menu/", 
@@ -347,7 +357,7 @@
         }, 
         {
             "location": "/resources/", 
-            "text": "Resources\n\n\nAccessibility\n\n\n\n\nAccessibility tools for JavaScript in Drupal 8\n\n\n\n\nBlock\n\n\n\n\nDrupal 8 Block API\n\n\nAttach a library\n\n\n\n\nCache\n\n\n\n\nBasic Cache API\n\n\nPractical: how you\nll typically use the Cache API\n\n\nCacheability of render arrays\n\n\nAuto-placeholdering\n\n\nCache in D8\n\n\nDisable Cache during development\n\n\nBeginner guild to caching in Drupal 8\n\n\n\n\nForm\n\n\n\n\nForm Element Reference\n\n\n\n\nTheme\n\n\n\n\nCustom template for custom module\n\n\n\n\nRender\n\n\n\n\nRender arrays\n\n\nThe Drupal 8 render pipeline\n\n\n\n\nWeb service:\n\n\n\n\nYour First RESTful View in Drupal 8\n\n\nInsights and Useful Snippets for the D8 Rest\n  Module", 
+            "text": "Resources\n\n\nAccessibility\n\n\n\n\nAccessibility tools for JavaScript in Drupal 8\n\n\n\n\nBlock\n\n\n\n\nDrupal 8 Block API\n\n\nAttach a library\n\n\n\n\nCache\n\n\n\n\nBasic Cache API\n\n\nPractical: how you\nll typically use the Cache API\n\n\nCacheability of render arrays\n\n\nAuto-placeholdering\n\n\nCache in D8\n\n\nDisable Cache during development\n\n\nBeginner guild to caching in Drupal 8\n\n\n\n\nForm\n\n\n\n\nForm Element Reference\n\n\n\n\nMedia\n\n\n\n\nHow to Embed Just About Anything in Drupal 8 WYSIWYG with Entity Embed and URL Embed\n\n\n\n\nTheme\n\n\n\n\nCustom template for custom module\n\n\n\n\nRender\n\n\n\n\nRender arrays\n\n\nThe Drupal 8 render pipeline\n\n\n\n\nWeb service:\n\n\n\n\nYour First RESTful View in Drupal 8\n\n\nInsights and Useful Snippets for the D8 Rest\n  Module", 
             "title": "Resources"
         }, 
         {
@@ -374,6 +384,11 @@
             "location": "/resources/#form", 
             "text": "Form Element Reference", 
             "title": "Form"
+        }, 
+        {
+            "location": "/resources/#media", 
+            "text": "How to Embed Just About Anything in Drupal 8 WYSIWYG with Entity Embed and URL Embed", 
+            "title": "Media"
         }, 
         {
             "location": "/resources/#theme", 
@@ -412,7 +427,7 @@
         }, 
         {
             "location": "/testing/", 
-            "text": "Testing\n\n\nAccess control\n\n\n\n\nMake sure a user who doesn\nt has access right can not edit the piece of the content\n\n\nIf a user has \nfull access control\n priviledge, she should be able to access all content for editing\n\n\n\n\nProtected Page (module)\n\n\n\n\nMake sure page that is passwd protected still working\n\n\n\n\nCalendar Block\n\n\n\n\nCalendar Homepage block should only display \nPing to homepage event\n\n\nCache durarion setting in the admin should reflect in the calendar block.\n\n\nMake sure drupal page load not hitting Coldfusion everytime\n\n\n\n\n\n\n\n\nColdfusion Authentication\n\n\n\n\nMake sure only login user can view the content\n\n\nMake sure once user logout, content viewing need to be re-authenticated\n\n\n\n\nFaculty Services\n\n\n\n\nFaculty profile could pull data from Faculty service (faculty view, faculty flexslider view)", 
+            "text": "Testing\n\n\nAccess control\n\n\n\n\nMake sure a user who doesn\nt has access right can not edit the piece of the content\n\n\nIf a user has \nfull access control\n priviledge, she should be able to access all content for editing\n\n\n\n\nProtected Page (module)\n\n\n\n\nMake sure page that is passwd protected still working\n\n\n\n\nCalendar Block\n\n\n\n\nCalendar Homepage block should only display \nPing to homepage event\n\n\nCache durarion setting in the admin should reflect in the calendar block.\n\n\nMake sure drupal page load not hitting Coldfusion everytime\n\n\n\n\n\n\n\n\nColdfusion Authentication\n\n\n\n\nMake sure only login user can view the content\n\n\nMake sure once user logout, content viewing need to be re-authenticated\n\n\n\n\nFaculty Services\n\n\n\n\nFaculty profile could pull data from Faculty service (faculty view, faculty flexslider view)\n\n\n\n\nNews/Press highlight\n\n\n\n\nThere should be a redirect icon for news/press highlight that link to external page.", 
             "title": "Testing"
         }, 
         {
@@ -446,6 +461,11 @@
             "title": "Faculty Services"
         }, 
         {
+            "location": "/testing/#newspress-highlight", 
+            "text": "There should be a redirect icon for news/press highlight that link to external page.", 
+            "title": "News/Press highlight"
+        }, 
+        {
             "location": "/update/", 
             "text": "Core/Module update\n\n\nThe site uses composer as package manger to manage core/module update. Generally, you will use the following commands:\n\n\n# To find out what are out-of-date\ncomposer outdate\n\n# To update a module\ncomposer update [module_name]\n\nor\n\ncomposer update [module_name]:[specific version using sematnic versioning syntax]\n\n\n# Run update script\ncd [drupal_root]\ndrush updatedb\n\n\n\n\n\nUpdate Drupal Core\n\n\ncomposer update drupal/core --with-dependencies\n\n# Sometimes drupal/core update is not update, use following to check what is blocking the update.\ncomposer prohibits drupal/core:8.5.0 // version number\n\n\n\n\nTo learn more about composer with syntax for versioning, take a look at \nDrupal 8 Composer Best Practices\n.\n\n\nComposer install vs. Composer update\n\n\nNever run composer update in production. Correct workflow should be: \n1. Run Composer update in dev to generate the composer.lock file \n2. Run composer install in prod based on composer.lock\n\n\n\n\nSee: \ncomposer update\n vs \ncomposer install", 
             "title": "Core/Module update"
@@ -467,7 +487,7 @@
         }, 
         {
             "location": "/weeklyupdate/", 
-            "text": "Weekly Update\n\n\nJune 11th, 2018 (week #5)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nHow draft works in D8?\n\n\n\n\nDiscussion\n\n\n\n\nView: docket \n Current broken on the live site \n\n\nView: Featured Blog Post \n Broken\n\n\nView: /editweb\n\n\nView: Feeds view \n Are we still using it? Seems like most of those blocks are disabled\n\n\nView: Field Blocks \n Related to field collection, need verify if this still use\n\n\nView: /gac \n Google analytics counter?\n\n\n\n\nView: Recent and Promoted \n Some of the blocks seems unused, can we disabled those\n\n\n\n\n\n\nThe link_attributes module only allow options for class, not for id; therefore, for the footer, we need to convert id to use class \n\n\n\n\nEvent calendar module upgraded with more admin options\n\n\n\n\nTo do\n\n\n\n\nUpdate drupal core + modules\n\n\n\n\nCreate missing views\n\n\n\n\nFaculty FlexSlider Service View\n\n\nFaculty Service View\n\n\nFeatured Alumni\n\n\nFlexSlider Views (Flexslider block, New Magazine Flexslider)\n\n\nIdeas Story Grid\n\n\nNews/Press Highlights\n\n\nRecent and Promoted\n\n\n\n\n\n\n\n\nWorks on template for the news_items\n\n\n\n\nBasic page - work on sidebar items\n\n\nHomepage \n\n\n\n\nJune 4th, 2018 (week #4)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nHow draft works in D8?\n\n\n\n\nDiscussion\n\n\n\n\nThe link_attributes module only allow options for class, not for id; therefore, for the footer, we need to convert id to use class \n\n\n\n\nTo do\n\n\n\n\nCustom module migration\n\n\nEvent Calendar\n\n\n\n\n\n\nCreate missing views\n\n\n\n\nMay 28th, 2018 (week #3)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nWhat is the status for the invalid menu items?\n\n\nInvalid menu deleted from live site? \nStatus\n\n\n\n\n\n\nHow draft works in D8?\n\n\nList of different news item page\n\n\nPage type\n\n\n\n\n\n\n\n\nDiscussion\n\n\n\n\nDrupal 8 Page caching. \n\n\nHow protected page can be secured even with anonymous user caching turn on.\n\n\nVarnish may bring issue for protected page.\n\n\n\n\n\n\n\n\nTo do\n\n\n\n\nCustom module migration\n\n\nProtected Page for CF\n\n\nEvent Calendar\n\n\n\n\n\n\n\n\nMay 21th, 2018 (week #2)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nWhat is the status for the invalid menu items?\n\n\nAre all users in the system active?\n\n\nNeed content purge\n\n\n\n\n\n\nShould workbench assignment manually migrate?\n\n\n\n\nDiscussion\n\n\n\n\nWorkbench node access: The toppest root level \nAccess Control\n is no longer available in D8\n\n\nIn D7, there\ns opion to allow the vacaburary be one of the active editorial section (admin/structure/taxonomy/access_control/edit). This option is not longer available in D8.\n\n\nNode Clone module, communication should know that this module will not be avaiabled in D8. There\ns may be a draft feature in D8 so it may worth of time to find out.\n\n\n\n\nTo do\n\n\nMay 14th, 2018 (week #1)\n\n\nQuestions\n\n\nProtected page\n\n\n\n\nThere are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n\n\nIf they need, probably need manually migrated\n\n\n\n\nTo do\n\n\n\n\nFinishing up migration for workbench (node access + editor role)\n\n\nRecreate views (clayton will work on this later in the d8 instance)\n\n\nSolution for custom blocks\n\n\nCustom module - protected page via coldfusion\n\n\nProtected page migration\n\n\nClayton to re-examine the list of menu-items, which didn\nt migrate\n\n\n\n\n The path \ninternal:/aggregator\n failed validation.\n The path \ninternal:/ctools_ajax_sample\n failed validation.\n The path \ninternal:/blog\n failed validation.\n The path \ninternal:/mega_menu/1\n failed validation.\n The path \ninternal:/press-highlights\n failed validation.\n The path \ninternal:/announcements\n failed validation.\n The path \ninternal:/presshightlights\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/featured-alumni-view\n failed validation.\n The path \ninternal:/aggregator/categories\n failed validation.\n The path \ninternal:/aggregator/sources\n failed validation.\n The path \ninternal:/ctools_ajax_sample/jumped\n failed validation.\n The path \ninternal:/blog/%\n failed validation.\n The path \ninternal:/node/294\n failed validation.\n The path \ninternal:/presshighlights\n failed validation.\n The path \ninternal:/news/alumni\n failed validation.\n The path \ninternal:/news/centers\n failed validation.\n The path \ninternal:/news/faculty\n failed validation.\n The path \ninternal:/news/global\n failed validation.\n The path \ninternal:/news/students\n failed validation.\n The path \ninternal:/news-ideas\n failed validation.\n The path \ninternal:/node/269\n failed validation.\n The path \ninternal:/node/322\n failed validation.\n The path \ninternal:/node/320\n failed validation.\n The path \ninternal:/node/308\n failed validation.\n The path \ninternal:/node/323\n failed validation.\n The path \ninternal:/node/270\n failed validation.\n The path \ninternal:/node/325\n failed validation.\n The path \ninternal:/node/288\n failed validation.\n The path \ninternal:/node/327\n failed validation.\n The path \ninternal:/node/293\n failed validation.", 
+            "text": "Weekly Update\n\n\nJune 18th, 2018 (week #6)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up, need the report for this?\n\n\nHow draft works in D8?\n\n\nViews cleanup update\n\n\nMenu settings - Currently only basic page allow menu setting, should that be the same.\n\n\n\n\nDiscussion\n\n\n\n\nPanel page conversion\n\n\nNews landing page: Right now rely on paginator, would be nice to have auto generate content based on scroll position.\n\n\nAlt tag in wysiwyg, may need to use the caption field\n\n\nSee: \nDrupal issue queue\n\n\nSee: \nAdd \nalt\n and \ntitle\n tokenized text options for image formatters, and a \ntitle\n option for the generic file formatter\n\n\n\n\n\n\nTesting plan\n\n\nSpec for consolidating edge-to-edge images\n\n\nKevin (How to add \nalt text\n option for wysiwyg; Big Menu mitigatin;)\n\n\n\n\nTo do\n\n\nJune 11th, 2018 (week #5)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nHow draft works in D8?\n\n\n\n\nDiscussion\n\n\n\n\nView: docket \n Current broken on the live site \n\n\nView: Featured Blog Post \n Broken\n\n\nView: /editweb\n\n\nView: Feeds view \n Are we still using it? Seems like most of those blocks are disabled\n\n\nView: Field Blocks \n Related to field collection, need verify if this still use\n\n\nView: /gac \n Google analytics counter?\n\n\nView: Recent and Promoted \n Some of the blocks seems unused, can we disabled those\n\n\nThe link_attributes module only allow options for class, not for id; therefore, for the footer, we need to convert id to use class \n\n\nEvent calendar module upgraded with more admin options\n\n\n\n\nTo do\n\n\n\n\nUpdate drupal core + modules\n\n\n\n\nCreate missing views\n\n\n\n\nFaculty FlexSlider Service View\n\n\nFaculty Service View\n\n\nFeatured Alumni\n\n\nFlexSlider Views (Flexslider block, New Magazine Flexslider)\n\n\nIdeas Story Grid\n\n\nNews/Press Highlights\n\n\nRecent and Promoted\n\n\n\n\n\n\n\n\nWorks on template for the news_items\n\n\n\n\nBasic page - work on sidebar items\n\n\nHomepage \n\n\nSpin up a drupal instant for testing\n\n\n\n\nJune 4th, 2018 (week #4)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nHow draft works in D8?\n\n\n\n\nDiscussion\n\n\n\n\nThe link_attributes module only allow options for class, not for id; therefore, for the footer, we need to convert id to use class \n\n\n\n\nTo do\n\n\n\n\nCustom module migration\n\n\nEvent Calendar\n\n\n\n\n\n\nCreate missing views\n\n\n\n\nMay 28th, 2018 (week #3)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nWhat is the status for the invalid menu items?\n\n\nInvalid menu deleted from live site? \nStatus\n\n\n\n\n\n\nHow draft works in D8?\n\n\nList of different news item page\n\n\nPage type\n\n\n\n\n\n\n\n\nDiscussion\n\n\n\n\nDrupal 8 Page caching. \n\n\nHow protected page can be secured even with anonymous user caching turn on.\n\n\nVarnish may bring issue for protected page.\n\n\n\n\n\n\n\n\nTo do\n\n\n\n\nCustom module migration\n\n\nProtected Page for CF\n\n\nEvent Calendar\n\n\n\n\n\n\n\n\nMay 21th, 2018 (week #2)\n\n\nQuestions\n\n\n\n\nWhat is the status for protected page clean up?\n\n\nWhat is the status for the invalid menu items?\n\n\nAre all users in the system active?\n\n\nNeed content purge\n\n\n\n\n\n\nShould workbench assignment manually migrate?\n\n\n\n\nDiscussion\n\n\n\n\nWorkbench node access: The toppest root level \nAccess Control\n is no longer available in D8\n\n\nIn D7, there\ns opion to allow the vacaburary be one of the active editorial section (admin/structure/taxonomy/access_control/edit). This option is not longer available in D8.\n\n\nNode Clone module, communication should know that this module will not be avaiabled in D8. There\ns may be a draft feature in D8 so it may worth of time to find out.\n\n\n\n\nTo do\n\n\nMay 14th, 2018 (week #1)\n\n\nQuestions\n\n\nProtected page\n\n\n\n\nThere are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.\n\n\nIf they need, probably need manually migrated\n\n\n\n\nTo do\n\n\n\n\nFinishing up migration for workbench (node access + editor role)\n\n\nRecreate views (clayton will work on this later in the d8 instance)\n\n\nSolution for custom blocks\n\n\nCustom module - protected page via coldfusion\n\n\nProtected page migration\n\n\nClayton to re-examine the list of menu-items, which didn\nt migrate\n\n\n\n\n The path \ninternal:/aggregator\n failed validation.\n The path \ninternal:/ctools_ajax_sample\n failed validation.\n The path \ninternal:/blog\n failed validation.\n The path \ninternal:/mega_menu/1\n failed validation.\n The path \ninternal:/press-highlights\n failed validation.\n The path \ninternal:/announcements\n failed validation.\n The path \ninternal:/presshightlights\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/news/Press%20Contacts/presscontacts\n failed validation.\n The path \ninternal:/featured-alumni-view\n failed validation.\n The path \ninternal:/aggregator/categories\n failed validation.\n The path \ninternal:/aggregator/sources\n failed validation.\n The path \ninternal:/ctools_ajax_sample/jumped\n failed validation.\n The path \ninternal:/blog/%\n failed validation.\n The path \ninternal:/node/294\n failed validation.\n The path \ninternal:/presshighlights\n failed validation.\n The path \ninternal:/news/alumni\n failed validation.\n The path \ninternal:/news/centers\n failed validation.\n The path \ninternal:/news/faculty\n failed validation.\n The path \ninternal:/news/global\n failed validation.\n The path \ninternal:/news/students\n failed validation.\n The path \ninternal:/news-ideas\n failed validation.\n The path \ninternal:/node/269\n failed validation.\n The path \ninternal:/node/322\n failed validation.\n The path \ninternal:/node/320\n failed validation.\n The path \ninternal:/node/308\n failed validation.\n The path \ninternal:/node/323\n failed validation.\n The path \ninternal:/node/270\n failed validation.\n The path \ninternal:/node/325\n failed validation.\n The path \ninternal:/node/288\n failed validation.\n The path \ninternal:/node/327\n failed validation.\n The path \ninternal:/node/293\n failed validation.", 
             "title": "Weekly Update"
         }, 
         {
@@ -476,29 +496,29 @@
             "title": "Weekly Update"
         }, 
         {
-            "location": "/weeklyupdate/#june-11th-2018-week-5", 
+            "location": "/weeklyupdate/#june-18th-2018-week-6", 
             "text": "", 
-            "title": "June 11th, 2018 (week #5)"
+            "title": "June 18th, 2018 (week #6)"
         }, 
         {
             "location": "/weeklyupdate/#questions", 
-            "text": "What is the status for protected page clean up?  How draft works in D8?", 
+            "text": "What is the status for protected page clean up, need the report for this?  How draft works in D8?  Views cleanup update  Menu settings - Currently only basic page allow menu setting, should that be the same.", 
             "title": "Questions"
         }, 
         {
             "location": "/weeklyupdate/#discussion", 
-            "text": "View: docket   Current broken on the live site   View: Featured Blog Post   Broken  View: /editweb  View: Feeds view   Are we still using it? Seems like most of those blocks are disabled  View: Field Blocks   Related to field collection, need verify if this still use  View: /gac   Google analytics counter?   View: Recent and Promoted   Some of the blocks seems unused, can we disabled those    The link_attributes module only allow options for class, not for id; therefore, for the footer, we need to convert id to use class    Event calendar module upgraded with more admin options", 
+            "text": "Panel page conversion  News landing page: Right now rely on paginator, would be nice to have auto generate content based on scroll position.  Alt tag in wysiwyg, may need to use the caption field  See:  Drupal issue queue  See:  Add  alt  and  title  tokenized text options for image formatters, and a  title  option for the generic file formatter    Testing plan  Spec for consolidating edge-to-edge images  Kevin (How to add  alt text  option for wysiwyg; Big Menu mitigatin;)", 
             "title": "Discussion"
         }, 
         {
             "location": "/weeklyupdate/#to-do", 
-            "text": "Update drupal core + modules   Create missing views   Faculty FlexSlider Service View  Faculty Service View  Featured Alumni  FlexSlider Views (Flexslider block, New Magazine Flexslider)  Ideas Story Grid  News/Press Highlights  Recent and Promoted     Works on template for the news_items   Basic page - work on sidebar items  Homepage", 
+            "text": "", 
             "title": "To do"
         }, 
         {
-            "location": "/weeklyupdate/#june-4th-2018-week-4", 
+            "location": "/weeklyupdate/#june-11th-2018-week-5", 
             "text": "", 
-            "title": "June 4th, 2018 (week #4)"
+            "title": "June 11th, 2018 (week #5)"
         }, 
         {
             "location": "/weeklyupdate/#questions_1", 
@@ -507,11 +527,31 @@
         }, 
         {
             "location": "/weeklyupdate/#discussion_1", 
-            "text": "The link_attributes module only allow options for class, not for id; therefore, for the footer, we need to convert id to use class", 
+            "text": "View: docket   Current broken on the live site   View: Featured Blog Post   Broken  View: /editweb  View: Feeds view   Are we still using it? Seems like most of those blocks are disabled  View: Field Blocks   Related to field collection, need verify if this still use  View: /gac   Google analytics counter?  View: Recent and Promoted   Some of the blocks seems unused, can we disabled those  The link_attributes module only allow options for class, not for id; therefore, for the footer, we need to convert id to use class   Event calendar module upgraded with more admin options", 
             "title": "Discussion"
         }, 
         {
             "location": "/weeklyupdate/#to-do_1", 
+            "text": "Update drupal core + modules   Create missing views   Faculty FlexSlider Service View  Faculty Service View  Featured Alumni  FlexSlider Views (Flexslider block, New Magazine Flexslider)  Ideas Story Grid  News/Press Highlights  Recent and Promoted     Works on template for the news_items   Basic page - work on sidebar items  Homepage   Spin up a drupal instant for testing", 
+            "title": "To do"
+        }, 
+        {
+            "location": "/weeklyupdate/#june-4th-2018-week-4", 
+            "text": "", 
+            "title": "June 4th, 2018 (week #4)"
+        }, 
+        {
+            "location": "/weeklyupdate/#questions_2", 
+            "text": "What is the status for protected page clean up?  How draft works in D8?", 
+            "title": "Questions"
+        }, 
+        {
+            "location": "/weeklyupdate/#discussion_2", 
+            "text": "The link_attributes module only allow options for class, not for id; therefore, for the footer, we need to convert id to use class", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/weeklyupdate/#to-do_2", 
             "text": "Custom module migration  Event Calendar    Create missing views", 
             "title": "To do"
         }, 
@@ -521,17 +561,17 @@
             "title": "May 28th, 2018 (week #3)"
         }, 
         {
-            "location": "/weeklyupdate/#questions_2", 
+            "location": "/weeklyupdate/#questions_3", 
             "text": "What is the status for protected page clean up?  What is the status for the invalid menu items?  Invalid menu deleted from live site?  Status    How draft works in D8?  List of different news item page  Page type", 
             "title": "Questions"
         }, 
         {
-            "location": "/weeklyupdate/#discussion_2", 
+            "location": "/weeklyupdate/#discussion_3", 
             "text": "Drupal 8 Page caching.   How protected page can be secured even with anonymous user caching turn on.  Varnish may bring issue for protected page.", 
             "title": "Discussion"
         }, 
         {
-            "location": "/weeklyupdate/#to-do_2", 
+            "location": "/weeklyupdate/#to-do_3", 
             "text": "Custom module migration  Protected Page for CF  Event Calendar", 
             "title": "To do"
         }, 
@@ -541,17 +581,17 @@
             "title": "May 21th, 2018 (week #2)"
         }, 
         {
-            "location": "/weeklyupdate/#questions_3", 
+            "location": "/weeklyupdate/#questions_4", 
             "text": "What is the status for protected page clean up?  What is the status for the invalid menu items?  Are all users in the system active?  Need content purge    Should workbench assignment manually migrate?", 
             "title": "Questions"
         }, 
         {
-            "location": "/weeklyupdate/#discussion_3", 
+            "location": "/weeklyupdate/#discussion_4", 
             "text": "Workbench node access: The toppest root level  Access Control  is no longer available in D8  In D7, there s opion to allow the vacaburary be one of the active editorial section (admin/structure/taxonomy/access_control/edit). This option is not longer available in D8.  Node Clone module, communication should know that this module will not be avaiabled in D8. There s may be a draft feature in D8 so it may worth of time to find out.", 
             "title": "Discussion"
         }, 
         {
-            "location": "/weeklyupdate/#to-do_3", 
+            "location": "/weeklyupdate/#to-do_4", 
             "text": "", 
             "title": "To do"
         }, 
@@ -561,12 +601,12 @@
             "title": "May 14th, 2018 (week #1)"
         }, 
         {
-            "location": "/weeklyupdate/#questions_4", 
+            "location": "/weeklyupdate/#questions_5", 
             "text": "Protected page   There are 22 protected pages that are managed by protected page module. Do this page still valid or can be deleted.  If they need, probably need manually migrated", 
             "title": "Questions"
         }, 
         {
-            "location": "/weeklyupdate/#to-do_4", 
+            "location": "/weeklyupdate/#to-do_5", 
             "text": "Finishing up migration for workbench (node access + editor role)  Recreate views (clayton will work on this later in the d8 instance)  Solution for custom blocks  Custom module - protected page via coldfusion  Protected page migration  Clayton to re-examine the list of menu-items, which didn t migrate    The path  internal:/aggregator  failed validation.\n The path  internal:/ctools_ajax_sample  failed validation.\n The path  internal:/blog  failed validation.\n The path  internal:/mega_menu/1  failed validation.\n The path  internal:/press-highlights  failed validation.\n The path  internal:/announcements  failed validation.\n The path  internal:/presshightlights  failed validation.\n The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n The path  internal:/news/Press%20Contacts/presscontacts  failed validation.\n The path  internal:/featured-alumni-view  failed validation.\n The path  internal:/aggregator/categories  failed validation.\n The path  internal:/aggregator/sources  failed validation.\n The path  internal:/ctools_ajax_sample/jumped  failed validation.\n The path  internal:/blog/%  failed validation.\n The path  internal:/node/294  failed validation.\n The path  internal:/presshighlights  failed validation.\n The path  internal:/news/alumni  failed validation.\n The path  internal:/news/centers  failed validation.\n The path  internal:/news/faculty  failed validation.\n The path  internal:/news/global  failed validation.\n The path  internal:/news/students  failed validation.\n The path  internal:/news-ideas  failed validation.\n The path  internal:/node/269  failed validation.\n The path  internal:/node/322  failed validation.\n The path  internal:/node/320  failed validation.\n The path  internal:/node/308  failed validation.\n The path  internal:/node/323  failed validation.\n The path  internal:/node/270  failed validation.\n The path  internal:/node/325  failed validation.\n The path  internal:/node/288  failed validation.\n The path  internal:/node/327  failed validation.\n The path  internal:/node/293  failed validation.", 
             "title": "To do"
         }
