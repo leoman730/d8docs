@@ -1051,9 +1051,10 @@
 <li>Reset all user password, password policy enforcement</li>
 <li>Kevin (How to add &ldquo;alt text&rdquo; option for wysiwyg; Big Menu mitigation;)</li>
 <li>Related links block
-    There are many of them for basic pages (309).
-    Even more if remove exclusion.
-    <code>select * from field_data_field_related_links
+    There are many of them for basic pages (309). 
+    Even more if remove exclusion. </li>
+</ul>
+<pre><code>select * from field_data_field_related_links
 inner join url_alias on url_alias.source = concat('node/', entity_id)
 where bundle='basic_page'
 and 
@@ -1061,7 +1062,11 @@ and
 alias not like 'areasofstudy/%'
 and alias not like 'graduateadmissions'
 and alias not like 'graduateadmissions/%'
-and alias not like 'llmjsd/%')</code></li>
+and alias not like 'llmjsd/%')
+</code></pre>
+
+<ul>
+<li>Promo block is not longer used</li>
 </ul>
 <h3 id="to-do">To do</h3>
 <ul>
