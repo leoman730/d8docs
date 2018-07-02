@@ -1065,8 +1065,26 @@ and alias not like 'graduateadmissions/%'
 and alias not like 'llmjsd/%')
 </code></pre>
 
+<p><em>This used to be created by Views, but now we can just create a block directly thanks for the Field API.</em></p>
 <ul>
-<li>Promo block is not longer used</li>
+<li>
+<p>Promo block is not longer used</p>
+</li>
+<li>
+<p>Block reference
+    There a very few numbers of blocks are references(7). Need examine if they still needed. 
+    Look at: https://docs.google.com/spreadsheets/d/1nCsx8oOyVDd3WjEsO7l9oBeDt-rmhILoQYfk7sqKjb4/edit#gid=0 </p>
+</li>
+<li>
+<p>Image block
+    Only 3 pages are using this. Please examine if it really need or we can get rid off it.(17959, 19855, 22280)</p>
+</li>
+</ul>
+<pre><code>select * from field_data_field_images;
+</code></pre>
+
+<ul>
+<li>Views &gt;&gt; promo &gt;&gt; Public Interest News (Seems not use)</li>
 </ul>
 <h3 id="to-do">To do</h3>
 <ul>
