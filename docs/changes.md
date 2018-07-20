@@ -16,3 +16,12 @@ In Basic page type, the sidebar field collection now are in Paragraphs sidebar b
 
 ## Node clone module
 - There's no D8 version of this, and will not be migrated. 
+
+
+## Page class
+- In D7, the context module add a classname to the body tag based on the path. This no longer the case in D8. There's a custom implementation to accomplish the same. Look at the add_classname_based_on_path() in nyulaw.theme.
+
+
+## Related link/Super header block
+- This used to be created by Views, but now we can just create a block directly thanks for the Field API.
+

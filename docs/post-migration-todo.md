@@ -35,3 +35,10 @@ Migrate everything from the migrate-later branch in D7 project
 |---|---|---|
 |Flexslider View| {host_name}/faculty_flexslider_service_view?facultyid=20315&items_per_page=1&_format=json| {host_name}/api/v1/views/faculty_flexslider_service_view?facultyid=20315&limit=1	
 |Faculty View|{host_name}/faculty_service_view?facultyid=20315&items_per_page=1&_format=json|{hostname}/api/v1/views/faculty_service_view?facultyid=20315&limit=1
+
+
+## Media
+- Make sure all users can view media assets (Set permission for allow all user for view)
+
+## Security
+- Reset all user password, make sure password is strong.
