@@ -615,20 +615,18 @@
 </ul>
 <h2 id="module-upgrade-helper">Module upgrade helper</h2>
 <p>There&rsquo;s useful module <a href="https://www.drupal.org/documentation/modules/drupalmoduleupgrader">Drupal Module Upgrader</a> can be used to identify compatibilitiess issue D7 modules.</p>
-<pre><code># To generate an issue report
+<div class="highlight"><pre><span></span># To generate an issue report
 drush dmu-analyze  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication
 
 # To try automatically fix issue
 drush dmu-upgrade  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication
-
-</code></pre>
+</pre></div>
 
 <h2 id="drupal-console">Drupal console</h2>
-<p>Use Drupal console to enable/disable development mode. See <a href="https://www.drupaleasy.com/quicktips/enabling-development-mode-local-drupal-8-site">Enable development mode</a></p>
-<pre><code>drupal site:mode dev
+<p>Use Drupal console to enable/disable development mode. See <a href="https://www.drupaleasy.com/quicktips/enabling-development-mode-local-drupal-8-site">Enable development mode</a>
+<div class="highlight"><pre><span></span>drupal site:mode dev
 drupal site:mode prod
-</code></pre>
-
+</pre></div></p>
 <h2 id="cache">Cache</h2>
 <p><a href="https://www.adcisolutions.com/knowledge/cache-drupal-8">Cache in D8</a></p>
 <h2 id="block">Block</h2>

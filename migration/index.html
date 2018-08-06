@@ -938,7 +938,7 @@
 <li><a href="https://drupalize.me/tutorial/custom-drupal-drupal-migrations?p=2578">Custom Drupal-to-Drupal Migrations</a></li>
 </ul>
 <h2 id="some-useful-migration-commands">Some useful migration commands</h2>
-<pre><code># Generate configuration for migration
+<div class="highlight"><pre><span></span># Generate configuration for migration
 # Modify settings.php to include db connection string &quot;migrate&quot;
 drush migrate-upgrade --configure-only --legacy-db-key=migrate
 
@@ -952,12 +952,12 @@ drush config-export --destination=/tmp/migrate
 # Show a specific config
 drush config-get {config_name}
 
-# Only show migration status related to 'field'
+# Only show migration status related to &#39;field&#39;
 drush ms --group=migrate_drupal_7 --names-only | ag field
 
 # Get a list of Destination plugins
 # At the php console:
-\Drupal::service('plugin.manager.migrate.destination')-&gt;getDefinitions();
+\Drupal::service(&#39;plugin.manager.migrate.destination&#39;)-&gt;getDefinitions();
 
 
 fin drush migrate-status --tag=Field
@@ -968,18 +968,16 @@ drush config-import --partial --source=module/custom/nyulaw_migrate/config/insta
 
 # To reset migrtion status
 drush migrate-reset-status
-
-
-</code></pre>
+</pre></div>
 
 <h2 id="common-migration-issues">Common migration issues</h2>
 <h3 id="revision-id">Revision id</h3>
-<pre><code>Drupal\Core\Entity\EntityStorageException: Update existing 'node' entity revision while changing the revision ID is not supported. in Drupal\Core\Entity\ContentEntityStorageBase-&gt;doPreSave() (line 598 of                [error]
+<div class="highlight"><pre><span></span>Drupal\Core\Entity\EntityStorageException: Update existing &#39;node&#39; entity revision while changing the revision ID is not supported. in Drupal\Core\Entity\ContentEntityStorageBase-&gt;doPreSave() (line 598 of                [error]
 /var/www/web/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php).
-Update existing 'node' entity revision while changing the revision ID is not supported. (/var/www/web/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php:829)                                                     [error]
-Processed 1 item (0 created, 0 updated, 1 failed, 0 ignored) - done with 'upgrade_d7_node_basic_page'                                                                                                                      [status]
+Update existing &#39;node&#39; entity revision while changing the revision ID is not supported. (/var/www/web/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php:829)                                                     [error]
+Processed 1 item (0 created, 0 updated, 1 failed, 0 ignored) - done with &#39;upgrade_d7_node_basic_page&#39;                                                                                                                      [status]
 upgrade_d7_node_basic_page Migration - 1 failed.                                                                                                                                                                           [error]
-</code></pre>
+</pre></div>
 
 <p>Remove vid mapping from migration script.</p>
 <h2 id="migration-steps">Migration Steps:</h2>
@@ -996,7 +994,7 @@ upgrade_d7_node_basic_page Migration - 1 failed.                                
 <li>Once the site structure is ready, use <code>drush config-export -y</code> to export entire site configs</li>
 <li>Install Drupal as usual, but using the minimal profile</li>
 <li>Run <code>fin drush site-install --verbose config_installer config_installer_sync_configure_form.sync_directory=../config --yes</code> to re-install the site based on config files in the sync directory</li>
-<li>Once it is completed, the srceen will show the user name and password. In case that is not working, Use <code>fin drush upwd admin --password="admin"</code> to reset admin password</li>
+<li>Once it is completed, the srceen will show the user name and password. In case that is not working, Use <code>fin drush upwd admin --password=&quot;admin&quot;</code> to reset admin password</li>
 </ol>
 <h2 id="migration-note">Migration Note</h2>
 <p>To set up a new dev site with content, we could modify the script (migrationclean.sh) to:
@@ -1006,17 +1004,17 @@ upgrade_d7_node_basic_page Migration - 1 failed.                                
 <p>Paragraphs has most of the code to migrate field collections. And this is the plan based on the community discussion.</p>
 <p>According to @mikelutz</p>
 <blockquote>
-<p>If you install the latest paragraphs -dev and apply https://www.drupal.org/project/paragraphs/issues/2911244  it
+<p>If you install the latest paragraphs -dev and apply <a href="https://www.drupal.org/project/paragraphs/issues/2911244">https://www.drupal.org/project/paragraphs/issues/2911244</a>  it
 should migrate through the migrate_drupal_ui</p>
 </blockquote>
 <p>There are couple threads related to this:</p>
 <ul>
-<li>https://www.drupal.org/project/paragraphs/issues/2911244</li>
-<li>https://www.drupal.org/project/paragraphs/issues/2897021</li>
+<li><a href="https://www.drupal.org/project/paragraphs/issues/2911244">https://www.drupal.org/project/paragraphs/issues/2911244</a></li>
+<li><a href="https://www.drupal.org/project/paragraphs/issues/2897021">https://www.drupal.org/project/paragraphs/issues/2897021</a></li>
 </ul>
 <h2 id="basic-page-migration">Basic page migration</h2>
 <p>benjifisher [2:02 PM]
-I think you want the <code>merge</code> plugin: https://cgit.drupalcode.org/migrate_plus/tree/src/Plugin/migrate/process/Merge.php</p>
+I think you want the <code>merge</code> plugin: <a href="https://cgit.drupalcode.org/migrate_plus/tree/src/Plugin/migrate/process/Merge.php">https://cgit.drupalcode.org/migrate_plus/tree/src/Plugin/migrate/process/Merge.php</a></p>
 <p>There might be an easier way, but if you want to follow the model in the docblock, then you can create three separate migrations, each of which creates a Paragraph entity from one of the source fields. Then use <code>migration_lookup</code> and <code>merge</code> as in the sample code in the docblock. Remember that <code>iterator</code> is deprecated; use <code>sub_process</code> instead. (edited)</p>
 <h2 id="block-reference">Block reference</h2>
 <p>Block reference is not support in D8. There are discussions propose how this should work in D8 but there&rsquo;s no agreement
@@ -1025,7 +1023,7 @@ yet. See <a href="https://www.drupal.org/project/blockreference/issues/2410289">
 <h2 id="ckeditor-embeded-media">CKeditor - Embeded media</h2>
 <p>Media module is in Drupal core &gt;= 8.5. Ckeditor can work with Media Embed module for embeding many types of media eneity inside a ckeditor. Refer to the <a href="../media-guide">media guide section</a> for more info.</p>
 <p>In order to make legacy embeded string work, some process transformations is needed. This transformation will convert the legacy embeded string into a new string that is regonizabled by the new editor.</p>
-<pre><code># Old Embeded String
+<div class="highlight"><pre><span></span># Old Embeded String
 [[{&quot;fid&quot;:&quot;41966&quot;,&quot;view_mode&quot;:&quot;190wide&quot;,&quot;fields&quot;:{&quot;alt&quot;:&quot;Alt - Chinese New Year &quot;,&quot;title&quot;:&quot;Title - Chinese New
 Year&quot;,&quot;style&quot;:&quot;float: right;&quot;,&quot;class&quot;:&quot;media-element my_custom_class
 file-teaser&quot;,&quot;data-delta&quot;:&quot;1&quot;,&quot;format&quot;:&quot;190wide&quot;,&quot;field_file_caption[und][0][value]&quot;:&quot;Happy Chinese New
@@ -1041,28 +1039,26 @@ file-190wide&quot;,&quot;data-delta&quot;:&quot;1&quot;}}]]
 
 
 # New Embeded String
-&lt;drupal-entity data-align='left' data-caption='Happy Chinese New Year' data-entity-type='media'
-data-entity-uuid='302905a2-3598-433b-9fa2-143fbaac4b98' data-entity-embed-display='entity_reference:media_thumbnail'
-data-embed-button='media_browser_button' data-entity-embed-display-settings='{&quot;image_style&quot;:&quot;190wide&quot;}'  /&gt;
-
-</code></pre>
+&lt;drupal-entity data-align=&#39;left&#39; data-caption=&#39;Happy Chinese New Year&#39; data-entity-type=&#39;media&#39;
+data-entity-uuid=&#39;302905a2-3598-433b-9fa2-143fbaac4b98&#39; data-entity-embed-display=&#39;entity_reference:media_thumbnail&#39;
+data-embed-button=&#39;media_browser_button&#39; data-entity-embed-display-settings=&#39;{&quot;image_style&quot;:&quot;190wide&quot;}&#39;  /&gt;
+</pre></div>
 
 <p>Look at the FixMediaTags.php from the nyulaw_migrate module to understand how th process works.</p>
 <p>If after migrated content the front end doesn&rsquo;t render html tag correctly. This is due to body_format field value doesn&rsquo;t specified.
 The default migration script comes from core does not set soruce for body_format; Therefore, the migration script set a default body_format value to full_html during the migration.</p>
 <p>Assuming the body_format value is set, run <code>drush cr</code> should resolve this issue.</p>
 <h2 id="debug-migration">Debug migration</h2>
-<pre><code>⟩ drush migrate-import upgrade_d7_menu_links
-Processed 4462 items (48 created, 0 updated, 4066 failed, 348 ignored) - done with 'upgrade_d7_menu_links'                                                                                                                 [status]
+<div class="highlight"><pre><span></span>⟩ drush migrate-import upgrade_d7_menu_links
+Processed 4462 items (48 created, 0 updated, 4066 failed, 348 ignored) - done with &#39;upgrade_d7_menu_links&#39;                                                                                                                 [status]
 upgrade_d7_menu_links Migration - 4066 failed.
-
-</code></pre>
+</pre></div>
 
 <p>Use drush mmsg upgrade_d7_menu_links</p>
-<pre><code>drush mmsg upgrade_d7_menu_links
+<div class="highlight"><pre><span></span>drush mmsg upgrade_d7_menu_links
 
 109dbf0220db6b16b80efe7fb1211f97d558d3624372b2b012f745a9ea3b8145  1       The path &quot;internal:/node/19346&quot; failed validation.
-</code></pre>
+</pre></div>
 
 <p>For reporting purpose, use $migration_executable-&gt;saveMessage() to log migration issue.</p>
 <h2 id="content-migration">Content migration</h2>
@@ -1110,9 +1106,8 @@ upgrade_d7_menu_links Migration - 4066 failed.
 <h3 id="redirect">Redirect</h3>
 <p>Todo:</p>
 <ul>
-<li>There are couple (4) redirect failing, primary because the source url is identical, only the letter cases vary. The easiest fix seems to be re-add those manually after migration.</li>
-</ul>
-<pre><code>SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'JDfYcWeYjq2O0VL70etyNcPOZnQn0DMYpJd_wCMCXcU' for key 'hash': INSERT INTO {redirect} (rid, type, uuid, language, hash, uid, redirect_source__path, redirect_source__query, redirect_redirect__uri, redirect_redirect__title, redirect_redirect__options, status_code, created) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9, :db_insert_placeholder_10, :db_insert_placeholder_11, :db_insert_placeholder_12); Array
+<li>There are couple (4) redirect failing, primary because the source url is identical, only the letter cases vary. The easiest fix seems to be re-add those manually after migration.
+<div class="highlight"><pre><span></span>SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry &#39;JDfYcWeYjq2O0VL70etyNcPOZnQn0DMYpJd_wCMCXcU&#39; for key &#39;hash&#39;: INSERT INTO {redirect} (rid, type, uuid, language, hash, uid, redirect_source__path, redirect_source__query, redirect_redirect__uri, redirect_redirect__title, redirect_redirect__options, status_code, created) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9, :db_insert_placeholder_10, :db_insert_placeholder_11, :db_insert_placeholder_12); Array
 (
     [:db_insert_placeholder_0] =&gt; 1712
     [:db_insert_placeholder_1] =&gt; redirect
@@ -1135,48 +1130,46 @@ upgrade_d7_menu_links Migration - 4066 failed.
  29626
  23299
  23267
-
-</code></pre>
-
+</pre></div></li>
+</ul>
 <h3 id="field-collection">Field Collection</h3>
 <p>Note: </p>
 <ul>
 <li>Couple items didn&rsquo;t migrate due to file missing. Not a blocker. </li>
 </ul>
-<pre><code>    ⟩ fin drush migrate-import --tag=FieldCollection
-Processed 7 items (7 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_type'                                                                                                               [status]
-Processed 25 items (25 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_bm_section'                                                                                                       [status]
-Processed 0 items (0 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_dynamic_lead_item'                                                                                                  [status]
-Processed 7 items (7 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_images'                                                                                                             [status]
-Processed 49 items (49 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_mm_section'                                                                                                       [status]
+<div class="highlight"><pre><span></span>    ⟩ fin drush migrate-import --tag=FieldCollection
+Processed 7 items (7 created, 0 updated, 0 failed, 0 ignored) - done with &#39;upgrade_d7_field_collection_type&#39;                                                                                                               [status]
+Processed 25 items (25 created, 0 updated, 0 failed, 0 ignored) - done with &#39;upgrade_d7_field_collection_bm_section&#39;                                                                                                       [status]
+Processed 0 items (0 created, 0 updated, 0 failed, 0 ignored) - done with &#39;upgrade_d7_field_collection_dynamic_lead_item&#39;                                                                                                  [status]
+Processed 7 items (7 created, 0 updated, 0 failed, 0 ignored) - done with &#39;upgrade_d7_field_collection_images&#39;                                                                                                             [status]
+Processed 49 items (49 created, 0 updated, 0 failed, 0 ignored) - done with &#39;upgrade_d7_field_collection_mm_section&#39;                                                                                                       [status]
 Missing file with ID 18833. ImageItem.php:327                                                                                                                                                                              [warning]
 Missing file with ID 18858. ImageItem.php:327                                                                                                                                                                              [warning]
-Processed 12 items (12 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_selected_news_item'                                                                                               [status]
+Processed 12 items (12 created, 0 updated, 0 failed, 0 ignored) - done with &#39;upgrade_d7_field_collection_selected_news_item&#39;                                                                                               [status]
 Missing file with ID 18866. ImageItem.php:327                                                                                                                                                                              [warning]
 Missing file with ID 18867. ImageItem.php:327                                                                                                                                                                              [warning]
-Processed 1382 items (1382 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_slides'                                                                                                       [status]
+Processed 1382 items (1382 created, 0 updated, 0 failed, 0 ignored) - done with &#39;upgrade_d7_field_collection_slides&#39;                                                                                                       [status]
 Missing file with ID 15901. ImageItem.php:327                                                                                                                                                                              [warning]
 Missing file with ID 18883. ImageItem.php:327                                                                                                                                                                              [warning]
 Missing file with ID 18884. ImageItem.php:327                                                                                                                                                                              [warning]
-Processed 52 items (52 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_field_collection_stat_box_item'                                                                                                    [status]
-</code></pre>
+Processed 52 items (52 created, 0 updated, 0 failed, 0 ignored) - done with &#39;upgrade_d7_field_collection_stat_box_item&#39;                                                                                                    [status]
+</pre></div>
 
 <h3 id="gallery">Gallery</h3>
 <p>Note:</p>
 <ul>
-<li>Gallery migrated. 2 missing files is reported. </li>
-</ul>
-<pre><code>~/git_repos/nyu-law-d8/web · (migration±)
+<li>Gallery migrated. 2 missing files is reported. 
+<div class="highlight"><pre><span></span>~/git_repos/nyu-law-d8/web · (migration±)
 ⟩ fin drush migrate-import --tag=Gallery
 Missing file with ID 18866. ImageItem.php:327                                                                                                                                                                              [warning]
 Missing file with ID 18867. ImageItem.php:327                                                                                                                                                                              [warning]
-Processed 174 items (174 created, 0 updated, 0 failed, 0 ignored) - done with 'upgrade_d7_node_gallery'                                                                                                                    [status]
-</code></pre>
-
+Processed 174 items (174 created, 0 updated, 0 failed, 0 ignored) - done with &#39;upgrade_d7_node_gallery&#39;                                                                                                                    [status]
+</pre></div></li>
+</ul>
 <h3 id="video">Video</h3>
 <p>Note:
-<em> After discussion, the video content type will not be migrated (95% for sure)
-</em> For the sake of migration, the video field value for some reasons do not migrate.</p>
+* After discussion, the video content type will not be migrated (95% for sure)
+* For the sake of migration, the video field value for some reasons do not migrate.</p>
 <h3 id="flexslider">Flexslider</h3>
 <p>Note:
 * Everything migrated.</p>
@@ -1184,10 +1177,10 @@ Processed 174 items (174 created, 0 updated, 0 failed, 0 ignored) - done with 'u
 <p>Note: 
 * Most links were migrate. 
 - 34 links failed - Views and other related
-- 20 ignored - Admin links, which no need for migrate</p>
-<pre><code>~/git_repos/nyu-law-d8/web · (migration±)
+- 20 ignored - Admin links, which no need for migrate
+<div class="highlight"><pre><span></span>~/git_repos/nyu-law-d8/web · (migration±)
 ⟩ fin drush migrate-import  upgrade_d7_menu_links
-Processed 4462 items (4408 created, 0 updated, 34 failed, 20 ignored) - done with 'upgrade_d7_menu_links'                                                                                                                  [status]
+Processed 4462 items (4408 created, 0 updated, 34 failed, 20 ignored) - done with &#39;upgrade_d7_menu_links&#39;                                                                                                                  [status]
 upgrade_d7_menu_links Migration - 34 failed.                                                                                                                                                                               [error]
 
 
@@ -1236,13 +1229,12 @@ upgrade_d7_menu_links Migration - 34 failed.                                    
 
 # Following menu link were ignored, because they are admin links
 select * from menu_links where mlid in (434,93354,85819,93512,93514,80308,78871,93406,196,68391,93421,79563,491,197,79824,93427,94270,93355,96859,96852);
-</code></pre>
-
+</pre></div></p>
 <h3 id="custom-blocks_1">Custom blocks</h3>
 <h3 id="workbench">Workbench</h3>
 <p>Note:
-<em> Content type now need to create a field for access control
-</em> The first level node (&ldquo;Access control&rdquo;) no longer avaiable for selection</p>
+* Content type now need to create a field for access control
+* The first level node (&ldquo;Access control&rdquo;) no longer avaiable for selection</p>
 <p>Todo:</p>
 <ul>
 <li>Check if workbench for node set correctly</li>
@@ -1252,8 +1244,8 @@ select * from menu_links where mlid in (434,93354,85819,93512,93514,80308,78871,
 <p>Note:
 * In D8, in order to enable content to override default metatags settings, the content type needs to create a new field for metatag. See <a href="https://www.drupal.org/project/metatag/issues/2715395">Metatags per content Drupal8?</a></p>
 <p>Todo:
-<em> Need meta description migrate
-</em> This could be just site config,not migration.</p>
+* Need meta description migrate
+* This could be just site config,not migration.</p>
 <h3 id="404-redirect">404 Redirect</h3>
 <p>Note:
 * Dropping it</p>

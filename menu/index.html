@@ -452,26 +452,24 @@
                 
                 <p>Currently, we are using menu_attributes module for providing css class settings for menu link. There&rsquo;s exist a warning complaining about argument data type (array vs string). A custom fix is made to fix this issue. </p>
 <p>This ideally should be package as a patch and submit to the module page.</p>
-<pre><code>( ! ) Warning: explode() expects parameter 2 to be string, array given in /var/www/web/modules/contrib/menu_attributes/menu_attributes.module on line 374
-</code></pre>
+<div class="highlight"><pre><span></span>( ! ) Warning: explode() expects parameter 2 to be string, array given in /var/www/web/modules/contrib/menu_attributes/menu_attributes.module on line 374
+</pre></div>
 
-<pre><code># In menu_attributes.module
+<div class="highlight"><pre><span></span># In menu_attributes.module
 
-    // Class attribute needs special handling because it's stored as an array.
-    if (isset($attributes[MENU_ATTRIBUTES_LINK]['class'])) {
-      $attributes[MENU_ATTRIBUTES_LINK]['class'] = explode(' ', $attributes[MENU_ATTRIBUTES_LINK]['class']);
+    // Class attribute needs special handling because it&#39;s stored as an array.
+    if (isset($attributes[MENU_ATTRIBUTES_LINK][&#39;class&#39;])) {
+      $attributes[MENU_ATTRIBUTES_LINK][&#39;class&#39;] = explode(&#39; &#39;, $attributes[MENU_ATTRIBUTES_LINK][&#39;class&#39;]);
     }
-    if (isset($attributes[MENU_ATTRIBUTES_ITEM]['class'])) {
-      $attributes[MENU_ATTRIBUTES_ITEM]['class'] = explode(' ', $attributes[MENU_ATTRIBUTES_ITEM]['class']);
+    if (isset($attributes[MENU_ATTRIBUTES_ITEM][&#39;class&#39;])) {
+      $attributes[MENU_ATTRIBUTES_ITEM][&#39;class&#39;] = explode(&#39; &#39;, $attributes[MENU_ATTRIBUTES_ITEM][&#39;class&#39;]);
     }
-
-
-</code></pre>
+</pre></div>
 
 <p>Update</p>
 <p>The menu_attributes module was removed in favor of the link_attributes module, which has a stable release.</p>
-<p>*<em> Todo
-</em> Menu is not scalable and load very slow because of the big menu tree. Big menu module is no longer available, need to find alternative solution.</p>
+<p>** Todo
+* Menu is not scalable and load very slow because of the big menu tree. Big menu module is no longer available, need to find alternative solution.</p>
 <ul>
 <li>Menu select for node also a problem because the big tree make selection very difficult.</li>
 </ul>

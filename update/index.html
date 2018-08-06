@@ -530,7 +530,7 @@
                 
                 <h1 id="coremodule-update">Core/Module update</h1>
 <p>The site uses composer as package manger to manage core/module update. Generally, you will use the following commands:</p>
-<pre><code># To find out what are out-of-date
+<div class="highlight"><pre><span></span># To find out what are out-of-date
 composer outdate
 
 # To update a module
@@ -544,15 +544,14 @@ composer update [module_name]:[specific version using sematnic versioning syntax
 # Run update script
 cd [drupal_root]
 drush updatedb
-
-</code></pre>
+</pre></div>
 
 <h2 id="update-drupal-core">Update Drupal Core</h2>
-<pre><code>composer update drupal/core --with-dependencies
+<div class="highlight"><pre><span></span>composer update drupal/core --with-dependencies
 
 # Sometimes drupal/core update is not update, use following to check what is blocking the update.
 composer prohibits drupal/core:8.5.0 // version number
-</code></pre>
+</pre></div>
 
 <p>To learn more about composer with syntax for versioning, take a look at <a href="https://www.lullabot.com/articles/drupal-8-composer-best-practices">Drupal 8 Composer Best Practices</a>.</p>
 <h2 id="composer-install-vs-composer-update">Composer install vs. Composer update</h2>
