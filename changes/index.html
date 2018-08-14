@@ -616,7 +616,7 @@
 </ul>
 <h2 id="page-class">Page class</h2>
 <ul>
-<li>In D7, the context module add a classname to the body tag based on the path. This no longer the case in D8. There&rsquo;s a custom implementation to accomplish the same. Look at the add_classname_based_on_path() in nyulaw.theme.</li>
+<li>In D7, the context module add a classname to the body tag based on the path. This no longer the case in D8. There&rsquo;s a custom implementation to accomplish the same. Look at the add_classname_based_on_path() in nyulaw.theme. In addition, now page can specify its own class name via layout option.</li>
 </ul>
 <h2 id="related-linksuper-header-block">Related link/Super header block</h2>
 <ul>
@@ -624,12 +624,17 @@
 </ul>
 <h2 id="blocks">Blocks</h2>
 <ul>
-<li>To create a button that put in the sidebar (<a href="http://www.law.nyu.edu/jdadmissions">http://www.law.nyu.edu/jdadmissions</a>) &gt;&gt; ABA, now use 
+<li>
+<p>To create a button that put in the sidebar (<a href="http://www.law.nyu.edu/jdadmissions">http://www.law.nyu.edu/jdadmissions</a>) &gt;&gt; ABA, now use 
 <div class="highlight"><pre><span></span>&lt;ul class=&quot;nyulaw-button promo-button&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;ABA Required Disclosures&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;ABA Required Disclosures 2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</pre></div></li>
+</pre></div></p>
+</li>
+<li>
+<p>There&rsquo;s no more block reference for the sidebar region</p>
+</li>
 </ul>
                 
                   
