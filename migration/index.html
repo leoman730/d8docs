@@ -997,9 +997,11 @@ upgrade_d7_node_basic_page Migration - 1 failed.                                
 <li>Once it is completed, the srceen will show the user name and password. In case that is not working, Use <code>fin drush upwd admin --password=&quot;admin&quot;</code> to reset admin password</li>
 </ol>
 <h2 id="migration-note">Migration Note</h2>
-<p>To set up a new dev site with content, we could modify the script (migrationclean.sh) to:
-1. Install the config profile
-2. Then run run-migration.sh to import site content</p>
+<p>To set up a new dev site with content, we could modify the script (migrationclean.sh) to:</p>
+<ol>
+<li>Install the config profile</li>
+<li>Then run run-migration.sh to import site content</li>
+</ol>
 <h2 id="field-collection-to-paragraphs">Field collection to Paragraphs</h2>
 <p>Paragraphs has most of the code to migrate field collections. And this is the plan based on the community discussion.</p>
 <p>According to @mikelutz</p>
@@ -1060,6 +1062,9 @@ upgrade_d7_menu_links Migration - 4066 failed.
 109dbf0220db6b16b80efe7fb1211f97d558d3624372b2b012f745a9ea3b8145  1       The path &quot;internal:/node/19346&quot; failed validation.
 </pre></div>
 
+<p>To pring debug message in the migration script
+<div class="highlight"><pre><span></span>drush_print(&#39;Your message&#39;);
+</pre></div></p>
 <p>For reporting purpose, use $migration_executable-&gt;saveMessage() to log migration issue.</p>
 <h2 id="content-migration">Content migration</h2>
 <h3 id="basic-page">Basic Page</h3>
