@@ -578,17 +578,18 @@ composer prohibits drupal/core:8.5.0 // version number
 <p>From: <a href="https://www.previousnext.com.au/blog/using-composer-debug-issues-updating-drupal-core">https://www.previousnext.com.au/blog/using-composer-debug-issues-updating-drupal-core</a></p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
-<p>running <code>composer update &quot;drupal/core&quot; --with-dependencies</code> is in general not something that you want to do on your
-Drupal site. The reason is that the Drupal core developers only update Drupal&rsquo;s dependencies on minor releases &ndash; e.g.
-from 8.3.x to 8.4.0. If you use <code>composer update</code> to get a newer patch release of Drupal core, then you will end up
-with a different set of dependencies than Drupal is currently using. While this should, in general work, your
-configuration will not be exactly the same as the one that the core committers are testing, so you become more likely
-to encounter new dependency bugs before the rest of the community. If your goal is to update a site that is in
-production, this is generally not what you want.</p>
+<p>running composer update &ldquo;drupal/core&rdquo; &ndash;with-dependencies is in general not something that you want to do on your
+Drupal site. The reason is that the Drupal core developers only update Drupal’s dependencies on minor releases –
+e.g. from 8.3.x to 8.4.0. If you use composer update to get a newer patch release of Drupal core, then you will end
+up with a different set of dependencies than Drupal is currently using. While this should, in general work, your
+configuration will not be exactly the same as the one that the core committers are testing, so you become more
+likely to encounter new dependency bugs before the rest of the community. If your goal is to update a site that is
+in production, this is generally not what you want.</p>
 <p>To work around this problem, try using <a href="https://github.com/webflo/drupal-core-strict">https://github.com/webflo/drupal-core-strict</a>. This project contains tagged
-releases that strongly constrain the versions of all of Drupal&rsquo;s dependencies to match what is being tested in Drupal
-core. If you require this project in your Composer-managed Drupal site, then you will be able to use <code>composer update</code>
-to update your non-Drupal-core-releated dependencies without bringing in more updates than intended.</p>
+releases that strongly constrain the versions of all of Drupal’s dependencies to match what is being tested in
+Drupal core. If you require this project in your Composer-managed Drupal site, then you will be able to use
+composer update to update your non-Drupal-core-releated dependencies without bringing in more updates than
+intended.</p>
 <p>For additional background on phpdocumentor version constraints and Drush, see
 <a href="https://github.com/drush-ops/drush/pull/2877">https://github.com/drush-ops/drush/pull/2877</a></p>
 </div>
