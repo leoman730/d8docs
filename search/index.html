@@ -384,9 +384,51 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Search
+      </label>
+    
     <a href="./" title="Search" class="md-nav__link md-nav__link--active">
       Search
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-search" title="Elastic Search" class="md-nav__link">
+    Elastic Search
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-for-docksal" title="Configuration for docksal" class="md-nav__link">
+    Configuration for docksal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -456,6 +498,35 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-search" title="Elastic Search" class="md-nav__link">
+    Elastic Search
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-for-docksal" title="Configuration for docksal" class="md-nav__link">
+    Configuration for docksal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -486,6 +557,23 @@
     - <a href="https://sematext.com/blog/solr-vs-elasticsearch-part-1-overview/">Solr vs. ElasticSearch: details</a>
     - <a href="http://solr-vs-elasticsearch.com/">Solr vs ES features breakdown</a>
     - <a href="https://swsblog.stanford.edu/blog/better-search-drupal">A better search for Drupal</a></p>
+<h2 id="elastic-search">Elastic Search</h2>
+<h3 id="configuration-for-docksal">Configuration for docksal</h3>
+<p>The image from dockerhub for ES has deprecated, and Elastic search image now can be pull to docksal directly from elastic.co </p>
+<div class="highlight"><pre><span></span>  elasticsearch:
+    hostname: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.0
+    ports:
+      - &quot;9200:9200&quot;
+    dns:
+      - ${DOCKSAL_DNS1}
+      - ${DOCKSAL_DNS2}
+</pre></div>
+
+<p>There&rsquo;s a catcha for setting vm.max_map_count. Refer to: <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.4/docker.html">https://www.elastic.co/guide/en/elasticsearch/reference/6.4/docker.html</a></p>
+<div class="highlight"><pre><span></span>docker-machine ssh docksal
+sudo sysctl -w vm.max_map_count=262144
+</pre></div>
                 
                   
                 
