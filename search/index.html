@@ -417,6 +417,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#kibana-configuration" title="Kibana configuration" class="md-nav__link">
+    Kibana configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-demo-example" title="Search demo example" class="md-nav__link">
+    Search demo example
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -516,6 +530,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#kibana-configuration" title="Kibana configuration" class="md-nav__link">
+    Kibana configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-demo-example" title="Search demo example" class="md-nav__link">
+    Search demo example
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -548,7 +576,9 @@
 <p>For elastic search:
     - <a href="https://www.lullabot.com/articles/indexing-content-from-drupal-8-to-elasticsearch">Indexing content from Drupal 8 using Elasticsearch</a>
     - <a href="https://www.lullabot.com/articles/an-html-and-javascript-client-for-elasticsearch">An HTML and JavaScript Client for Elasticsearch</a>
-    - <a href="https://www.elastic.co/webinars/getting-started-elasticsearch">Video: Getting start with Elastic Search</a></p>
+    - <a href="https://www.elastic.co/webinars/getting-started-elasticsearch">Video: Getting start with Elastic Search</a>
+    - <a href="http://elasticsearch-cheatsheet.jolicode.com/">Cheatsheet</a>
+    - <a href="https://www.sitepoint.com/install-integrate-elasticsearch-drupal/">Intergrate Drupal with ES</a></p>
 <p>Solr vs Elastic Search
     - <a href="https://www.reddit.com/r/drupal/comments/8i4rk3/solr_vs_elasticsearch_for_drupal/">Solr vs Elasticsearch for Drupal</a>
     - <a href="https://camp.drupal.cornell.edu/sites/default/files/Session-files/2017-10/drupal-solr-elasticsearch.pdf">Improving Drupal search experience with Apache Solr and Elasticsearch</a>
@@ -574,6 +604,22 @@
 <div class="highlight"><pre><span></span>docker-machine ssh docksal
 sudo sysctl -w vm.max_map_count=262144
 </pre></div>
+
+<p>Setting ports 
+<div class="highlight"><pre><span></span>fin vm stop
+VBoxManage modifyvm &quot;docksal&quot; --natpf1 &quot;tcp-port5602,tcp,,5602,,5602&quot;;
+VBoxManage modifyvm &quot;docksal&quot; --natpf1 &quot;tcp-port9200,tcp,,9200,,9200&quot;;
+fin vm start
+</pre></div></p>
+<p>Elasticsearch web access:
+x-Pack security: elastic/changeme</p>
+<p><a href="http://192.168.64.100:9200/">http://192.168.64.100:9200/</a>
+<a href="http://192.168.64.100:5601/">http://192.168.64.100:5601/</a></p>
+<h3 id="kibana-configuration">Kibana configuration</h3>
+<p><a href="https://www.elastic.co/guide/en/kibana/current/docker.html">Kibana Image</a>
+<a href="https://www.elastic.co/guide/en/kibana/6.4/using-kibana-with-security.html">Security setup</a></p>
+<h3 id="search-demo-example">Search demo example</h3>
+<p><a href="http://drupalsear.ch">Umani</a></p>
                 
                   
                 
