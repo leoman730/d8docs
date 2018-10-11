@@ -325,6 +325,19 @@
     Debug within vim
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-xdebug-with-phpstorm-for-docksal" title="Configure xdebug with phpstorm for docksal" class="md-nav__link">
+    Configure xdebug with phpstorm for docksal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -556,6 +569,19 @@
     Debug within vim
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-xdebug-with-phpstorm-for-docksal" title="Configure xdebug with phpstorm for docksal" class="md-nav__link">
+    Configure xdebug with phpstorm for docksal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -627,6 +653,21 @@
 <ul>
 <li><a href="https://github.com/vim-vdebug/vdebug">vDebug</a></li>
 </ul>
+<h3 id="configure-xdebug-with-phpstorm-for-docksal">Configure xdebug with phpstorm for docksal</h3>
+<p>Follow instruction on <a href="https://docksal.readthedocs.io/en/master/tools/xdebug/">Using Xdebug debugger</a></p>
+<p><img alt="PHP Storm xdebug server config" src="../assets/phpstorm-xdebug.png" /></p>
+<p>Setting for the docksal.yml
+<div class="highlight"><pre><span></span>  cli:
+    hostname: cli
+    image: ${CLI_IMAGE}
+    volumes:
+      - project_root:/var/www:rw
+      - docksal_ssh_agent:/.ssh-agent:ro
+    environment:
+      - XDEBUG_ENABLED=1
+      - XDEBUG_CONFIG=idekey=PHPSTORM remote_host=192.168.10.1
+      - PHP_IDE_CONFIG=serverName=${VIRTUAL_HOST}
+</pre></div></p>
 <h2 id="module-upgrade-helper">Module upgrade helper</h2>
 <p>There&rsquo;s useful module <a href="https://www.drupal.org/documentation/modules/drupalmoduleupgrader">Drupal Module Upgrader</a> can be used to identify compatibilitiess issue D7 modules.</p>
 <div class="highlight"><pre><span></span># To generate an issue report
