@@ -443,6 +443,19 @@
     Update Drupal Core
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-drupal-core-restrict" title="Update drupal-core-restrict" class="md-nav__link">
+    Update drupal-core-restrict
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -514,6 +527,19 @@
     Update Drupal Core
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-drupal-core-restrict" title="Update drupal-core-restrict" class="md-nav__link">
+    Update drupal-core-restrict
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -581,6 +607,10 @@ drush updatedb
 composer prohibits drupal/core:8.5.0 // version number
 </pre></div>
 
+<h3 id="update-drupal-core-restrict">Update drupal-core-restrict</h3>
+<p>Once the core is updated, run 
+<div class="highlight"><pre><span></span>composer require &#39;drupal/drupal-core-restrict:[the exact drupal version]&#39;
+</pre></div></p>
 <p>To learn more about composer with syntax for versioning, take a look at <a href="https://www.lullabot.com/articles/drupal-8-composer-best-practices">Drupal 8 Composer Best Practices</a>.</p>
 <h2 id="composer-install-vs-composer-update">Composer install vs. Composer update</h2>
 <p>Never run composer update in production. Correct workflow should be: 
