@@ -359,6 +359,19 @@
     Rate alternative on the criteria
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ease-of-deployment" title="Ease of deployment" class="md-nav__link">
+    Ease of deployment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -574,6 +587,19 @@
     Rate alternative on the criteria
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ease-of-deployment" title="Ease of deployment" class="md-nav__link">
+    Ease of deployment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -702,10 +728,45 @@
 <li>Migrating the current site to another platform </li>
 <li>Environment consistency - configure environment with the same set up </li>
 <li>Git based source control</li>
+<li>Security on platform - how well the platform protect against intrusion</li>
 </ul>
 <h2 id="weight-the-criteria">Weight the criteria</h2>
 <h2 id="generate-alternative">Generate alternative</h2>
+<ul>
+<li>K8 on AWS</li>
+<li>Pantheon</li>
+<li>Acquia</li>
+</ul>
 <h2 id="rate-alternative-on-the-criteria">Rate alternative on the criteria</h2>
+<p>Rank each criteria 1 - 5 (1 is the lowest; 5 is the heighest)</p>
+<h3 id="ease-of-deployment">Ease of deployment</h3>
+<ul>
+<li>
+<p>K8 (2)</p>
+</li>
+<li>
+<p>Since there no intuitive UI interface, deployment most likely will utilize commandline interface. Less tech savvy users may found it difficult to use or have a steeper learning curve.</p>
+</li>
+<li>Permission set up for users may also less straight foward.</li>
+<li>If something goes wrong, rollback could also be complicated.</li>
+<li>
+<p>It is not sure at this point the webteam will have fully access for deployment, which is a higly desirable feature.</p>
+</li>
+<li>
+<p>Pantheon (5)</p>
+</li>
+<li>
+<p>It provides a simple use UI that allow site admin to deploy from one environment to another.</p>
+</li>
+<li>With <a href="https://pantheon.io/edu">EDU plan</a>, user role with various permission could be set up via the UI.</li>
+<li>
+<p>Backup can be schecule nightly/manually, if something mess up, rollback could be easily done.</p>
+</li>
+<li>
+<p>Acquia</p>
+</li>
+<li>TBD</li>
+</ul>
 <h2 id="computer-for-optima-solution">Computer for optima solution</h2>
 <p>Additional questoins:
 1. Is the redirect server still need if we move the site to pantheon?</p>
