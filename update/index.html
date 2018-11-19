@@ -471,8 +471,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#update-drupal-core-restrict" title="Update drupal-core-restrict" class="md-nav__link">
-    Update drupal-core-restrict
+  <a href="#update-core-with-drupal-core-restrict" title="Update core with drupal-core-restrict" class="md-nav__link">
+    Update core with drupal-core-restrict
   </a>
   
 </li>
@@ -555,8 +555,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#update-drupal-core-restrict" title="Update drupal-core-restrict" class="md-nav__link">
-    Update drupal-core-restrict
+  <a href="#update-core-with-drupal-core-restrict" title="Update core with drupal-core-restrict" class="md-nav__link">
+    Update core with drupal-core-restrict
   </a>
   
 </li>
@@ -631,9 +631,11 @@ drush updatedb
 composer prohibits drupal/core:8.5.0 // version number
 </pre></div>
 
-<h3 id="update-drupal-core-restrict">Update drupal-core-restrict</h3>
+<h3 id="update-core-with-drupal-core-restrict">Update core with drupal-core-restrict</h3>
 <p>Once the core is updated, run 
-<div class="highlight"><pre><span></span>composer require &#39;drupal/drupal-core-restrict:[the exact drupal version]&#39;
+<div class="highlight"><pre><span></span># Modify drupal-core-restrict version to match the updated drupal core number, then run
+
+composer update drupal/core webflo/drupal-core-strict --with-dependencies
 </pre></div></p>
 <p>To learn more about composer with syntax for versioning, take a look at <a href="https://www.lullabot.com/articles/drupal-8-composer-best-practices">Drupal 8 Composer Best Practices</a>.</p>
 <h2 id="composer-install-vs-composer-update">Composer install vs. Composer update</h2>
