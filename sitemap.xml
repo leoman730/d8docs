@@ -123,6 +123,14 @@
 
     
     <url>
+     <loc>/styleguide/</loc>
+     <lastmod>2018-11-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>/testing/</loc>
      <lastmod>2018-11-19</lastmod>
      <changefreq>daily</changefreq>
