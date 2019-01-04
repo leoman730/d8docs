@@ -1102,6 +1102,10 @@ The default migration script comes from core does not set soruce for body_format
 <p class="admonition-title">About alt tag and caption migration</p>
 <p><img alt="Alt tag / caption migration" src="../assets/alt_caption_migration.png" /></p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some image object in D7 contains value for caption, since it is not being used withing Wysiwyg editor, those values are not migrated.</p>
+</div>
 <h2 id="debug-migration">Debug migration</h2>
 <div class="highlight"><pre><span></span>⟩ drush migrate-import upgrade_d7_menu_links
 Processed 4462 items (48 created, 0 updated, 4066 failed, 348 ignored) - done with &#39;upgrade_d7_menu_links&#39;                                                                                                                 [status]
