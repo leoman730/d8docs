@@ -387,6 +387,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#rebuild-permission" title="Rebuild permission" class="md-nav__link">
+    Rebuild permission
+  </a>
+  
+</li>
+      
       
       
       
@@ -667,6 +674,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#rebuild-permission" title="Rebuild permission" class="md-nav__link">
+    Rebuild permission
+  </a>
+  
+</li>
+      
       
       
       
@@ -740,6 +754,11 @@ drupal site:mode prod
 </ul>
 <h2 id="file-permission-fix">File permission fix</h2>
 <p><a href="https://www.drupal.org/node/244924">Securing file permissions and ownership</a></p>
+<h2 id="rebuild-permission">Rebuild permission</h2>
+<p>Permission can be rebuild at: /admin/reports/status/rebuild</p>
+<div class="highlight"><pre><span></span>drush rls # to list all user roles
+drush rls full_site_editor # to list all permissions of a specific role
+</pre></div>
                 
                   
                 
