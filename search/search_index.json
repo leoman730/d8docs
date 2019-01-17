@@ -47,12 +47,12 @@
         }, 
         {
             "location": "/cache/", 
-            "text": "References\n\n\n\n\nCache API Overview\n\n\nAdd cache metadata render arrrays\n\n\nEnsuring Drupal 8 Block Cache Tags bubble up to the Page", 
+            "text": "References\n\n\n\n\nCache API Overview\n\n\nAdd cache metadata render arrrays\n\n\nEnsuring Drupal 8 Block Cache Tags bubble up to the Page\n\n\nCache Drupal 8\n\n\nQuick Handbook on cache API", 
             "title": "Cache"
         }, 
         {
             "location": "/cache/#references", 
-            "text": "Cache API Overview  Add cache metadata render arrrays  Ensuring Drupal 8 Block Cache Tags bubble up to the Page", 
+            "text": "Cache API Overview  Add cache metadata render arrrays  Ensuring Drupal 8 Block Cache Tags bubble up to the Page  Cache Drupal 8  Quick Handbook on cache API", 
             "title": "References"
         }, 
         {
