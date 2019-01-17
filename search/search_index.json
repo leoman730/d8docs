@@ -46,6 +46,16 @@
             "title": "Event subscription"
         }, 
         {
+            "location": "/cache/", 
+            "text": "References\n\n\n\n\nCache API Overview\n\n\nAdd cache metadata render arrrays\n\n\nEnsuring Drupal 8 Block Cache Tags bubble up to the Page", 
+            "title": "Cache"
+        }, 
+        {
+            "location": "/cache/#references", 
+            "text": "Cache API Overview  Add cache metadata render arrrays  Ensuring Drupal 8 Block Cache Tags bubble up to the Page", 
+            "title": "References"
+        }, 
+        {
             "location": "/calendar/", 
             "text": "Event Calendar\n\n\nLifeWhale\n\n\n\n\nQuestions\n\n\n\n\n\n\nHow events can be maganged by department, user within the same department can edit events?\n\n\n\n\nUser role integration. (Authentication/Authorization)\n\n\n\n\n\n\nEvent trigger - can action be taken (send email) based on the event infomation fill out by th user?\n\n\n\n\n\n\nSearch integration - Google Custom Search or elastic search\n\n\n\n\n\n\nAPI?\n\n\n\n\n\n\nCutomization on looks and feels\n\n\n\n\n\n\nCustom field for event form?", 
             "title": "Event Calendar"
@@ -137,7 +147,7 @@
         }, 
         {
             "location": "/development/", 
-            "text": "Development\n\n\nDrupal coding standard\n\n\n\n\nDrupal Coding Standard\n\n\n\n\nHelpful during development\n\n\n\n\nTwig Xdebug\n\n\nDevel\n\n\nMigrate Devel\n\n\n\n\nDebug within vim\n\n\n\n\nvDebug\n\n\n\n\nConfigure xdebug with phpstorm for docksal\n\n\nFollow instruction on \nUsing Xdebug debugger\n\n\n\n\nSetting for the docksal.yml\n\n  cli:\n    hostname: cli\n    image: ${CLI_IMAGE}\n    volumes:\n      - project_root:/var/www:rw\n      - docksal_ssh_agent:/.ssh-agent:ro\n    environment:\n      - XDEBUG_ENABLED=1\n      - XDEBUG_CONFIG=idekey=PHPSTORM remote_host=192.168.10.1\n      - PHP_IDE_CONFIG=serverName=${VIRTUAL_HOST}\n\n\n\nModule upgrade helper\n\n\nThere\ns useful module \nDrupal Module Upgrader\n can be used to identify compatibilitiess issue D7 modules.\n\n\n# To generate an issue report\ndrush dmu-analyze  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication\n\n# To try automatically fix issue\ndrush dmu-upgrade  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication\n\n\n\n\nDrupal console\n\n\nUse Drupal console to enable/disable development mode. See \nEnable development mode\n\n\ndrupal site:mode dev\ndrupal site:mode prod\n\n\n\nCache\n\n\nCache in D8\n\n\nBlock\n\n\n\n\nBlock API\n\n\nTransitioning from Drupal 7 to Drupal 8: programmatically creating blocks\n\n\nBlock are now plugins\n\n\n\n\nFile permission fix\n\n\nSecuring file permissions and ownership\n\n\nRebuild permission\n\n\nPermission can be rebuild at: /admin/reports/status/rebuild\n\n\ndrush rls # to list all user roles\ndrush rls full_site_editor # to list all permissions of a specific role", 
+            "text": "Development\n\n\nDrupal coding standard\n\n\n\n\nDrupal Coding Standard\n\n\n\n\nHelpful during development\n\n\n\n\nTwig Xdebug\n\n\nDevel\n\n\nMigrate Devel\n\n\n\n\nDebug within vim\n\n\n\n\nvDebug\n\n\n\n\nConfigure xdebug with phpstorm for docksal\n\n\nFollow instruction on \nUsing Xdebug debugger\n\n\n\n\nSetting for the docksal.yml\n\n  cli:\n    hostname: cli\n    image: ${CLI_IMAGE}\n    volumes:\n      - project_root:/var/www:rw\n      - docksal_ssh_agent:/.ssh-agent:ro\n    environment:\n      - XDEBUG_ENABLED=1\n      - XDEBUG_CONFIG=idekey=PHPSTORM remote_host=192.168.10.1\n      - PHP_IDE_CONFIG=serverName=${VIRTUAL_HOST}\n\n\n\nModule upgrade helper\n\n\nThere\ns useful module \nDrupal Module Upgrader\n can be used to identify compatibilitiess issue D7 modules.\n\n\n# To generate an issue report\ndrush dmu-analyze  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication\n\n# To try automatically fix issue\ndrush dmu-upgrade  --skip=info --path=modules/custom/nyulaw_authentication nyulaw_authentication\n\n\n\n\nDrupal console\n\n\nUse Drupal console to enable/disable development mode. See \nEnable development mode\n\n\ndrupal site:mode dev\ndrupal site:mode prod\n\n\n\nCache\n\n\nCache in D8\n\n\nBlock\n\n\n\n\nBlock API\n\n\nTransitioning from Drupal 7 to Drupal 8: programmatically creating blocks\n\n\nBlock are now plugins\n\n\n\n\nFile permission fix\n\n\nSecuring file permissions and ownership\n\n\nRebuild permission\n\n\nPermission can be rebuild at: /admin/reports/status/rebuild\n\n\ndrush rls # to list all user roles\ndrush rls full_site_editor # to list all permissions of a specific role\n\n\n\n\nServices and Container\n\n\ndrupal container:debug # Get a list of available services\n\n\n\n\nServices and dependency injection in Drupal 8\n\n\nDrupal 8: Service Decorators", 
             "title": "Development"
         }, 
         {
@@ -194,6 +204,11 @@
             "location": "/development/#rebuild-permission", 
             "text": "Permission can be rebuild at: /admin/reports/status/rebuild  drush rls # to list all user roles\ndrush rls full_site_editor # to list all permissions of a specific role", 
             "title": "Rebuild permission"
+        }, 
+        {
+            "location": "/development/#services-and-container", 
+            "text": "drupal container:debug # Get a list of available services  Services and dependency injection in Drupal 8  Drupal 8: Service Decorators", 
+            "title": "Services and Container"
         }, 
         {
             "location": "/git/", 
