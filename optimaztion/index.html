@@ -36,7 +36,7 @@
     
     
       
-        <title>Menu - My Docs</title>
+        <title>Optimaztion - My Docs</title>
       
     
     
@@ -111,7 +111,7 @@
                 My Docs
               </span>
               <span class="md-header-nav__topic">
-                Menu
+                Optimaztion
               </span>
             
           
@@ -346,18 +346,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-    <a href="./" title="Menu" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../menu/" title="Menu" class="md-nav__link">
       Menu
     </a>
-    
   </li>
 
     
@@ -377,11 +370,18 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../optimaztion/" title="Optimaztion" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="./" title="Optimaztion" class="md-nav__link md-nav__link--active">
       Optimaztion
     </a>
+    
   </li>
 
     
@@ -517,34 +517,12 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/leoman730/d8docs/edit/master/docs/menu.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/leoman730/d8docs/edit/master/docs/optimaztion.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Menu</h1>
+                  <h1>Optimaztion</h1>
                 
-                <p>Currently, we are using menu_attributes module for providing css class settings for menu link. There&rsquo;s exist a warning complaining about argument data type (array vs string). A custom fix is made to fix this issue. </p>
-<p>This ideally should be package as a patch and submit to the module page.</p>
-<div class="highlight"><pre><span></span>( ! ) Warning: explode() expects parameter 2 to be string, array given in /var/www/web/modules/contrib/menu_attributes/menu_attributes.module on line 374
-</pre></div>
-
-<div class="highlight"><pre><span></span># In menu_attributes.module
-
-    // Class attribute needs special handling because it&#39;s stored as an array.
-    if (isset($attributes[MENU_ATTRIBUTES_LINK][&#39;class&#39;])) {
-      $attributes[MENU_ATTRIBUTES_LINK][&#39;class&#39;] = explode(&#39; &#39;, $attributes[MENU_ATTRIBUTES_LINK][&#39;class&#39;]);
-    }
-    if (isset($attributes[MENU_ATTRIBUTES_ITEM][&#39;class&#39;])) {
-      $attributes[MENU_ATTRIBUTES_ITEM][&#39;class&#39;] = explode(&#39; &#39;, $attributes[MENU_ATTRIBUTES_ITEM][&#39;class&#39;]);
-    }
-</pre></div>
-
-<p>Update</p>
-<p>The menu_attributes module was removed in favor of the link_attributes module, which has a stable release.</p>
-<p>** Todo
-* Menu is not scalable and load very slow because of the big menu tree. Big menu module is no longer available, need to find alternative solution.</p>
-<ul>
-<li>Menu select for node also a problem because the big tree make selection very difficult.</li>
-</ul>
+                
                 
                   
                 
@@ -565,7 +543,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../improvement/" title="Improvement" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../migration/" title="Migration" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -574,19 +552,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Improvement
+                Migration
               </span>
             </div>
           </a>
         
         
-          <a href="../migration/" title="Migration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../post-migration-todo/" title="Post migration todo" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Migration
+                Post migration todo
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
