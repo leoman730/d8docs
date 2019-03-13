@@ -36,7 +36,7 @@
     
     
       
-        <title>Rest Services - My Docs</title>
+        <title>SAML and oAuth - My Docs</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#rest-services" tabindex="1" class="md-skip">
+      <a href="#saml-and-oauth" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -115,7 +115,7 @@
                 My Docs
               </span>
               <span class="md-header-nav__topic">
-                Rest Services
+                SAML and oAuth
               </span>
             
           
@@ -434,6 +434,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../rest_service/" title="Rest Services" class="md-nav__link">
+      Rest Services
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -444,22 +456,10 @@
       
     
     
-    <a href="./" title="Rest Services" class="md-nav__link md-nav__link--active">
-      Rest Services
+    <a href="./" title="SAML and oAuth" class="md-nav__link md-nav__link--active">
+      SAML and oAuth
     </a>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../saml_oath/" title="Saml oath" class="md-nav__link">
-      Saml oath
-    </a>
   </li>
 
     
@@ -562,24 +562,26 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/leoman730/d8docs/edit/master/docs/rest_service.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/leoman730/d8docs/edit/master/docs/saml_oath.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="rest-services">Rest Services</h1>
-<p>Drupal 8 now has REST service out of the box, meaning we don&rsquo;t need to rely on the Services module to 
-create service API. With build in REST module and the Serilization module enable, Views can export service
-directly. </p>
-<p>The only thing I see need to change it the Service API URL.
-For example: <a href="http://d8.law.nyu.edu/faculty_service_view?_format=json">http://d8.law.nyu.edu/faculty_service_view?_format=json</a>
-Notice that the _format={} is required, otherwise &ldquo;client error&rdquo; may occured. </p>
-<p>In additional, in order to be able to control number of items to display, there some odd settings need to
-be make to the view:
-- The pager has to be set &ldquo;Full pager&rdquo;.
-- In the full pager setting, the expose options value has to be &lsquo;whitelist&rsquo;.</p>
-<p>See:
-- <a href="https://drupalize.me/blog/201402/your-first-restful-view-drupal-8">Your First RESTful View in Drupal 8</a>
-- <a href="https://www.mediacurrent.com/blog/8-insights-and-useful-snippets-d8-rest-module/">Insights and Useful Snippets for the D8 Rest
-  Module</a></p>
+                <h1 id="saml-and-oauth">SAML and oAuth</h1>
+<h1 id="plan">Plan</h1>
+<ul>
+<li>Create a new instance from upstream</li>
+<li>Configure simpleSAMLphp based on [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]</li>
+<li>Test the instance with SAML idProvider</li>
+<li>Test the instance with oAuth idProvider</li>
+<li>Test role matching</li>
+<li>Test some migrate users with corePerson role</li>
+</ul>
+<h2 id="resources">Resources:</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=rTcC0maPLSA&amp;list=PLZOQ_ZMpYrZtqy5-o7KoDhM3n6M0duBjX&amp;index=1">Simple oAuth Youtube playlist</a></li>
+<li><a href="https://www.drupal.org/project/simple_oauth">Drupal simple oAuth module</a></li>
+<li><a href="https://www.drupal.org/project/simplesamlphp_auth">Drupal simpleSAMLphp Authentication</a></li>
+<li><a href="https://pantheon.io/docs/shibboleth-sso/">Pantheon - Using SimpleSAMLphp with Shibboleth SSO</a></li>
+</ul>
                 
                   
                 
@@ -600,7 +602,7 @@ be make to the view:
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../resources/" title="Resources" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../rest_service/" title="Rest Services" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -609,19 +611,19 @@ be make to the view:
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Resources
+                Rest Services
               </span>
             </div>
           </a>
         
         
-          <a href="../saml_oath/" title="Saml oath" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../search/" title="Search" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Saml oath
+                Search
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -212,13 +212,18 @@
         }, 
         {
             "location": "/git/", 
-            "text": "Dealing with head detached\n\n\nSee \nWhat\ns a \ndetached HEAD\n in Git?", 
+            "text": "Dealing with head detached\n\n\nSee \nWhat\ns a \ndetached HEAD\n in Git?\n\n\nMerge strategies\n\n\nPull Request Merge Strategies: The Great\nDebate", 
             "title": "Git"
         }, 
         {
             "location": "/git/#dealing-with-head-detached", 
             "text": "See  What s a  detached HEAD  in Git?", 
             "title": "Dealing with head detached"
+        }, 
+        {
+            "location": "/git/#merge-strategies", 
+            "text": "Pull Request Merge Strategies: The Great\nDebate", 
+            "title": "Merge strategies"
         }, 
         {
             "location": "/hosting/", 
@@ -482,8 +487,13 @@
         }, 
         {
             "location": "/pantheon/", 
-            "text": "# Clear a specific page cache in CDN\nterminus drush [site].[env] -- eval \npantheon_clear_edge_paths([\n/robot\n])\n  \nterminus drush [site].[env] drush cc css-js", 
+            "text": "# Clear a specific page cache in CDN\nterminus drush [site].[env] -- eval \npantheon_clear_edge_paths([\n/robot\n])\n  \nterminus drush [site].[env] drush cc css-js\n\n\n\n\nReferences\n\n\n\n\nCollaborative Development Using GitHub and Pantheon\n\n\nGit FAQs\n\n\nUndo Git Commits\n\n\nUsing Quicksilver to Automatically Test Each Deploy on Pantheon", 
             "title": "Pantheon"
+        }, 
+        {
+            "location": "/pantheon/#references", 
+            "text": "Collaborative Development Using GitHub and Pantheon  Git FAQs  Undo Git Commits  Using Quicksilver to Automatically Test Each Deploy on Pantheon", 
+            "title": "References"
         }, 
         {
             "location": "/post-migration-todo/", 
@@ -664,6 +674,26 @@
             "location": "/rest_service/#rest-services", 
             "text": "Drupal 8 now has REST service out of the box, meaning we don t need to rely on the Services module to \ncreate service API. With build in REST module and the Serilization module enable, Views can export service\ndirectly.   The only thing I see need to change it the Service API URL.\nFor example:  http://d8.law.nyu.edu/faculty_service_view?_format=json \nNotice that the _format={} is required, otherwise  client error  may occured.   In additional, in order to be able to control number of items to display, there some odd settings need to\nbe make to the view:\n- The pager has to be set  Full pager .\n- In the full pager setting, the expose options value has to be  whitelist .  See:\n-  Your First RESTful View in Drupal 8 \n-  Insights and Useful Snippets for the D8 Rest\n  Module", 
             "title": "Rest Services"
+        }, 
+        {
+            "location": "/saml_oath/", 
+            "text": "SAML and oAuth\n\n\nPlan\n\n\n\n\nCreate a new instance from upstream\n\n\nConfigure simpleSAMLphp based on [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]\n\n\nTest the instance with SAML idProvider\n\n\nTest the instance with oAuth idProvider\n\n\nTest role matching\n\n\nTest some migrate users with corePerson role\n\n\n\n\nResources:\n\n\n\n\nSimple oAuth Youtube playlist\n\n\nDrupal simple oAuth module\n\n\nDrupal simpleSAMLphp Authentication\n\n\nPantheon - Using SimpleSAMLphp with Shibboleth SSO", 
+            "title": "SAML and oAuth"
+        }, 
+        {
+            "location": "/saml_oath/#saml-and-oauth", 
+            "text": "", 
+            "title": "SAML and oAuth"
+        }, 
+        {
+            "location": "/saml_oath/#plan", 
+            "text": "Create a new instance from upstream  Configure simpleSAMLphp based on [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]  Test the instance with SAML idProvider  Test the instance with oAuth idProvider  Test role matching  Test some migrate users with corePerson role", 
+            "title": "Plan"
+        }, 
+        {
+            "location": "/saml_oath/#resources", 
+            "text": "Simple oAuth Youtube playlist  Drupal simple oAuth module  Drupal simpleSAMLphp Authentication  Pantheon - Using SimpleSAMLphp with Shibboleth SSO", 
+            "title": "Resources:"
         }, 
         {
             "location": "/search/", 
