@@ -677,7 +677,7 @@
         }, 
         {
             "location": "/saml_oath/", 
-            "text": "SAML and oAuth\n\n\nPlan\n\n\n\n\nCreate a new instance from upstream\n\n\nConfigure simpleSAMLphp based on [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]\n\n\nTest the instance with SAML idProvider\n\n\nTest the instance with oAuth idProvider\n\n\nTest role matching\n\n\nTest some migrate users with corePerson role\n\n\n\n\nResources:\n\n\n\n\nSimple oAuth Youtube playlist\n\n\nDrupal simple oAuth module\n\n\nDrupal simpleSAMLphp Authentication\n\n\n[Pantheon - Using SimpleSAMLphp with Shibboleth SSO]: \nhttps://pantheon.io/docs/shibboleth-sso/", 
+            "text": "SAML and oAuth\n\n\nPlan\n\n\n\n\nCreate a new instance from upstream\n\n\nConfigure simpleSAMLphp based on [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]\n\n\nTest the instance with SAML idProvider\n\n\nTest the instance with oAuth idProvider\n\n\nTest role matching\n\n\nTest some migrate users with corePerson role\n\n\n\n\nResources:\n\n\n\n\nSimple oAuth Youtube playlist\n\n\nDrupal simple oAuth module\n\n\nDrupal simpleSAMLphp Authentication\n\n\n[Pantheon - Using SimpleSAMLphp with Shibboleth SSO]: \nhttps://pantheon.io/docs/shibboleth-sso/\n\n\nDeep dive into SSO in Drupal", 
             "title": "SAML and oAuth"
         }, 
         {
@@ -692,7 +692,7 @@
         }, 
         {
             "location": "/saml_oath/#resources", 
-            "text": "Simple oAuth Youtube playlist  Drupal simple oAuth module  Drupal simpleSAMLphp Authentication  [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]:  https://pantheon.io/docs/shibboleth-sso/", 
+            "text": "Simple oAuth Youtube playlist  Drupal simple oAuth module  Drupal simpleSAMLphp Authentication  [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]:  https://pantheon.io/docs/shibboleth-sso/  Deep dive into SSO in Drupal", 
             "title": "Resources:"
         }, 
         {
