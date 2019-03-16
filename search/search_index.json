@@ -677,7 +677,7 @@
         }, 
         {
             "location": "/saml_oath/", 
-            "text": "SAML and oAuth\n\n\nPlan\n\n\n\n\nCreate a new instance from upstream\n\n\nConfigure simpleSAMLphp based on [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]\n\n\nTest the instance with SAML idProvider\n\n\nTest the instance with oAuth idProvider\n\n\nTest role matching\n\n\nTest some migrate users with corePerson role\n\n\n\n\nResources:\n\n\n\n\nSimple oAuth Youtube playlist\n\n\nDrupal simple oAuth module\n\n\nDrupal simpleSAMLphp Authentication\n\n\nPantheon - Using SimpleSAMLphp with Shibboleth SSO\n\n\nDeep dive into SSO in Drupal\n\n\nHow to Install and Configure SimpleSAMLphp", 
+            "text": "SAML and oAuth\n\n\nPlan\n\n\n\n\nCreate a new instance from upstream\n\n\nConfigure simpleSAMLphp based on [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]\n\n\nTest the instance with SAML idProvider\n\n\nTest the instance with oAuth idProvider\n\n\nTest role matching\n\n\nTest some migrate users with corePerson role\n\n\n\n\nResources:\n\n\n\n\nSimple oAuth Youtube playlist\n\n\nDrupal simple oAuth module\n\n\nDrupal simpleSAMLphp Authentication\n\n\nPantheon - Using SimpleSAMLphp with Shibboleth SSO\n\n\nDeep dive into SSO in Drupal\n\n\nHow to Install and Configure SimpleSAMLphp\n\n\nSimpleSAMLphp Service Provider QuickStart\n\n\nSingle Sign On (SSO) SOS with SimpleSAMLphp\n\n\n\n\n\n\nConfiguring SimpleSAMLphp as a Service Provider", 
             "title": "SAML and oAuth"
         }, 
         {
@@ -692,7 +692,7 @@
         }, 
         {
             "location": "/saml_oath/#resources", 
-            "text": "Simple oAuth Youtube playlist  Drupal simple oAuth module  Drupal simpleSAMLphp Authentication  Pantheon - Using SimpleSAMLphp with Shibboleth SSO  Deep dive into SSO in Drupal  How to Install and Configure SimpleSAMLphp", 
+            "text": "Simple oAuth Youtube playlist  Drupal simple oAuth module  Drupal simpleSAMLphp Authentication  Pantheon - Using SimpleSAMLphp with Shibboleth SSO  Deep dive into SSO in Drupal  How to Install and Configure SimpleSAMLphp  SimpleSAMLphp Service Provider QuickStart  Single Sign On (SSO) SOS with SimpleSAMLphp    Configuring SimpleSAMLphp as a Service Provider", 
             "title": "Resources:"
         }, 
         {
