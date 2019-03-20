@@ -677,7 +677,7 @@
         }, 
         {
             "location": "/saml_oath/", 
-            "text": "SAML and oAuth\n\n\nPlan\n\n\n\n\nCreate a new instance from upstream\n\n\nConfigure simpleSAMLphp based on [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]\n\n\nTest the instance with SAML idProvider\n\n\nTest the instance with oAuth idProvider\n\n\nTest role matching\n\n\nTest some migrate users with corePerson role\n\n\n\n\nResources:\n\n\n\n\nSimple oAuth Youtube playlist\n\n\nDrupal simple oAuth module\n\n\nDrupal simpleSAMLphp Authentication\n\n\nPantheon - Using SimpleSAMLphp with Shibboleth SSO\n\n\nDeep dive into SSO in Drupal\n\n\nHow to Install and Configure SimpleSAMLphp\n\n\nSimpleSAMLphp Service Provider QuickStart\n\n\nSingle Sign On (SSO) SOS with SimpleSAMLphp\n\n\n\n\n\n\nConfiguring SimpleSAMLphp as a Service Provider", 
+            "text": "SAML and oAuth\n\n\nSAML SSO configuration note\n\n\nGenerate a X.509 certificate for SP\n\n\ncd private/simplesamlphp/cert\nopenssl req -newkey rsa:2048 -new -x509 -sha256 -days 3652 -nodes -out samplesso.crt -keyout samplesso.pem\n\n\n\n\nModify authconf on simplesamlphp\n\n\n    \nsample-sso\n =\n [\n        \nsaml:SP\n,\n\n        // The entity ID of this SP.\n        // Can be NULL/unset, in which case an entity ID is generated based on the metadata URL.\n        \nentityID\n =\n \ndrupal\n,\n\n        // The entity ID of the IdP this SP should contact.\n        // Can be NULL/unset, in which case the user will be shown a list of available IdPs.\n        \nidp\n =\n \nsso-provider\n,\n\n        // The URL to the discovery service.\n        // Can be NULL/unset, in which case a builtin discovery service will be used.\n        \ndiscoURL\n =\n null,\n\n        \nprivatekey\n =\n \nsamplesso.pem\n,\n        \ncertificate\n =\n \nsamplesso.crt\n\n        ],\n\n\n\n\nSend SP metadata to IdP\n\n\nPlan\n\n\n\n\nCreate a new instance from upstream\n\n\nConfigure simpleSAMLphp based on [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]\n\n\nTest the instance with SAML idProvider\n\n\nTest the instance with oAuth idProvider\n\n\nTest role matching\n\n\nTest some migrate users with corePerson role\n\n\n\n\nResources:\n\n\n\n\nSimple oAuth Youtube playlist\n\n\nDrupal simple oAuth module\n\n\nDrupal simpleSAMLphp Authentication\n\n\nPantheon - Using SimpleSAMLphp with Shibboleth SSO\n\n\nDeep dive into SSO in Drupal\n\n\nHow to Install and Configure SimpleSAMLphp\n\n\nSimpleSAMLphp Service Provider QuickStart\n\n\nSingle Sign On (SSO) SOS with SimpleSAMLphp\n\n\nConfiguring SimpleSAMLphp as a Service Provider", 
             "title": "SAML and oAuth"
         }, 
         {
@@ -686,13 +686,33 @@
             "title": "SAML and oAuth"
         }, 
         {
+            "location": "/saml_oath/#saml-sso-configuration-note", 
+            "text": "", 
+            "title": "SAML SSO configuration note"
+        }, 
+        {
+            "location": "/saml_oath/#generate-a-x509-certificate-for-sp", 
+            "text": "cd private/simplesamlphp/cert\nopenssl req -newkey rsa:2048 -new -x509 -sha256 -days 3652 -nodes -out samplesso.crt -keyout samplesso.pem", 
+            "title": "Generate a X.509 certificate for SP"
+        }, 
+        {
+            "location": "/saml_oath/#modify-authconf-on-simplesamlphp", 
+            "text": "sample-sso  =  [\n         saml:SP ,\n\n        // The entity ID of this SP.\n        // Can be NULL/unset, in which case an entity ID is generated based on the metadata URL.\n         entityID  =   drupal ,\n\n        // The entity ID of the IdP this SP should contact.\n        // Can be NULL/unset, in which case the user will be shown a list of available IdPs.\n         idp  =   sso-provider ,\n\n        // The URL to the discovery service.\n        // Can be NULL/unset, in which case a builtin discovery service will be used.\n         discoURL  =  null,\n\n         privatekey  =   samplesso.pem ,\n         certificate  =   samplesso.crt \n        ],", 
+            "title": "Modify authconf on simplesamlphp"
+        }, 
+        {
+            "location": "/saml_oath/#send-sp-metadata-to-idp", 
+            "text": "", 
+            "title": "Send SP metadata to IdP"
+        }, 
+        {
             "location": "/saml_oath/#plan", 
             "text": "Create a new instance from upstream  Configure simpleSAMLphp based on [Pantheon - Using SimpleSAMLphp with Shibboleth SSO]  Test the instance with SAML idProvider  Test the instance with oAuth idProvider  Test role matching  Test some migrate users with corePerson role", 
             "title": "Plan"
         }, 
         {
             "location": "/saml_oath/#resources", 
-            "text": "Simple oAuth Youtube playlist  Drupal simple oAuth module  Drupal simpleSAMLphp Authentication  Pantheon - Using SimpleSAMLphp with Shibboleth SSO  Deep dive into SSO in Drupal  How to Install and Configure SimpleSAMLphp  SimpleSAMLphp Service Provider QuickStart  Single Sign On (SSO) SOS with SimpleSAMLphp    Configuring SimpleSAMLphp as a Service Provider", 
+            "text": "Simple oAuth Youtube playlist  Drupal simple oAuth module  Drupal simpleSAMLphp Authentication  Pantheon - Using SimpleSAMLphp with Shibboleth SSO  Deep dive into SSO in Drupal  How to Install and Configure SimpleSAMLphp  SimpleSAMLphp Service Provider QuickStart  Single Sign On (SSO) SOS with SimpleSAMLphp  Configuring SimpleSAMLphp as a Service Provider", 
             "title": "Resources:"
         }, 
         {

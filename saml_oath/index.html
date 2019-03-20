@@ -475,6 +475,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#saml-sso-configuration-note" title="SAML SSO configuration note" class="md-nav__link">
+    SAML SSO configuration note
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-a-x509-certificate-for-sp" title="Generate a X.509 certificate for SP" class="md-nav__link">
+    Generate a X.509 certificate for SP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-authconf-on-simplesamlphp" title="Modify authconf on simplesamlphp" class="md-nav__link">
+    Modify authconf on simplesamlphp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-sp-metadata-to-idp" title="Send SP metadata to IdP" class="md-nav__link">
+    Send SP metadata to IdP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#plan" title="Plan" class="md-nav__link">
     Plan
   </a>
@@ -592,6 +626,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#saml-sso-configuration-note" title="SAML SSO configuration note" class="md-nav__link">
+    SAML SSO configuration note
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-a-x509-certificate-for-sp" title="Generate a X.509 certificate for SP" class="md-nav__link">
+    Generate a X.509 certificate for SP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-authconf-on-simplesamlphp" title="Modify authconf on simplesamlphp" class="md-nav__link">
+    Modify authconf on simplesamlphp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-sp-metadata-to-idp" title="Send SP metadata to IdP" class="md-nav__link">
+    Send SP metadata to IdP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#plan" title="Plan" class="md-nav__link">
     Plan
   </a>
@@ -625,6 +693,34 @@
                 
                 
                 <h1 id="saml-and-oauth">SAML and oAuth</h1>
+<h2 id="saml-sso-configuration-note">SAML SSO configuration note</h2>
+<h3 id="generate-a-x509-certificate-for-sp">Generate a X.509 certificate for SP</h3>
+<div class="highlight"><pre><span></span>cd private/simplesamlphp/cert
+openssl req -newkey rsa:2048 -new -x509 -sha256 -days 3652 -nodes -out samplesso.crt -keyout samplesso.pem
+</pre></div>
+
+<h3 id="modify-authconf-on-simplesamlphp">Modify authconf on simplesamlphp</h3>
+<div class="highlight"><pre><span></span>    &#39;sample-sso&#39; =&gt; [
+        &#39;saml:SP&#39;,
+
+        // The entity ID of this SP.
+        // Can be NULL/unset, in which case an entity ID is generated based on the metadata URL.
+        &#39;entityID&#39; =&gt; &#39;drupal&#39;,
+
+        // The entity ID of the IdP this SP should contact.
+        // Can be NULL/unset, in which case the user will be shown a list of available IdPs.
+        &#39;idp&#39; =&gt; &#39;sso-provider&#39;,
+
+        // The URL to the discovery service.
+        // Can be NULL/unset, in which case a builtin discovery service will be used.
+        &#39;discoURL&#39; =&gt; null,
+
+        &#39;privatekey&#39; =&gt; &#39;samplesso.pem&#39;,
+        &#39;certificate&#39; =&gt; &#39;samplesso.crt&#39;
+        ],
+</pre></div>
+
+<h3 id="send-sp-metadata-to-idp">Send SP metadata to IdP</h3>
 <h2 id="plan">Plan</h2>
 <ul>
 <li>Create a new instance from upstream</li>
@@ -644,11 +740,7 @@
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-simplesamlphp-for-saml-authentication-on-ubuntu-16-04">How to Install and Configure SimpleSAMLphp</a></li>
 <li><a href="https://simplesamlphp.org/docs/stable/simplesamlphp-sp">SimpleSAMLphp Service Provider QuickStart</a></li>
 <li><a href="https://www.drupalcampatlanta.com/2018/sessions/single-sign-sso-sos-simplesamlphp">Single Sign On (SSO) SOS with SimpleSAMLphp</a></li>
-<li>
-<ul>
 <li><a href="https://docs.wso2.com/display/IS530/Configuring+SimpleSAMLphp+as+a+Service+Provider">Configuring SimpleSAMLphp as a Service Provider</a></li>
-</ul>
-</li>
 </ul>
                 
                   
